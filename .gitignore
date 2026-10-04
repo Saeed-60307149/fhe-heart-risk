@@ -1,0 +1,26 @@
+# Node
+node_modules/
+npm-debug.log*
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# Data (scripts yes, data no)
+*.csv
+*.data
+code/data/raw/
+# Secrets and keys
+.env
+*.key
+*.pem
+# FHE contexts / ciphertexts (huge, and secret contexts must never be committed)
+*.ctx
+*.seal
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+~$*
