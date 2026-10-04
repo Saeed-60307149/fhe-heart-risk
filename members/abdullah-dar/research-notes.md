@@ -5,6 +5,10 @@
 ### 1. Architecture
 - Three parts: **client** (form), **backend API** (Node/Express), **FHE-ML service** (Python + TenSEAL).
 - Main rule: **encrypt on the client, compute on the server, decrypt on the client.**
+
+![Planned system architecture](images/architecture.png)
+*Figure 1: Planned system architecture. The server never sees plaintext data or the secret key.*
+
 - The server only gets the ciphertext + a **public context** (public key + evaluation keys). Never the **secret key**.
 - In TenSEAL you can make a copy of the context without the secret key (`make_context_public()`) and serialize it to send.
 
