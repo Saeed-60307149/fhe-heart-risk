@@ -2,9 +2,7 @@
 Owner: Abdullah Dar (Wk 7)
 
 ![COMP4101 Practicum Gantt chart](gantt/COMP4101_Practicum_Gantt.png)
-*Gantt chart, Weeks 6–15 (PR1 version). Working week is Sunday–Thursday. Source file: [gantt/COMP4101_Practicum_Gantt.gan](gantt/COMP4101_Practicum_Gantt.gan) – open it in [GanttProject](https://www.ganttproject.biz/), edit, then re-export the PNG over the old one.*
-
-> **The image above is out of date (PR1 version, 7 Oct).** The `.gan` file and the task table below have the 9 Oct fixes: no work in the Week 9 break, SLR stages moved to match Protocol v3 (full text + extraction Week 10, synthesis + PRISMA Week 12), final-report milestone on Thu 26 Nov, defence in Week 15. Re-export the PNG from the `.gan` file to update it.
+*Gantt chart, Weeks 6–15 (updated 9 Oct: Week 9 break kept free, SLR stages per Protocol v3). Dotted arrows are flexible (Rubber) dependencies. Working week is Sunday–Thursday. Source file: [gantt/COMP4101_Practicum_Gantt.gan](gantt/COMP4101_Practicum_Gantt.gan) – open it in [GanttProject](https://www.ganttproject.biz/), edit, then re-export the PNG over the old one.*
 
 ## Milestones by week
 
