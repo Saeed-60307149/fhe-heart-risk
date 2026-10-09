@@ -14,7 +14,13 @@ Minimum: 6 hours per week. Only log days you actually worked.
 SLR (v3, Pair 2, screener 2): re-run Sarim's ACM search to confirm the count; de-duplicate in RefWorks, enter the count, split records at random into Pair 1/2/3 in the Screening Log. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
-| | | | |
+| | | Build the PRISMA tracking sheet | |
+| | | Read SLR Protocol v3 and reply 'changes' or 'no changes' to Abdullah (by Sat 10 Oct) | |
+| | | Re-run Sarim's ACM search and confirm the count in the Search Log tab | |
+| | | De-duplicate in RefWorks, enter 'Duplicate records removed' on the PRISMA Counts tab, split records at random into Pairs 1–3 in the Screening Log | |
+| | | Commit the first dated PRISMA sheet snapshot | |
+| | | Write the PR1 data statement with Sarim | |
+| | | Write the ethics/data note with Sarim (`research/ethics-data-note.md`) | |
 | **Total** | | | |
 
 ## Week 8 (11 – 15 Oct)

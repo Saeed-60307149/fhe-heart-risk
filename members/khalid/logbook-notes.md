@@ -14,7 +14,10 @@ Minimum: 6 hours per week. Only log days you actually worked.
 SLR (v3, Pair 3, screener 1): Scopus search check first, then the Scopus search; fill the Search Log tab of the live PRISMA sheet; Abdullah confirms. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
-| | | | |
+| | | Read SLR Protocol v3 and reply 'changes' or 'no changes' to Abdullah (by Sat 10 Oct) | |
+| | | Run the Scopus search check (3 known papers) | |
+| | | Run the Scopus search and fill the Scopus row of the Search Log tab (string, date, filters, count) | |
+| | | Write the PR1 'Expected results' section | |
 | **Total** | | | |
 
 ## Week 8 (11 – 15 Oct)

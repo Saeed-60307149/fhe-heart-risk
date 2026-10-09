@@ -14,7 +14,10 @@ Minimum: 6 hours per week. Only log days you actually worked.
 SLR (v3, Pair 1, screener 2): re-run Saif's IEEE Xplore search to confirm the count; add the protocol + search counts to PR1. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
-| | | | |
+| | | Read SLR Protocol v3 and reply 'changes' or 'no changes' to Abdullah (by Sat 10 Oct) | |
+| | | Re-run Saif's IEEE Xplore search and confirm the count in the Search Log tab | |
+| | | Write the SLR section of Progress Report 1 (protocol + search counts) | |
+| | | Compile Progress Report 1 and upload to D2L (due Sun 11 Oct) | |
 | **Total** | | | |
 
 ## Week 8 (11 – 15 Oct)
