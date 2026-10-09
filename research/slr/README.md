@@ -22,6 +22,7 @@ A **systematic literature review** answers fixed research questions by searching
 | File | What it is | Owner |
 |---|---|---|
 | `SLR_Protocol_v2.docx` | Protocol, Word original | Abdullah |
+| `PRISMA_Tracking_Sheet_2026-10-09.xlsx` | PRISMA tracking workbook, snapshot of 9 Oct (tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log). Built for Protocol v3 (pairs) | Hassan |
 | `protocol.md` | Same protocol, readable on GitHub | Abdullah |
 | `search-strings.md` | The three exact search strings, filters and rules | Everyone (read-only unless the team agrees a change) |
 | `search-log.csv` | One row per database search: string, date, filters, result count | Saif, Sarim, Khalid |
