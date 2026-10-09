@@ -1,4 +1,7 @@
 # PRISMA Tracking
+
+> **Superseded:** PRISMA counts live in the PRISMA tracking sheet – see [slr/README.md](slr/README.md).
+
 Owner: Hassan Zahid
 
 | Stage | IEEE | ACM | Scopus | Total |
