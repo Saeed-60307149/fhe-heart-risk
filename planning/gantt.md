@@ -2,8 +2,6 @@
 Owner: Abdullah Dar (Wk 7)
 
 ![COMP4101 Practicum Gantt chart](gantt/COMP4101_Practicum_Gantt.png)
-> **Re-export pending:** the PNG above predates the 9 Oct plan audit (task splits, owners, TenSEAL pilot → Week 10, node-seal test → Week 11). The `.gan` file and the task table below are current.
-
 *Gantt chart, Weeks 6–15 (updated 9 Oct: Week 9 break kept free, SLR stages per Protocol v3). Dotted arrows are flexible (Rubber) dependencies. **Owners are in the task table below** (the PNG shows bars only). Working week is Sunday–Thursday. Source file: [gantt/COMP4101_Practicum_Gantt.gan](gantt/COMP4101_Practicum_Gantt.gan) – open it in [GanttProject](https://www.ganttproject.biz/), edit, then re-export the PNG over the old one.*
 
 ## Milestones by week
