@@ -9,13 +9,13 @@
     | Week | Dates | Task | Due | Done |
     |---|---|---|---|---|
     | Wk 6 | 27 Sep–1 Oct | Create the GitHub repo with the folder skeleton and the task board. Invite everyone. | Logbook Sun 4 Oct | ⬜ |
-| Wk 7 | 4–8 Oct | Write PR1 work-distribution section and the Gantt chart/timeline. Update the task board. | PR1 + logbook Sun 11 Oct | ⬜ |
-| Wk 7 | 4–8 Oct | *(extra)* Wrote SLR Protocol v2 and set up the SLR workspace in the repo (`research/slr/`, each member's `slr/`). | PR1 + logbook Sun 11 Oct | ✅ |
-| Wk 8 | 11–15 Oct | Draw the methodology workflow diagram (draw.io) from the team's method outlines. | No logbook (mid-term) – keep notes | ⬜ |
-| Wk 10 | 25–29 Oct | Write the architecture diagram and API contract (paper design only, no build). | Logbook Sun 1 Nov | ⬜ |
-| Wk 11 | 1–5 Nov | Document the pilot workflow and update the Gantt for PR2. | PR2 + logbook Sun 8 Nov | ⬜ |
-| Wk 12 | 8–12 Nov | Draft final report: architecture, Gantt (Practicum → Capstone 2), challenges. | Logbook Sun 15 Nov | ⬜ |
-| Wk 13 | 15–19 Nov | Fix feedback. Build slides: introduction, scope, Gantt. | Logbook Sun 22 Nov | ⬜ |
+| Wk 7 | 4–8 Oct | Write PR1 work-distribution section and the Gantt chart/timeline. Update the task board. Collect the six 'changes / no changes' replies on Protocol v3 by Sat 10 Oct. Confirm Khalid's Scopus search check and count (Search Log tab). | PR1 + logbook Sun 11 Oct | ⬜ |
+| Wk 7 | 4–8 Oct | *(extra)* Wrote SLR Protocol v2 → v3 and set up the SLR workspace in the repo (`research/slr/`, each member's `slr/`). | PR1 + logbook Sun 11 Oct | ✅ |
+| Wk 8 | 11–15 Oct | Draw the methodology workflow diagram (draw.io) from the team's method outlines. Screen all of Set 3 (column H) with Khalid; tie-break Pair 1. | Thu 15 Oct (no logbook, mid-term – keep notes) | ⬜ |
+| Wk 10 | 25–29 Oct | Write the architecture diagram and API contract (paper design only, no build). Full-text screening of the other half of Pair 3's papers, with extraction + quality rows. | Logbook Sun 1 Nov | ⬜ |
+| Wk 11 | 1–5 Nov | Document the pilot workflow and update the Gantt for PR2. Backward snowballing on your included papers (Screening Log, Source = Snowballing). | PR2 + logbook Sun 8 Nov | ⬜ |
+| Wk 12 | 8–12 Nov | Draft final report: architecture, Gantt (Practicum → Capstone 2), challenges. Co-write SLR synthesis RQ2 with Khalid. | Logbook Sun 15 Nov | ⬜ |
+| Wk 13 | 15–19 Nov | Close every Shikfa comment on your sections (done when none are open in `reports/final-report/feedback.md`). Build slides: introduction, scope, Gantt. | Logbook Sun 22 Nov | ⬜ |
 
     Tick a task by changing ⬜ to ✅. If something is blocked, write it in `logbook-notes.md` and tell Naif.
 

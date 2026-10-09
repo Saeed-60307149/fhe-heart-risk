@@ -11,7 +11,7 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
-SLR (v3, Pair 2, screener 1): run the ACM Digital Library search, fill the Search Log tab of the live PRISMA sheet; Hassan confirms the count. Checklist: [slr/TASKS.md](slr/TASKS.md)
+SLR (v3, Pair 2, screener 1): run the ACM Digital Library search, fill the Search Log tab of the live PRISMA sheet; Hassan confirms the count. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |
