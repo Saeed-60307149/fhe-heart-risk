@@ -43,11 +43,11 @@ Extra roles:
 
 Each person's checklist is in `members/<name>/slr/TASKS.md`.
 
-**Timing:** searches due Sun 11 Oct · title/abstract screening Week 8 · full text + extraction Week 10 · synthesis + PRISMA Week 12.
+**Timing:** searches due Sun 11 Oct · title/abstract screening Week 8 (Mon 12–Thu 15 Oct) · full-text decisions Week 10 · extraction + quality Weeks 10–11 · snowballing Week 11 · synthesis + PRISMA Week 12.
 
 ## Due Sun 11 Oct
 
-- [ ] Everyone: read the protocol, send changes to Abdullah by **Sat 10 Oct**
+- [ ] Each of the six (Naif, Saif, Sarim, Khalid, Hassan, Abdullah): reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**. Done when all six replies are ticked in `members/abdullah-dar/slr/TASKS.md`
 - [ ] Khalid + Abdullah: Scopus search check first, then Scopus search
 - [ ] Saif + Naif: IEEE Xplore search
 - [ ] Sarim + Hassan: ACM Digital Library search

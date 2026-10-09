@@ -2,7 +2,7 @@
 
 > **Superseded:** the full SLR protocol (v3) is now in [slr/protocol.md](slr/protocol.md).
 
-Owner: Naif, Saif
+Owner: Abdullah (see slr/)
 
 ## Review questions
 - RQ1:

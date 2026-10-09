@@ -11,7 +11,7 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
-SLR (v3, Pair 2, screener 2): re-run Sarim's ACM search to confirm the count; de-duplicate in RefWorks, enter the count, split records at random into Pair 1/2/3 in the Screening Log. Checklist: [slr/TASKS.md](slr/TASKS.md)
+SLR (v3, Pair 2, screener 2): re-run Sarim's ACM search to confirm the count; de-duplicate in RefWorks, enter the count, split records at random into Pair 1/2/3 in the Screening Log. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |
