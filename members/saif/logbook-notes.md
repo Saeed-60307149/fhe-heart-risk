@@ -11,6 +11,15 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
+SLR: review RQs/PICOC/criteria with Naif; test + run the IEEE Xplore search; fill the IEEE row of `research/slr/search-log.csv`. Checklist: [slr/TASKS.md](slr/TASKS.md)
+| Day / Date | Time | What I did | Hours |
+|---|---|---|---|
+| | | | |
+| **Total** | | | |
+
+## Week 8 (11 – 15 Oct)
+No logbook (mid-term) – keep notes.
+SLR: title/abstract screening of Set A (`slr/screening-set-A.csv`), due Thu 15 Oct.
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |

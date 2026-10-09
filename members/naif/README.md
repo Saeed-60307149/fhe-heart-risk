@@ -21,3 +21,4 @@
     ## Files in this folder
     - `logbook-notes.md` – what you did each day + times (copy into the official logbook template)
     - `research-notes.md` – papers you read and what you learned
+    - `slr/` – your SLR checklist (`TASKS.md`) and working files

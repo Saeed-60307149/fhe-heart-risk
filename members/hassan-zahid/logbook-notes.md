@@ -11,6 +11,15 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
+SLR: export all records to RefWorks, remove duplicates, fill `research/slr/prisma-tracking.csv`. Checklist: [slr/TASKS.md](slr/TASKS.md)
+| Day / Date | Time | What I did | Hours |
+|---|---|---|---|
+| | | | |
+| **Total** | | | |
+
+## Week 8 (11 – 15 Oct)
+No logbook (mid-term) – keep notes.
+SLR: update `research/slr/prisma-tracking.csv` after screening.
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |
