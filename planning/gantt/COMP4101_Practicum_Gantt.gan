@@ -46,7 +46,7 @@
                 <depend id="22" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="4" uid="c2167649475d448890a479ebe25493de" name="2. Systematic literature review" color="#eb6834" meeting="false" start="2026-09-27" duration="25" complete="0" expand="true">
+        <task id="4" uid="c2167649475d448890a479ebe25493de" name="2. Systematic literature review" color="#eb6834" meeting="false" start="2026-09-27" duration="35" complete="0" expand="true">
             <task id="5" uid="94251f756a784c229b27c18f458597ca" name="2.1 Initial reading lists (FHE, heart-disease ML, sigmoid approx.)" color="#eb6834" meeting="false" start="2026-09-27" duration="5" complete="0" expand="true">
                 <depend id="6" type="2" difference="0" hardness="Strong"/>
                 <depend id="7" type="2" difference="0" hardness="Strong"/>
@@ -62,33 +62,33 @@
                 <depend id="32" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="9" uid="fb2866ae50794d93bb91263179fafcff" name="2.5 PRISMA tracking sheet &amp; de-duplication" color="#eb6834" meeting="false" start="2026-10-04" duration="5" complete="0" expand="true"/>
-            <task id="10" uid="c59b60b8f79348e488e97c36fb5139c9" name="2.6 Title/abstract screening + 20% second screen" color="#eb6834" meeting="false" start="2026-10-11" duration="5" complete="0" expand="true">
-                <depend id="11" type="2" difference="0" hardness="Strong"/>
+            <task id="10" uid="c59b60b8f79348e488e97c36fb5139c9" name="2.6 Title/abstract screening (pairs, every record screened twice)" color="#eb6834" meeting="false" start="2026-10-11" duration="5" complete="0" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Rubber"/>
             </task>
-            <task id="11" uid="e2d6aad5912c4c19a723e5243df744ef" name="2.7 Full-text screening" color="#eb6834" meeting="false" start="2026-10-18" duration="5" complete="0" expand="true">
-                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            <task id="11" uid="e2d6aad5912c4c19a723e5243df744ef" name="2.7 Full-text screening, data extraction &amp; quality scoring" color="#eb6834" meeting="false" start="2026-10-25" duration="5" complete="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Rubber"/>
             </task>
-            <task id="12" uid="1028a5912e58446aa7e5a1edc504efe1" name="2.8 PRISMA diagram &amp; synthesis table" color="#eb6834" meeting="false" start="2026-10-25" duration="5" complete="0" expand="true">
+            <task id="12" uid="1028a5912e58446aa7e5a1edc504efe1" name="2.8 PRISMA diagram &amp; synthesis (RQ1-RQ4)" color="#eb6834" meeting="false" start="2026-11-08" duration="5" complete="0" expand="true">
                 <depend id="36" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="13" uid="b51e5e0ea38944bd8e798b1af4ecee5f" name="3. Design &amp; methodology" color="#eda100" meeting="false" start="2026-10-04" duration="20" complete="0" expand="true">
+        <task id="13" uid="b51e5e0ea38944bd8e798b1af4ecee5f" name="3. Design &amp; methodology" color="#eda100" meeting="false" start="2026-10-04" duration="25" complete="0" expand="true">
             <task id="14" uid="de4400a4a8a84d4cab282d51f554f106" name="3.1 Work distribution &amp; Gantt chart (PR1)" color="#eda100" meeting="false" start="2026-10-04" duration="5" complete="0" expand="true">
                 <depend id="16" type="2" difference="0" hardness="Strong"/>
                 <depend id="32" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="15" uid="096af527a2d14680b72d02672c74b550" name="3.2 Methodology outline v1" color="#eda100" meeting="false" start="2026-10-11" duration="5" complete="0" expand="true">
-                <depend id="17" type="2" difference="0" hardness="Strong"/>
-                <depend id="19" type="2" difference="0" hardness="Strong"/>
+                <depend id="17" type="2" difference="0" hardness="Rubber"/>
+                <depend id="19" type="2" difference="0" hardness="Rubber"/>
             </task>
             <task id="16" uid="0c0481219dcc43b588d3db0816d35586" name="3.3 Methodology workflow diagram" color="#eda100" meeting="false" start="2026-10-11" duration="5" complete="0" expand="true">
-                <depend id="18" type="2" difference="0" hardness="Strong"/>
+                <depend id="18" type="2" difference="0" hardness="Rubber"/>
             </task>
-            <task id="17" uid="8700632459454484a98baa4b41397528" name="3.4 Methodology v2 + feasibility/risk assessment" color="#eda100" meeting="false" start="2026-10-18" duration="5" complete="0" expand="true"/>
-            <task id="18" uid="4a152367a4674f6ab56909b09033dc39" name="3.5 Architecture diagram &amp; API contract" color="#eda100" meeting="false" start="2026-10-18" duration="5" complete="0" expand="true">
+            <task id="17" uid="8700632459454484a98baa4b41397528" name="3.4 Methodology v2 + feasibility/risk assessment" color="#eda100" meeting="false" start="2026-10-25" duration="5" complete="0" expand="true"/>
+            <task id="18" uid="4a152367a4674f6ab56909b09033dc39" name="3.5 Architecture diagram &amp; API contract" color="#eda100" meeting="false" start="2026-10-25" duration="5" complete="0" expand="true">
                 <depend id="29" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="19" uid="8ef6f1f9a2254206b184f9fbc408e804" name="3.6 Threat model (draft, then update with pilot findings)" color="#eda100" meeting="false" start="2026-10-18" duration="10" complete="0" expand="true"/>
+            <task id="19" uid="8ef6f1f9a2254206b184f9fbc408e804" name="3.6 Threat model (draft, then update with pilot findings)" color="#eda100" meeting="false" start="2026-10-25" duration="10" complete="0" expand="true"/>
         </task>
         <task id="20" uid="b82f588a89f44f5aacf32960a15c2551" name="4. Technical pilots" color="#1baf7a" meeting="false" start="2026-10-04" duration="25" complete="0" expand="true">
             <task id="21" uid="67a9ab209d5c49099272fff92f6b00fb" name="4.1 Benchmark plan" color="#1baf7a" meeting="false" start="2026-10-25" duration="5" complete="0" expand="true">
@@ -96,7 +96,7 @@
             </task>
             <task id="22" uid="6b4856029bdc4c319b2fbb94e0a0042f" name="4.2 TenSEAL CKKS toy pilot" color="#1baf7a" meeting="false" start="2026-10-04" duration="5" complete="0" expand="true">
                 <depend id="25" type="2" difference="0" hardness="Strong"/>
-                <depend id="28" type="2" difference="0" hardness="Strong"/>
+                <depend id="28" type="2" difference="0" hardness="Rubber"/>
             </task>
             <task id="23" uid="bc5eb6e7d8e74e3f987eec31b1ac3053" name="4.3 Dataset prep + baseline logistic regression" color="#1baf7a" meeting="false" start="2026-10-25" duration="5" complete="0" expand="true">
                 <depend id="26" type="2" difference="0" hardness="Strong"/>
@@ -105,7 +105,7 @@
                 <depend id="27" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="25" uid="207f82c7788b466b9d07632e8e5b48eb" name="4.5 node-seal compatibility test &amp; Plan A/B" color="#1baf7a" meeting="false" start="2026-10-11" duration="5" complete="0" expand="true">
-                <depend id="34" type="2" difference="0" hardness="Strong"/>
+                <depend id="34" type="2" difference="0" hardness="Rubber"/>
             </task>
             <task id="26" uid="a4a7acf8f6f5469cba2f45e4d6d6f41f" name="4.6 Baseline evaluation (accuracy, F1, ROC-AUC)" color="#1baf7a" meeting="false" start="2026-11-01" duration="5" complete="0" expand="true">
                 <depend id="34" type="2" difference="0" hardness="Strong"/>
@@ -116,9 +116,9 @@
             <task id="28" uid="75c95ebaae25465287d2b8620afe7de4" name="4.8 PoC timing (encrypt/decrypt time, ciphertext size)" color="#1baf7a" meeting="false" start="2026-11-01" duration="5" complete="0" expand="true">
                 <depend id="34" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="29" uid="12ab6250870e496d9611ac67b6b18787" name="4.9 Pilot workflow notes &amp; Gantt update" color="#1baf7a" meeting="false" start="2026-10-25" duration="5" complete="0" expand="true"/>
+            <task id="29" uid="12ab6250870e496d9611ac67b6b18787" name="4.9 Pilot workflow notes &amp; Gantt update" color="#1baf7a" meeting="false" start="2026-11-01" duration="5" complete="0" expand="true"/>
         </task>
-        <task id="30" uid="f055647f47f44ab687f45f9c099aeaae" name="5. Reports &amp; defence" color="#e87ba4" meeting="false" start="2026-10-04" duration="40" complete="0" expand="true">
+        <task id="30" uid="f055647f47f44ab687f45f9c099aeaae" name="5. Reports &amp; defence" color="#e87ba4" meeting="false" start="2026-10-04" duration="45" complete="0" expand="true">
             <task id="31" uid="9f45e015aab24412aea06cf8af0a237a" name="5.1 Compile &amp; submit Progress Report 1" color="#e87ba4" meeting="false" start="2026-10-04" duration="5" complete="0" expand="true">
                 <depend id="32" type="2" difference="0" hardness="Strong"/>
             </task>
@@ -133,13 +133,13 @@
             </task>
             <task id="36" uid="31334c856e264a83b5d5c69afb199353" name="5.4 Merge, supervisor feedback, revisions &amp; slides" color="#e87ba4" meeting="false" start="2026-11-15" duration="5" complete="0" expand="true">
                 <depend id="37" type="2" difference="0" hardness="Strong"/>
-                <depend id="38" type="2" difference="0" hardness="Strong"/>
+                <depend id="38" type="2" difference="0" hardness="Rubber"/>
             </task>
             <task id="37" uid="ee9b64a8f1c744118923c9879651d25f" name="5.5 Final formatting &amp; rehearsal" color="#e87ba4" meeting="false" start="2026-11-22" duration="5" complete="0" expand="true"/>
-            <task id="38" uid="3e59928c854b4fe3a15e71ec1416eab4" name="Final report due (Thu 26 Nov)" color="#1f1f1e" meeting="true" start="2026-11-22" duration="0" complete="0" expand="true">
-                <depend id="39" type="2" difference="0" hardness="Strong"/>
+            <task id="38" uid="3e59928c854b4fe3a15e71ec1416eab4" name="Final report due (Thu 26 Nov)" color="#1f1f1e" meeting="true" start="2026-11-26" duration="0" complete="0" expand="true">
+                <depend id="39" type="2" difference="0" hardness="Rubber"/>
             </task>
-            <task id="39" uid="a9a2307f463d40829057e0bb8e9ac8fb" name="5.6 Defence, slides to D2L, peer review, cross-supervisor chat" color="#e87ba4" meeting="false" start="2026-11-22" duration="5" complete="0" expand="true"/>
+            <task id="39" uid="a9a2307f463d40829057e0bb8e9ac8fb" name="5.6 Defence, slides to D2L, peer review, cross-supervisor chat" color="#e87ba4" meeting="false" start="2026-11-29" duration="5" complete="0" expand="true"/>
         </task>
     </tasks>
     <resources>
