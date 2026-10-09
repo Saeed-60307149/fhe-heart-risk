@@ -1,4 +1,7 @@
 # PRISMA Tracking
+
+> **Superseded:** use [slr/prisma-tracking.csv](slr/prisma-tracking.csv) for PRISMA counts.
+
 Owner: Hassan Zahid
 
 | Stage | IEEE | ACM | Scopus | Total |

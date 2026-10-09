@@ -24,3 +24,7 @@ Thumbs.db
 .vscode/
 .idea/
 ~$*
+
+# SLR tracking sheets are not datasets: keep them in git
+!research/slr/*.csv
+!members/*/slr/*.csv
