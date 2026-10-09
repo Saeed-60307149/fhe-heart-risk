@@ -1,6 +1,6 @@
 # PRISMA Tracking
 
-> **Superseded:** use [slr/prisma-tracking.csv](slr/prisma-tracking.csv) for PRISMA counts.
+> **Superseded:** PRISMA counts live in the PRISMA tracking sheet – see [slr/README.md](slr/README.md).
 
 Owner: Hassan Zahid
 

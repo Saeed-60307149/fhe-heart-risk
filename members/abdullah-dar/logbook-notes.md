@@ -13,7 +13,7 @@ Minimum: 6 hours per week. Only log days you actually worked.
 
 ## Week 7 (4 – 8 Oct)
 Task: PR1 work-distribution section + Gantt chart. Update task board.
-SLR: wrote SLR Protocol v2 and set up `research/slr/` + each member's `slr/` folder. Keep protocol.md and the docx in sync. Checklist: [slr/TASKS.md](slr/TASKS.md)
+SLR: wrote SLR Protocol v2 → v3 and set up `research/slr/` + each member's `slr/` folder. v3 role (Pair 3, screener 2): protocol owner (collect changes by Sat 10 Oct); confirm Khalid's Scopus search check + count. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | *(date)* | *(time)* | Wrote SLR Protocol v2: review questions RQ1–RQ4, PICOC, search strings for IEEE Xplore / ACM DL / Scopus, Scopus search check, inclusion/exclusion criteria, screening process, quality checklist, data extraction form | *(h)* |
@@ -22,7 +22,7 @@ SLR: wrote SLR Protocol v2 and set up `research/slr/` + each member's `slr/` fol
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.
-SLR: track screening progress (Set A, Set B, 20% sample) against the task table in `research/slr/README.md`.
+SLR: screen all of Set 3 (Screening Log, column H) independently of Khalid; tie-breaker for Pair 1.
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |

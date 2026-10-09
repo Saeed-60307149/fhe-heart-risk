@@ -11,7 +11,7 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
-SLR: export all records to RefWorks, remove duplicates, fill `research/slr/prisma-tracking.csv`. Checklist: [slr/TASKS.md](slr/TASKS.md)
+SLR (v3, Pair 2, screener 2): re-run Sarim's ACM search to confirm the count; de-duplicate in RefWorks, enter the count, split records at random into Pair 1/2/3 in the Screening Log. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |
@@ -19,7 +19,7 @@ SLR: export all records to RefWorks, remove duplicates, fill `research/slr/prism
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.
-SLR: update `research/slr/prisma-tracking.csv` after screening.
+SLR: screen all of Set 2 (Screening Log, column H) independently of Sarim; keep PRISMA checks OK and commit a dated sheet snapshot.
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |

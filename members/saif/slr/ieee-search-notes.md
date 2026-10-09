@@ -19,6 +19,7 @@ Uses 8 wildcards; IEEE Xplore allows at most 10 – do not add more.
 | Date run (logged) | |
 | Filters applied | Publication Year 2016–2026; Conferences and Journals |
 | Result count (logged) | |
+| Confirmed by partner (same-day re-run) + their count | |
 | Export file / format | |
 
 ## Changes made (with reason)
@@ -27,4 +28,4 @@ Uses 8 wildcards; IEEE Xplore allows at most 10 – do not add more.
 |---|---|---|---|
 | | | | |
 
-If the string changes, paste the new exact string in the search log too.
+If the string changes, paste the new exact string in the Search Log tab of the live PRISMA sheet too.

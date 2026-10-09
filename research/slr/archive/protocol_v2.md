@@ -1,9 +1,9 @@
 # SLR Protocol
 
 Privacy-Preserving Heart Disease Risk Prediction Using FHE · COMP4101 Practicum · UDST
-Oct 9, 2026 · v3 · Abdullah Dar
+Oct 9, 2026 · v2 · Abdullah Dar
 
-> Markdown copy of [SLR_Protocol_v3.pdf](SLR_Protocol_v3.pdf). The live protocol is edited in OneDrive, not here (see [README.md](README.md)). The v2 copy is in [archive/](archive/).
+> Markdown copy of [SLR_Protocol_v2.docx](SLR_Protocol_v2.docx). Keep the two in sync – if you change one, change the other and bump the version.
 
 ## Review questions
 
@@ -30,7 +30,7 @@ The search combines three concepts: encryption, machine learning, and health dat
 
 ## Search strategy
 
-Three databases are searched, one per pair (see Team roles below): IEEE Xplore (Saif and Naif), ACM Digital Library (Sarim and Hassan), and Scopus (Khalid and Abdullah). The first person named runs the logged search; the second re-runs it the same day to confirm the count. Each search covers papers published 2016 to 2026, in the fields noted under each database below.
+Three databases are searched: IEEE Xplore (Saif), ACM Digital Library (Sarim), and Scopus (Khalid). Each search covers papers published 2016 to 2026, in the fields noted under each database below.
 
 | Concept | Synonyms (joined with OR) |
 |---|---|
@@ -97,35 +97,16 @@ A paper is included only if it meets every inclusion criterion and no exclusion 
 | E5 | Full text not available through UDST library access |
 | E6 | Duplicate or earlier version of an included study (keep the most complete version) |
 
-## Team roles
-
-All six members work on the review in three fixed pairs. Each pair owns one database, one screening set, and part of the synthesis, so the work is shared evenly and every screening decision is made by two people.
-
-| Pair | Members | Search | Screening set | Synthesis |
-|---|---|---|---|---|
-| Pair 1 | Saif, Naif | IEEE Xplore | Set 1 | RQ1 schemes and libraries; RQ4 key management and deployment |
-| Pair 2 | Sarim, Hassan | ACM Digital Library | Set 2 | RQ3 performance costs |
-| Pair 3 | Khalid, Abdullah | Scopus, including the search check | Set 3 | RQ2 models, sigmoid approximation, and accuracy |
-
-Individual roles on top of the pair work:
-
-- Hassan: de-duplication in RefWorks, splitting records into the three sets, the PRISMA tracking sheet, and the final PRISMA diagram.
-- Naif: settles screening disagreements in Pairs 2 and 3, and puts the SLR into each progress report.
-- Abdullah: protocol owner (keeps this document up to date) and settles disagreements in Pair 1, since Naif is in it.
-- Everyone: full-text reading, data extraction, and quality scoring for the papers that pass their own pair's set, split evenly between the two partners.
-
 ## Screening and selection process
 
-Screening runs in two stages. Every record is screened by two people independently, which is stronger than double-checking only a sample and reduces bias.
+Screening runs in two stages, with a second screener checking a sample at each stage to reduce bias.
 
-1. Export all records from each database into RefWorks (or Rayyan) and remove duplicates. Hassan logs the count in the PRISMA tracking sheet.
-2. Hassan splits the de-duplicated records evenly and at random into Sets 1, 2 and 3, and pastes them into the Screening Log with the pair number.
-3. Title and abstract screening: both members of the pair screen every record in their set independently, without seeing each other's decisions. Mark each as include, exclude, or maybe; keep it when unsure.
-4. The pair compares decisions. The tracking sheet records the agreement rate. Differences are settled by discussion; if the pair still disagrees, Naif decides (Abdullah for Pair 1).
-5. Full-text screening: each pair splits the papers that passed its set between its two members. Each person reads their papers in full, applies criteria I1 to I5 and E1 to E6, and records an exclusion code for each paper removed. The partner checks every exclusion.
-6. The person who read an included paper also fills its data extraction row and quality score; the partner spot-checks them.
-7. Backward snowballing: each person checks the reference lists of their own included papers for relevant studies the search missed, and adds them to the Screening Log as Snowballing.
-8. Hassan checks the PRISMA tracking sheet after each stage and fixes any warnings with the pair concerned.
+1. Export all records from each database into RefWorks (or Rayyan) and remove duplicates. Hassan logs the count.
+2. Title and abstract screening: split records into Set A (Saif) and Set B (Sarim). Mark each as include, exclude, or maybe; keep it when unsure.
+3. Second screener: Khalid independently re-screens a random 20% of Set A. Record how many decisions differ, and resolve differences by discussion, with Naif deciding if needed.
+4. Full-text screening: read the remaining papers in full and apply criteria I1 to I5 and E1 to E6, recording an exclusion code for each paper removed.
+5. Backward snowballing: check the reference lists of included papers for relevant studies the search missed, and log these separately.
+6. Hassan updates the PRISMA tracking sheet after each stage.
 
 ## Quality assessment checklist
 
@@ -161,24 +142,24 @@ For every included paper, record one row in the shared synthesis sheet with thes
 
 ## Search log
 
-Fill one row per search as it is run. These numbers become the Identification stage of the PRISMA diagram, so record them exactly and never estimate.
+Fill one row per search as it is run. These numbers become the Identification stage of the PRISMA diagram, so record them exactly and never estimate. *(The working copy is [search-log.csv](search-log.csv).)*
 
 | Database | Run by | Date run | Exact string used | Filters applied | Results |
 |---|---|---|---|---|---|
-| IEEE Xplore | Saif, Naif | | | | |
-| ACM Digital Library | Sarim, Hassan | | | | |
-| Scopus | Khalid, Abdullah | | | | |
+| IEEE Xplore | Saif | | | | |
+| ACM Digital Library | Sarim | | | | |
+| Scopus | Khalid | | | | |
 | Total before de-duplication | | | | | |
 | Duplicates removed | Hassan | | | | |
 | Records to screen | | | | | |
 
 ## To do before Progress Report 1 (Sun 11 Oct)
 
-Every member has a task before the report goes in.
+This draft still needs the team's review and the real database searches before it goes into Progress Report 1.
 
-- [ ] Everyone: read this protocol; send changes to Abdullah by Sat 10 Oct
-- [ ] Khalid and Abdullah: run the Scopus search check, then the Scopus search; fill the search log
-- [ ] Saif and Naif: run the IEEE Xplore search and fill the search log
-- [ ] Sarim and Hassan: run the ACM search and fill the search log
-- [ ] Hassan: export all records to RefWorks, remove duplicates, and enter the counts in the PRISMA tracking sheet
+- [ ] Naif and Saif: review the review questions, PICOC, and criteria; change anything the team disagrees with
+- [ ] Saif: run the IEEE Xplore string and fill the search log
+- [ ] Sarim: run the ACM string and fill the search log
+- [ ] Khalid: run the Scopus string and fill the search log
+- [ ] Hassan: export all records to RefWorks, remove duplicates, and start the PRISMA tracking sheet
 - [ ] Naif: add the protocol and search counts to Progress Report 1

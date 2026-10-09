@@ -17,6 +17,7 @@ Abstract:("homomorphic encryption" OR "fully homomorphic" OR FHE OR CKKS OR BFV 
 | Date run (logged) | |
 | Filters applied | Publication date 2016–2026; content type Research Article |
 | Result count (logged) | |
+| Confirmed by partner (same-day re-run) + their count | |
 | Export file / format | |
 
 ## Changes made (with reason)
@@ -25,4 +26,4 @@ Abstract:("homomorphic encryption" OR "fully homomorphic" OR FHE OR CKKS OR BFV 
 |---|---|---|---|
 | | | | |
 
-If the string changes, paste the new exact string in the search log too.
+If the string changes, paste the new exact string in the Search Log tab of the live PRISMA sheet too.

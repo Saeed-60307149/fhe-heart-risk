@@ -1,16 +1,22 @@
-# Khalid – SLR tasks
+# Khalid – SLR tasks (Protocol v3)
 
-Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md)
+**Pair 3** with Abdullah · **Screener 1** (column G in the Screening Log) · Database: Scopus + search check · Set 3 · Synthesis: RQ2
+Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · Work in the **live** sheet (link in the [SLR README](../../../research/slr/README.md)), not the repo copy. v2 tasks: [archive/](archive/)
 
-## Before Progress Report 1 (due Sun 11 Oct)
-- [ ] **FIRST:** run the Scopus search check – all 3 known papers must be found ([scopus-search-notes.md](scopus-search-notes.md))
-  - If one is missing: find which concept (A, B or C) failed to match its title/abstract/keywords, fix the string, and record the change
-- [ ] Test the Scopus string, then do the logged run
-- [ ] If > ~400 results: tell the team – concept B is narrowed in **all three** databases, not just Scopus
-- [ ] Fill the Scopus row of [research/slr/search-log.csv](../../../research/slr/search-log.csv) (exact string, date, filters, result count)
-- [ ] Export the records and hand them to Hassan for de-duplication
+## Searches (due Sun 11 Oct)
+- [ ] Read the protocol; send changes to Abdullah by Sat 10 Oct
+- [ ] **First:** Scopus search check – all 3 known papers must be found ([scopus-search-notes.md](scopus-search-notes.md)); Abdullah confirms
+- [ ] Test, then run the logged **Scopus** search ([search-strings.md](../../../research/slr/search-strings.md))
+- [ ] Fill the Scopus row of the **Search Log** tab; ask Abdullah to re-run it the same day and confirm the count
 
-## Week 8 (11–15 Oct, due Thu 15 Oct)
-- [ ] Second screener: pick a **random 20% of Set A** (Saif's records) and screen them independently – don't look at Saif's decisions first
-- [ ] Record both decisions in [second-screening-sample.csv](second-screening-sample.csv); mark `agree_disagree`
-- [ ] Count how many decisions differ; resolve by discussion with Saif, Naif decides if needed; record the `resolution`
+## Title/abstract screening (Week 8)
+- [ ] Screen **all of Set 3** in the Screening Log, column G, without looking at Abdullah's column H
+- [ ] Compare with Abdullah; settle differences by discussion (Naif decides if still split)
+
+## Full text + extraction (Week 10)
+- [ ] Read **your half** of Pair 3's full texts; record decision + exclusion code (Abdullah checks your exclusions)
+- [ ] For each included paper: fill its row in [data-extraction.csv](../../../research/slr/data-extraction.csv) and [quality-assessment.csv](../../../research/slr/quality-assessment.csv)
+- [ ] Backward snowballing on your included papers; add finds to the Screening Log as Source = Snowballing
+
+## Synthesis (Week 12)
+- [ ] Co-write **RQ2** (models, sigmoid approximation, accuracy) with Abdullah

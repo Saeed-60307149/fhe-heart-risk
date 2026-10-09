@@ -27,6 +27,7 @@ TITLE-ABS-KEY ( "homomorphic encryption" OR "fully homomorphic" OR fhe OR ckks O
 | Date run (logged) | |
 | Filters applied | In the string: PUBYEAR 2016–2026, English, DOCTYPE ar + cp |
 | Result count (logged) | |
+| Confirmed by partner (same-day re-run) + their count | |
 | Export file / format | |
 
 ## Changes made (with reason)
@@ -35,4 +36,4 @@ TITLE-ABS-KEY ( "homomorphic encryption" OR "fully homomorphic" OR fhe OR ckks O
 |---|---|---|---|
 | | | | |
 
-If the string changes, paste the new exact string in the search log too.
+If the string changes, paste the new exact string in the Search Log tab of the live PRISMA sheet too.

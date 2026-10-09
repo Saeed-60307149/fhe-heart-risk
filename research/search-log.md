@@ -1,6 +1,6 @@
 # Search Log
 
-> **Superseded:** use [slr/search-log.csv](slr/search-log.csv) for the logged searches (exact strings are in [slr/search-strings.md](slr/search-strings.md)).
+> **Superseded:** log searches in the Search Log tab of the PRISMA tracking sheet – see [slr/README.md](slr/README.md) (exact strings are in [slr/search-strings.md](slr/search-strings.md)).
 
 Record **every** search exactly so it can be repeated.
 

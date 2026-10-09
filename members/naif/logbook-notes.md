@@ -11,7 +11,7 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
-SLR: review RQs, PICOC and criteria with Saif and the team; add the protocol + search counts to PR1. Checklist: [slr/TASKS.md](slr/TASKS.md)
+SLR (v3, Pair 1, screener 2): re-run Saif's IEEE Xplore search to confirm the count; add the protocol + search counts to PR1. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |
@@ -19,7 +19,7 @@ SLR: review RQs, PICOC and criteria with Saif and the team; add the protocol + s
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.
-SLR: settle Set A screening disagreements that Saif and Khalid can't resolve.
+SLR: screen all of Set 1 (Screening Log, column H) independently of Saif; tie-breaker for Pairs 2 and 3.
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |

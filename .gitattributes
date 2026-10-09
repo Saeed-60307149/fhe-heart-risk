@@ -1,0 +1,3 @@
+# Office files cannot be merged as text: on a conflict keep one version and redo the edit
+*.xlsx merge=binary
+*.docx merge=binary

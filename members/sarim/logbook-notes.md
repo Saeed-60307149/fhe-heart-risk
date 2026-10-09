@@ -11,7 +11,7 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
-SLR: test + run the ACM Digital Library search; fill the ACM row of `research/slr/search-log.csv`. Checklist: [slr/TASKS.md](slr/TASKS.md)
+SLR (v3, Pair 2, screener 1): run the ACM Digital Library search, fill the Search Log tab of the live PRISMA sheet; Hassan confirms the count. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |
@@ -19,7 +19,7 @@ SLR: test + run the ACM Digital Library search; fill the ACM row of `research/sl
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.
-SLR: title/abstract screening of Set B (`slr/screening-set-B.csv`), due Thu 15 Oct.
+SLR: screen all of Set 2 (Screening Log, column G) independently of Hassan; compare and settle differences (Naif breaks ties).
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |

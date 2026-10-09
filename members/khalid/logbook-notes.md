@@ -11,7 +11,7 @@ Minimum: 6 hours per week. Only log days you actually worked.
 | **Total** | | | |
 
 ## Week 7 (4 – 8 Oct)
-SLR: Scopus search check (3 known papers) first, then run the Scopus search; fill the Scopus row of `research/slr/search-log.csv`. Checklist: [slr/TASKS.md](slr/TASKS.md)
+SLR (v3, Pair 3, screener 1): Scopus search check first, then the Scopus search; fill the Search Log tab of the live PRISMA sheet; Abdullah confirms. Checklist: [slr/TASKS.md](slr/TASKS.md)
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |
@@ -19,7 +19,7 @@ SLR: Scopus search check (3 known papers) first, then run the Scopus search; fil
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.
-SLR: second screener on a random 20% of Set A (`slr/second-screening-sample.csv`), due Thu 15 Oct.
+SLR: screen all of Set 3 (Screening Log, column G) independently of Abdullah; compare and settle differences (Naif breaks ties).
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
 | | | | |

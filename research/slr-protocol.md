@@ -1,6 +1,6 @@
 # SLR Protocol (draft)
 
-> **Superseded:** the full SLR protocol (v2) is now in [slr/protocol.md](slr/protocol.md).
+> **Superseded:** the full SLR protocol (v3) is now in [slr/protocol.md](slr/protocol.md).
 
 Owner: Naif, Saif
 

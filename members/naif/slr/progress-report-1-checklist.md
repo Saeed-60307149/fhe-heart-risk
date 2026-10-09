@@ -7,17 +7,18 @@
 - [ ] Databases + who searched each
 - [ ] Search strings (or a reference to an appendix)
 - [ ] Inclusion (I1–I5) and exclusion (E1–E6) criteria
-- [ ] Screening process (two stages, 20% second screening)
+- [ ] Team roles: three pairs (database, screening set, synthesis RQs) and tie-breakers
+- [ ] Screening process (two stages; every record screened by both members of a pair)
 - [ ] Quality assessment checklist (Q1–Q5, flag < 2.5)
 
-## Search counts (from [search-log.csv](../../../research/slr/search-log.csv) and [prisma-tracking.csv](../../../research/slr/prisma-tracking.csv))
-- [ ] IEEE Xplore result count (Saif): ____
-- [ ] ACM DL result count (Sarim): ____
-- [ ] Scopus result count (Khalid): ____
+## Search counts (from the **Search Log** and **PRISMA Counts** tabs of the live PRISMA sheet – link in the [SLR README](../../../research/slr/README.md))
+- [ ] IEEE Xplore result count (Saif, confirmed by Naif): ____
+- [ ] ACM DL result count (Sarim, confirmed by Hassan): ____
+- [ ] Scopus result count (Khalid, confirmed by Abdullah): ____
 - [ ] Scopus search check passed (3/3 known papers found)
 - [ ] Any change to the strings, with reason (e.g. concept B narrowed)
 - [ ] Total identified / duplicates removed / records to screen (Hassan): ____ / ____ / ____
 
 ## Final check
 - [ ] Every number copied exactly from the logs – none estimated
-- [ ] Next steps stated: Week 8 title/abstract screening (Set A, Set B, 20% second screening)
+- [ ] Next steps stated: Week 8 title/abstract screening (Sets 1–3, both members of each pair screen every record)
