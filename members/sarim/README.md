@@ -9,7 +9,7 @@
     | Week | Dates | Task | Due | Done |
     |---|---|---|---|---|
     | Wk 6 | 27 Sep–1 Oct | Find existing studies on heart-disease prediction with ML (ideally privacy-aware). Check the UCI Heart Disease page and licence. | Logbook Sun 4 Oct | ⬜ |
-| Wk 7 | 4–8 Oct | Run the ACM Digital Library search and fill the ACM row of the Search Log tab; Hassan re-runs it to confirm. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Write the PR1 data statement with Hassan. | PR1 + logbook Sun 11 Oct | ⬜ |
+| Wk 7 | 4–8 Oct | Run the ACM Digital Library search and fill the ACM row of the Search Log tab; Hassan re-runs it to confirm. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Write the PR1 data statement and the ethics/data note with Hassan. | PR1 + logbook Sun 11 Oct | ⬜ |
 | Wk 8 | 11–15 Oct | Screen titles/abstracts for all of Set 2 with Hassan (SLR v3, Pair 2). Draft the plaintext baseline method as your section of `reports/progress-report-2/methodology-v1.md`. | Thu 15 Oct (no logbook, mid-term – keep notes) | ⬜ |
 | Wk 10 | 25–29 Oct | Pilot: download UCI Heart Disease, clean, scale, split, train baseline logistic regression. Save weights to JSON. Full-text screening of your half of Pair 2's papers, with extraction + quality rows. | Logbook Sun 1 Nov | ⬜ |
 | Wk 11 | 1–5 Nov | Evaluate the baseline: accuracy, precision, recall, F1, ROC-AUC on the test set. Backward snowballing on your included papers (Screening Log, Source = Snowballing). | PR2 + logbook Sun 8 Nov | ⬜ |
