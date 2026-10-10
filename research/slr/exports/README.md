@@ -1,6 +1,6 @@
 # Search exports
 
-Raw exports of every record found by the database searches on **10 Oct 2026**. These are the files Hassan imports into RefWorks for de-duplication. Don't edit them; if a search is re-run, add new dated files instead.
+Raw exports of every record found by the database searches on **10 Oct 2026**. These are the inputs to the de-duplication script (results in [../dedup/](../dedup/)). Don't edit them; if a search is re-run, add new dated files instead.
 
 | File | Database | Format | Records | Run by (confirmed by) |
 |---|---|---|---|---|

@@ -5,9 +5,9 @@ Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protoco
 
 ## Searches (due Sun 11 Oct)
 - [ ] Reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**
-- [ ] **First:** Scopus search check – all 3 known papers must be found ([scopus-search-notes.md](scopus-search-notes.md)); Abdullah confirms
-- [ ] Test, then run the logged **Scopus** search ([search-strings.md](../../../research/slr/search-strings.md))
-- [ ] Fill the Scopus row of the **Search Log** tab; ask Abdullah to re-run it the same day and confirm the count
+- [x] **First:** Scopus search check – all 3 known papers must be found ([scopus-search-notes.md](scopus-search-notes.md)); Abdullah confirms. Done 10 Oct: 2 of 3 found; Kim JMIR added from other sources (approved)
+- [x] Test, then run the logged **Scopus** search ([search-strings.md](../../../research/slr/search-strings.md))
+- [x] Fill the Scopus row of the **Search Log** tab; ask Abdullah to re-run it the same day and confirm the count
 
 ## Title/abstract screening (Week 8)
 - [ ] Screen **all of Set 3** in the Screening Log, column G, without looking at Abdullah's column H
