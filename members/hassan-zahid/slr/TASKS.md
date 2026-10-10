@@ -6,9 +6,10 @@ Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protoco
 ## Searches + de-duplication (due Sun 11 Oct)
 - [ ] Reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**
 - [ ] Re-run Sarim's **PubMed** search the same day and confirm the count in the **Search Log** tab
-- [ ] Import all three exports into RefWorks, remove duplicates, type "Duplicate records removed" on the **PRISMA Counts** tab ([dedup-notes.md](dedup-notes.md))
-- [ ] Split the de-duplicated records evenly and at random into Pair 1 / 2 / 3 and paste them into the **Screening Log**
-- [ ] Commit the first dated snapshot (`PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx`) to `research/slr/`, move the old one to `research/slr/archive/`
+- [x] De-duplicate the three exports with the de-duplication script (not RefWorks): 482 removed, 1,044 to screen ([dedup workbook](../../../research/slr/dedup/SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx), [dedup-notes.md](dedup-notes.md))
+- [x] Split the de-duplicated records evenly and at random into Sets 1 / 2 / 3 (348 each, seed 20261010)
+- [ ] **Before Mon 12 Oct:** paste the 1,044 records into the **Screening Log** and type 482 in *Duplicate records removed* on the **PRISMA Counts** tab of a new `PRISMA_Tracking_Sheet_2026-10-11.xlsx` (steps in [search-log.md](../../../research/slr/search-log.md))
+- [ ] Commit `PRISMA_Tracking_Sheet_2026-10-11.xlsx` to `research/slr/` and move the 2026-10-10 copy to `research/slr/archive/`
 
 ## Title/abstract screening (Week 8)
 - [ ] Screen **all of Set 2** in the Screening Log, column H, without looking at Sarim's column G
