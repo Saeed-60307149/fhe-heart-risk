@@ -7,8 +7,8 @@ Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protoco
 - [ ] Get a 'changes' or 'no changes' reply from all six by **Sat 10 Oct** (done when all six are ticked), then update [protocol.md](../../../research/slr/protocol.md):
   - [ ] Naif  - [ ] Saif  - [ ] Sarim  - [ ] Khalid  - [ ] Hassan  - [ ] Abdullah (self-review)
 - [ ] If the version changes: commit the new docx/pdf + [protocol.md](../../../research/slr/protocol.md), move the old version to `research/slr/archive/`
-- [ ] Confirm Khalid's **Scopus search check** (3/3 papers found)
-- [ ] Re-run Khalid's **Scopus** search the same day and confirm the count in the **Search Log** tab
+- [x] Confirm Khalid's **Scopus search check** (3/3 papers found) – result 2/3; Kim JMIR fix approved 10 Oct
+- [x] Re-run Khalid's **Scopus** search the same day and confirm the count in the **Search Log** tab
 
 ## Title/abstract screening (Week 8)
 - [ ] Screen **all of Set 3** in the Screening Log, column H, without looking at Khalid's column G

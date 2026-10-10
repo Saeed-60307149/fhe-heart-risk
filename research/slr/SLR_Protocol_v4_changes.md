@@ -55,7 +55,7 @@ v3 rule: before the logged run, Scopus must find three known on-topic papers; if
 
 **Fix:** add Kim JMIR 2018 to the PRISMA diagram as **1 record identified from other sources**, and report the miss as a **limitation** (records that describe health data without health terms in their title, abstract or keywords can be missed by the search).
 
-**Approved by Abdullah (protocol owner), 10 Oct 2026.**
+**Approved by Abdullah (protocol owner), 10 Oct 2026.** Done: added to `PRISMA_Tracking_Sheet_2026-10-11.xlsx` as record R1045 (Source = *Other sources*, Pair 3); it is counted under *Other methods* on the PRISMA Counts tab and goes straight to full text.
 
 ## Search totals after the changes
 

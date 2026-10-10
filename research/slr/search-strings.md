@@ -56,3 +56,5 @@ Check that Scopus finds these known on-topic papers. If any is missing, find out
 1. Kim, M., Song, Y., Wang, S., Xia, Y., and Jiang, X. (2018). Secure logistic regression based on homomorphic encryption: design and evaluation. *JMIR Medical Informatics, 6*(2), e19.
 2. Kim, A., Song, Y., Kim, M., Lee, K., and Cheon, J. H. (2018). Logistic regression model training based on the approximate homomorphic encryption. *BMC Medical Genomics, 11*(Suppl 4), 83.
 3. Chen, H., Gilad-Bachrach, R., Han, K., Huang, Z., Jalali, A., Laine, K., and Lauter, K. (2018). Logistic regression over encrypted data from fully homomorphic encryption. *BMC Medical Genomics, 11*(Suppl 4), 81.
+
+**Result (10 Oct 2026, all databases): 2 of 3 found.** Kim A. (Scopus) and Chen (PubMed, Scopus) were found; Kim M. (JMIR) was not found by any database and was added from other sources (approved). See [search-log.md](search-log.md#search-check-10-oct-2026-all-databases).

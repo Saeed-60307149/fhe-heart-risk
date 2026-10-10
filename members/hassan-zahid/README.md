@@ -9,7 +9,7 @@
     | Week | Dates | Task | Due | Done |
     |---|---|---|---|---|
     | Wk 6 | 27 Sep–1 Oct | Check library database access + RefWorks. Set up the shared folder. Test the TenSEAL install on your machine. | Logbook Sun 4 Oct | ⬜ |
-| Wk 7 | 4–8 Oct | Build the PRISMA tracking sheet (counts per database, duplicates). Re-run Sarim's PubMed search and confirm the count. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Write the ethics/data note with Sarim. De-duplicate in RefWorks and split records at random into Pairs 1–3 in the Screening Log. | PR1 + logbook Sun 11 Oct | ⬜ |
+| Wk 7 | 4–8 Oct | Build the PRISMA tracking sheet (counts per database, duplicates). Re-run Sarim's PubMed search and confirm the count. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Write the ethics/data note with Sarim. De-duplicate (by script) and split records at random into Pairs 1–3 in the Screening Log. | PR1 + logbook Sun 11 Oct | ⬜ |
 | Wk 8 | 11–15 Oct | Screen all of Set 2 (column H) with Sarim. Update PRISMA counts after screening. Write requirements.txt/setup notes for the pilot environment. | Thu 15 Oct (no logbook, mid-term – keep notes) | ⬜ |
 | Wk 10 | 25–29 Oct | Plan the benchmark: encryption time, inference time, ciphertext size, and how to measure. Full-text screening of the other half of Pair 2's papers, with extraction + quality rows. | Logbook Sun 1 Nov | ⬜ |
 | Wk 11 | 1–5 Nov | Time Saif's PoC: encryption/decryption time and ciphertext size vs plaintext. Backward snowballing on your included papers (Screening Log, Source = Snowballing). | PR2 + logbook Sun 8 Nov | ⬜ |

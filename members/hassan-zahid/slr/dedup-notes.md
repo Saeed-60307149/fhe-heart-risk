@@ -29,4 +29,4 @@ Export files are in [research/slr/exports/](../../../research/slr/exports/); sea
 - Kept the copy with an abstract (Scopus > PubMed > IEEE). Random split with fixed seed 20261010, so it can be repeated.
 - Search check: Kim JMIR 2018 was not found by any database; it is added as 1 record identified from other sources (approved by Abdullah, 10 Oct 2026). See [search-log.md](../../../research/slr/search-log.md#search-check-10-oct-2026-all-databases).
 
-**Next (before Mon 12 Oct):** enter 482 in "Duplicate records removed" on the **PRISMA Counts** tab and paste the 1,044 records into the **Screening Log** of a new `PRISMA_Tracking_Sheet_2026-10-11.xlsx` in [research/slr/](../../../research/slr/). The column order differs from the dedup workbook – follow the steps in [search-log.md](../../../research/slr/search-log.md).
+**Done:** 482 entered in "Duplicate records removed" and the 1,044 records pasted into the **Screening Log** of [`PRISMA_Tracking_Sheet_2026-10-11.xlsx`](../../../research/slr/PRISMA_Tracking_Sheet_2026-10-11.xlsx) (mapping in [search-log.md](../../../research/slr/search-log.md)).

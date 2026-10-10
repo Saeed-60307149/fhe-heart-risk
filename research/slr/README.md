@@ -6,14 +6,14 @@ A **systematic literature review** answers fixed research questions by searching
 
 **Everything lives in this repo.**
 
-- **PRISMA tracking sheet:** the newest `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` in this folder (now `PRISMA_Tracking_Sheet_2026-10-10.xlsx`). To update it: `git pull`, edit it in Excel, then commit and push straight away.
+- **PRISMA tracking sheet:** the newest `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` in this folder (now `PRISMA_Tracking_Sheet_2026-10-11.xlsx`). To update it: `git pull`, edit it in Excel, then commit and push straight away.
 - **One person edits the sheet at a time.** Excel files can't be merged, so if two people edit at once, one person's changes are lost. Say in the team chat before you start and when you've pushed.
 - At each milestone (after searches, after title/abstract screening, after full text, final), **Hassan** saves the sheet as a new dated copy and moves the previous one to [archive/](archive/).
 - **Protocol:** [protocol.md](protocol.md) and the PDF here are the master copies (Abdullah). A new version gets new files; the old version goes to [archive/](archive/).
 
 ## The 10 steps and which file each one uses
 
-"Sheet" = the PRISMA tracking sheet: the newest `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` in this folder (now `PRISMA_Tracking_Sheet_2026-10-10.xlsx`).
+"Sheet" = the PRISMA tracking sheet: the newest `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` in this folder (now `PRISMA_Tracking_Sheet_2026-10-11.xlsx`).
 
 | # | Step | File / tab |
 |---|---|---|
@@ -21,7 +21,7 @@ A **systematic literature review** answers fixed research questions by searching
 | 2 | Inclusion / exclusion criteria (I1–I5, E1–E6) | [protocol.md](protocol.md) |
 | 3 | Search string | [search-strings.md](search-strings.md) |
 | 4 | Search IEEE Xplore / PubMed / Scopus | Sheet → **Search Log** tab; repo record: [search-log.md](search-log.md), exports in [exports/](exports/) |
-| 5 | Remove duplicates (RefWorks), split into Sets 1–3 | Sheet → **PRISMA Counts** + **Screening Log** tabs |
+| 5 | Remove duplicates (by script – see [dedup/](dedup/)), split into Sets 1–3 | Sheet → **PRISMA Counts** + **Screening Log** tabs |
 | 6 | Title / abstract screening (both pair members, independently) | Sheet → **Screening Log** (screener 1 = column G, screener 2 = column H) |
 | 7 | Full-text screening | Sheet → **Screening Log** (full-text reader, decision, exclusion code) |
 | 8 | Data extraction + quality scoring | [data-extraction.csv](data-extraction.csv), [quality-assessment.csv](quality-assessment.csv) |
@@ -51,9 +51,9 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 - [x] Khalid + Abdullah: Scopus search check first, then Scopus search (Scopus 1,017; search check: see [search-log.md](search-log.md#search-check-10-oct-2026-all-databases))
 - [x] Saif + Naif: IEEE Xplore search (337)
 - [x] Sarim + Hassan: PubMed search (172; replaces ACM Digital Library, see [v4 changes](SLR_Protocol_v4_changes.md))
-- [ ] First person in each pair runs it and fills the **Search Log** tab; partner re-runs it to confirm the count
+- [x] First person in each pair runs it and fills the **Search Log** tab; partner re-runs it to confirm the count
 - [x] Hassan: de-duplicate and split records at random into Pair 1/2/3 – done by script, not RefWorks (482 duplicates removed, 1,044 records, 3 sets of 348; see [dedup/](dedup/))
-- [ ] Hassan: paste the Screening Log and counts into a new repo sheet, `PRISMA_Tracking_Sheet_2026-10-11.xlsx`, **before screening starts Mon 12 Oct** (steps in [search-log.md](search-log.md))
+- [x] Hassan: paste the Screening Log and counts into a new repo sheet, `PRISMA_Tracking_Sheet_2026-10-11.xlsx`, before screening starts Mon 12 Oct (1,044 records + Kim JMIR from other sources)
 - [ ] Naif: add protocol + counts to Progress Report 1
 
 ## Files in this folder
@@ -66,8 +66,8 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 | `search-strings.md` | The three exact search strings, filters and rules, with a dated change log | Everyone (change only if the team agrees) |
 | `search-log.md` | Search results of 10 Oct: IEEE 337, PubMed 172, Scopus 1,017 (total 1,526); 482 duplicates removed, 1,044 to screen; search check | Pairs 1–3; Hassan |
 | `exports/` | Raw search exports (RIS / NBIB) | Pairs 1–3 |
-| `dedup/SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx` | De-duplication and screening sets: 1,044 records split into Sets 1–3 (348 each), the 482 removed duplicates, PRISMA counts and the search check | Hassan |
-| `PRISMA_Tracking_Sheet_2026-10-10.xlsx` | The PRISMA sheet (tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log). Search Log filled with the 10 Oct searches (IEEE 337, PubMed 172, Scopus 1,017). Replaces the old search-log and PRISMA CSVs | Hassan |
+| `dedup/SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx` | De-duplication record: 1,044 records split into Sets 1–3 (348 each), the 482 removed duplicates, PRISMA counts and the search check. **Reference copy only – screening decisions go in the PRISMA sheet.** | Hassan |
+| `PRISMA_Tracking_Sheet_2026-10-11.xlsx` | **The PRISMA sheet – screen here.** Tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log. Search Log: IEEE 337, PubMed 172, Scopus 1,017. PRISMA Counts: 1,526 − 482 = 1,044 to screen, 348 per pair, + 1 from other sources. Screening Log: 1,044 records (R0001–R1044) + Kim JMIR (R1045, Other sources, Pair 3), with the abstract in column Q | Hassan |
 | `data-extraction.csv` | One row per included paper (answers RQ1–RQ4); `checked_by` = partner who spot-checked | Full-text reader |
 | `quality-assessment.csv` | Q1–Q5 score per included paper; `checked_by` = partner | Full-text reader |
 | `archive/` | Protocol v2, old CSVs, old sheet snapshots | – |

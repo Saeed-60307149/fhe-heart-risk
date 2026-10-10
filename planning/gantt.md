@@ -21,6 +21,8 @@ Owner: Abdullah Dar (Wk 7)
 
 ## Tasks (from the Gantt chart, updated 9 Oct after the plan audit)
 
+✅ = done (searches and de-duplication completed 10 Oct 2026; Gantt progress set to 100%).
+
 | # | Task | Owner(s) (lead first) | Start | End |
 |---|---|---|---|---|
 | **1** | **Project setup** | | 27/09/2026 | 01/10/2026 |
@@ -29,10 +31,10 @@ Owner: Abdullah Dar (Wk 7)
 | 1.3 | Shared folder, library access, TenSEAL install test | Hassan | 27/09/2026 | 01/10/2026 |
 | **2** | **Systematic literature review** | | 27/09/2026 | 12/11/2026 |
 | 2.1 | Initial reading lists (FHE, heart-disease ML, sigmoid approx.) | Saif, Naif, Sarim, Khalid | 27/09/2026 | 01/10/2026 |
-| 2.2 | SLR protocol v3 (questions, PICOC, criteria, team roles) | Abdullah, Naif, Saif | 04/10/2026 | 08/10/2026 |
-| 2.3 | Search strings | Saif | 04/10/2026 | 05/10/2026 |
-| 2.4 | Database searches (IEEE, PubMed, Scopus; run + same-day confirm) | Saif + all | 06/10/2026 | 11/10/2026 |
-| 2.5 | PRISMA tracking sheet & de-duplication | Hassan | 04/10/2026 | 11/10/2026 |
+| 2.2 | ✅ SLR protocol v3 (questions, PICOC, criteria, team roles) | Abdullah, Naif, Saif | 04/10/2026 | 08/10/2026 |
+| 2.3 | ✅ Search strings | Saif | 04/10/2026 | 05/10/2026 |
+| 2.4 | ✅ Database searches (IEEE, PubMed, Scopus; run + same-day confirm) | Saif + all | 06/10/2026 | 11/10/2026 |
+| 2.5 | ✅ PRISMA tracking sheet & de-duplication | Hassan | 04/10/2026 | 11/10/2026 |
 | 2.6 | Title/abstract screening (pairs, every record screened twice) | Saif + all | 12/10/2026 | 15/10/2026 |
 | 2.7a | Full-text screening decisions (Screening Log, columns L-O) | Naif + all | 25/10/2026 | 29/10/2026 |
 | 2.7b | Data extraction + quality scoring (CSV rows, partner checked_by) | Naif + all | 25/10/2026 | 05/11/2026 |

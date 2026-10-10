@@ -5,7 +5,7 @@ Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protoco
 
 ## Searches + Progress Report 1 (due Sun 11 Oct)
 - [ ] Reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**
-- [ ] Re-run Saif's **IEEE Xplore** search the same day and confirm the count in the **Search Log** tab
+- [x] Re-run Saif's **IEEE Xplore** search the same day and confirm the count in the **Search Log** tab
 - [ ] Add the protocol + search counts to Progress Report 1 ([progress-report-1-checklist.md](progress-report-1-checklist.md))
 
 ## Title/abstract screening (Week 8)

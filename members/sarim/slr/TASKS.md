@@ -5,8 +5,8 @@ Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protoco
 
 ## Searches (due Sun 11 Oct)
 - [ ] Reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**
-- [ ] Test, then run the logged **PubMed** search ([search-strings.md](../../../research/slr/search-strings.md))
-- [ ] Fill the PubMed row of the **Search Log** tab; ask Hassan to re-run it the same day and confirm the count
+- [x] Test, then run the logged **PubMed** search ([search-strings.md](../../../research/slr/search-strings.md))
+- [x] Fill the PubMed row of the **Search Log** tab; ask Hassan to re-run it the same day and confirm the count
 - [ ] Notes: [pubmed-search-notes.md](pubmed-search-notes.md)
 
 ## Title/abstract screening (Week 8)

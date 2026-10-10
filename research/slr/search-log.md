@@ -2,7 +2,7 @@
 
 Database searches for the SLR, run on **10 Oct 2026**. These numbers are the Identification stage of the PRISMA diagram: record them exactly and never estimate.
 
-> The same numbers are in the **Search Log** tab of `PRISMA_Tracking_Sheet_2026-10-10.xlsx`: IEEE Xplore **337**, PubMed **172**, Scopus **1,017**. Its **PRISMA Counts** tab adds them up (1,526).
+> The same numbers are in the **Search Log** tab of `PRISMA_Tracking_Sheet_2026-10-11.xlsx`: IEEE Xplore **337**, PubMed **172**, Scopus **1,017**. Its **PRISMA Counts** tab adds them up (1,526).
 
 | Database | Pair | Run by | Confirmed by | Date run | Exact string used | Filters applied | Results | Notes / changes |
 |---|---|---|---|---|---|---|---|---|
@@ -15,10 +15,7 @@ Database searches for the SLR, run on **10 Oct 2026**. These numbers are the Ide
 
 Export files: [exports/](exports/) · De-duplication and screening sets: [SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx](dedup/SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx) · Change details: [SLR_Protocol_v4_changes.md](SLR_Protocol_v4_changes.md)
 
-> **Before screening starts Mon 12 Oct – Hassan:** copy the de-duplicated records into a new repo sheet, `PRISMA_Tracking_Sheet_2026-10-11.xlsx` (start from `PRISMA_Tracking_Sheet_2026-10-10.xlsx`, then move the 10-10 copy to [archive/](archive/)). Commit and push it before Monday.
-> 1. **Screening Log tab:** paste all 1,044 records from the [dedup workbook](dedup/SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx) *Screening Log* tab. The columns are in a different order, so copy them one by one: Record ID → A, Title → B, Authors → C, Year → D, first database listed in *Databases* → E *Source*, Set `1`/`2`/`3` → F as `Pair 1`/`Pair 2`/`Pair 3`. Put the full *Databases* list in P *Notes*. Leave G–O empty.
-> 2. **Extend the sheet to 1,044 rows.** It is set up for 800 records (rows 2–801). Copy the formulas and drop-downs down to row 1045, and change `$801` to `$1045` in every formula on the *PRISMA Counts* tab, or the counts will miss 244 records.
-> 3. **PRISMA Counts tab:** type **482** in *Duplicate records removed*. Check that *Records to screen* shows **1,044** and *Records screened* shows **1,044**.
+> **Done (11 Oct sheet):** the 1,044 records are in the Screening Log of [`PRISMA_Tracking_Sheet_2026-10-11.xlsx`](PRISMA_Tracking_Sheet_2026-10-11.xlsx), ready for screening from Mon 12 Oct. Mapping from the dedup workbook: Record ID → A, Title → B, Authors → C, Year → D, first database listed → E *Source* (IEEE → IEEE Xplore), Set 1/2/3 → F *Pair 1/2/3*, databases + DOI + PMID → P *Notes*, abstract → new column Q. The sheet now runs to row 1046; *Duplicate records removed* = 482. Kim JMIR is row R1045 with Source = *Other sources* (Pair 3) and goes straight to full text.
 
 ## De-duplication (10 Oct 2026)
 
