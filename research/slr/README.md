@@ -2,18 +2,18 @@
 
 A **systematic literature review** answers fixed research questions by searching set databases with a written, repeatable search string, then screening every result against criteria agreed in advance. Every decision (search string, date, counts, why each paper was excluded) is logged, so anyone can repeat the review and get the same papers. The numbers feed a **PRISMA** flow diagram showing how many records were found, removed and finally included. Our review asks how FHE has been used for ML inference on health data, and at what cost. The full rules are in [protocol.md](protocol.md) (Protocol v3; PDF: [SLR_Protocol_v3.pdf](SLR_Protocol_v3.pdf)), with the 10 Oct changes in [SLR_Protocol_v4_changes.md](SLR_Protocol_v4_changes.md).
 
-## Where the live files are
+## Where the files are
 
-LIVE LINK: <add link>
+**Everything lives in this repo. There is no OneDrive copy.**
 
-- The **live** PRISMA tracking sheet and the **live** protocol are edited in our shared OneDrive/SharePoint folder (link above), **not in the repo**.
-- **Nobody edits the `.xlsx` or `.docx` in the repo directly.** The copies here are snapshots.
-- At each milestone (after searches, after title/abstract screening, after full text, final), **Hassan** commits a new dated snapshot `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` here and moves the previous one to [archive/](archive/).
-- The protocol is re-committed only when its version number changes (Abdullah). The old version goes to [archive/](archive/).
+- **PRISMA tracking sheet:** the newest `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` in this folder (now `PRISMA_Tracking_Sheet_2026-10-10.xlsx`). To update it: `git pull`, edit it in Excel, then commit and push straight away.
+- **One person edits the sheet at a time.** Excel files can't be merged, so if two people edit at once, one person's changes are lost. Say in the team chat before you start and when you've pushed.
+- At each milestone (after searches, after title/abstract screening, after full text, final), **Hassan** saves the sheet as a new dated copy and moves the previous one to [archive/](archive/).
+- **Protocol:** [protocol.md](protocol.md) and the PDF here are the master copies (Abdullah). A new version gets new files; the old version goes to [archive/](archive/).
 
 ## The 10 steps and which file each one uses
 
-"Sheet" = the live PRISMA tracking sheet (snapshot: `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx`).
+"Sheet" = the PRISMA tracking sheet: the newest `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` in this folder (now `PRISMA_Tracking_Sheet_2026-10-10.xlsx`).
 
 | # | Step | File / tab |
 |---|---|---|
@@ -59,13 +59,13 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 
 | File | What it is | Owner |
 |---|---|---|
-| `SLR_Protocol_v3.pdf` | Protocol v3 (snapshot of the live protocol) | Abdullah |
+| `SLR_Protocol_v3.pdf` | Protocol v3 (PDF) | Abdullah |
 | `protocol.md` | Same protocol, readable on GitHub | Abdullah |
 | `SLR_Protocol_v4_changes.md` | Changes from v3 made on 10 Oct: ACM → PubMed; Scopus kept at 1,017 | Abdullah |
 | `search-strings.md` | The three exact search strings, filters and rules, with a dated change log | Everyone (change only if the team agrees) |
 | `search-log.md` | Search results of 10 Oct: IEEE 337, PubMed 172, Scopus 1,017 (total 1,526) | Pairs 1–3; Hassan adds duplicates removed |
 | `exports/` | Raw search exports (RIS / NBIB) for RefWorks | Pairs 1–3 |
-| `PRISMA_Tracking_Sheet_2026-10-09.xlsx` | Snapshot of the PRISMA sheet (tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log). Replaces the old search-log and PRISMA CSVs | Hassan |
+| `PRISMA_Tracking_Sheet_2026-10-10.xlsx` | The PRISMA sheet (tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log). Search Log filled with the 10 Oct searches (IEEE 337, PubMed 172, Scopus 1,017). Replaces the old search-log and PRISMA CSVs | Hassan |
 | `data-extraction.csv` | One row per included paper (answers RQ1–RQ4); `checked_by` = partner who spot-checked | Full-text reader |
 | `quality-assessment.csv` | Q1–Q5 score per included paper; `checked_by` = partner | Full-text reader |
 | `archive/` | Protocol v2, old CSVs, old sheet snapshots | – |

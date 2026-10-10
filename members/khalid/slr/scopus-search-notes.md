@@ -36,4 +36,4 @@ TITLE-ABS-KEY ( "homomorphic encryption" OR "fully homomorphic" OR fhe OR ckks O
 |---|---|---|---|
 | | | | |
 
-If the string changes, paste the new exact string in the Search Log tab of the live PRISMA sheet too.
+If the string changes, paste the new exact string in the Search Log tab of the PRISMA sheet in research/slr/ too.

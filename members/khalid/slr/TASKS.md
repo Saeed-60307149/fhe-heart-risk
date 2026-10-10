@@ -1,7 +1,7 @@
 # Khalid – SLR tasks (Protocol v3)
 
 **Pair 3** with Abdullah · **Screener 1** (column G in the Screening Log) · Database: Scopus + search check · Set 3 · Synthesis: RQ2
-Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · Work in the **live** sheet (link in the [SLR README](../../../research/slr/README.md)), not the repo copy. v2 tasks: [archive/](archive/)
+Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · PRISMA sheet: the newest `PRISMA_Tracking_Sheet_*.xlsx` in [research/slr/](../../../research/slr/) – pull, edit, commit and push straight away; one person at a time. v2 tasks: [archive/](archive/)
 
 ## Searches (due Sun 11 Oct)
 - [ ] Reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**

@@ -1,7 +1,7 @@
 # Hassan – SLR tasks (Protocol v3)
 
 **Pair 2** with Sarim · **Screener 2** (column H in the Screening Log) · Database: PubMed (confirm; replaced ACM Digital Library on 10 Oct) · Set 2 · Synthesis: RQ3 · **De-duplication, sets, PRISMA sheet + diagram, repo snapshots**
-Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · Work in the **live** sheet (link in the [SLR README](../../../research/slr/README.md)), not the repo copy. v2 tasks: [archive/](archive/)
+Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · PRISMA sheet: the newest `PRISMA_Tracking_Sheet_*.xlsx` in [research/slr/](../../../research/slr/) – pull, edit, commit and push straight away; one person at a time. v2 tasks: [archive/](archive/)
 
 ## Searches + de-duplication (due Sun 11 Oct)
 - [ ] Reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**

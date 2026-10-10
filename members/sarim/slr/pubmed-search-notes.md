@@ -29,4 +29,4 @@ PubMed replaced ACM Digital Library on 10 Oct 2026 (see [SLR_Protocol_v4_changes
 | 10 Oct 2026 | ACM Digital Library replaced by PubMed | UDST has no ACM subscription; filters and export were locked | Team |
 | 10 Oct 2026 | Used `[tiab]` (title/abstract), not `[tw]` | The [tw] variant (176 results) was tested and not used | Team |
 
-If the string changes, paste the new exact string in the Search Log tab of the live PRISMA sheet too.
+If the string changes, paste the new exact string in the Search Log tab of the PRISMA sheet in research/slr/ too.

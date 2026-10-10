@@ -11,7 +11,7 @@
 - [ ] Screening process (two stages; every record screened by both members of a pair)
 - [ ] Quality assessment checklist (Q1–Q5, flag < 2.5)
 
-## Search counts (from the **Search Log** and **PRISMA Counts** tabs of the live PRISMA sheet – link in the [SLR README](../../../research/slr/README.md))
+## Search counts (from the **Search Log** and **PRISMA Counts** tabs of `PRISMA_Tracking_Sheet_2026-10-10.xlsx` in [research/slr/](../../../research/slr/))
 - [ ] IEEE Xplore result count (Saif, confirmed by Naif): ____
 - [ ] PubMed result count (Sarim, confirmed by Hassan): ____ (PubMed replaced ACM DL – see [v4 changes](../../../research/slr/SLR_Protocol_v4_changes.md))
 - [ ] Scopus result count (Khalid, confirmed by Abdullah): ____

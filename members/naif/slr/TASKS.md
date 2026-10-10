@@ -1,7 +1,7 @@
 # Naif – SLR tasks (Protocol v3)
 
 **Pair 1** with Saif · **Screener 2** (column H in the Screening Log) · Database: IEEE Xplore (confirm) · Set 1 · Synthesis: RQ1 + RQ4 · **Tie-breaker for Pairs 2 and 3**
-Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · Work in the **live** sheet (link in the [SLR README](../../../research/slr/README.md)), not the repo copy. v2 tasks: [archive/](archive/)
+Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · PRISMA sheet: the newest `PRISMA_Tracking_Sheet_*.xlsx` in [research/slr/](../../../research/slr/) – pull, edit, commit and push straight away; one person at a time. v2 tasks: [archive/](archive/)
 
 ## Searches + Progress Report 1 (due Sun 11 Oct)
 - [ ] Reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**

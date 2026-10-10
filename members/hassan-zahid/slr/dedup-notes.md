@@ -28,4 +28,4 @@ Export files are in [research/slr/exports/](../../../research/slr/exports/); sea
 
 -
 
-Enter "Duplicate records removed" on the **PRISMA Counts** tab of the live PRISMA sheet, and paste the records into the **Screening Log** with their pair number (link in the [SLR README](../../../research/slr/README.md)).
+Enter "Duplicate records removed" on the **PRISMA Counts** tab of the PRISMA sheet (`PRISMA_Tracking_Sheet_2026-10-10.xlsx` in [research/slr/](../../../research/slr/)), and paste the records into the **Screening Log** with their pair number.

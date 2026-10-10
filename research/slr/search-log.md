@@ -2,7 +2,7 @@
 
 Database searches for the SLR, run on **10 Oct 2026**. These numbers are the Identification stage of the PRISMA diagram: record them exactly and never estimate.
 
-> **Update the live PRISMA sheet by hand.** The live sheet in OneDrive is not updated from the repo. Type the same numbers into its **Search Log** tab: IEEE Xplore **337**, PubMed **172**, Scopus **1,017**.
+> The same numbers are in the **Search Log** tab of `PRISMA_Tracking_Sheet_2026-10-10.xlsx`: IEEE Xplore **337**, PubMed **172**, Scopus **1,017**. Its **PRISMA Counts** tab adds them up (1,526).
 
 | Database | Pair | Run by | Confirmed by | Date run | Exact string used | Filters applied | Results | Notes / changes |
 |---|---|---|---|---|---|---|---|---|
