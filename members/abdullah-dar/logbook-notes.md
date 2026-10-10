@@ -14,15 +14,21 @@ Minimum: 6 hours per week. Only log days you actually worked.
 ## Week 7 (4 – 8 Oct)
 Task: PR1 work-distribution section + Gantt chart. Update task board.
 SLR: wrote SLR Protocol v2 → v3 and set up `research/slr/` + each member's `slr/` folder. v3 role (Pair 3, screener 2): protocol owner (collect changes by Sat 10 Oct); confirm Khalid's Scopus search check + count. Checklist: [slr/TASKS.md](slr/TASKS.md)
+*Draft – check every line, fill in the [ ] parts, delete anything you didn't do, then commit from your own account.*
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
-| | | Write SLR Protocol v2 → v3 and set up `research/slr/` + each member's `slr/` folder | |
-| | | Write the PR1 work-distribution section | |
-| | | Make the Gantt chart / timeline (`planning/gantt/`) | |
-| | | Update the task board | |
-| | | Collect the six 'changes / no changes' replies on Protocol v3 (by Sat 10 Oct) | |
-| | | Confirm Khalid's Scopus search check and re-run the Scopus search to confirm the count | |
-| **Total** | | | |
+| Sun 4 Oct | 03:25–03:45 (start may be earlier) | Set up the GitHub repo and task board | 0.33 |
+| Sun 4 Oct | [start: fill in]–17:45 | Added the system architecture diagram to my research notes | [fill in] |
+| [fill in: Sun 4–Wed 7 Oct] | [fill in] | Researched IRB requirements for the project with Hassan | [fill in] |
+| Thu 8 Oct | 11:00–13:00 | Weekly supervisor/team meeting [confirm attendance] | 2 |
+| Fri 9 Oct | 18:36–20:06 (start may be earlier) | Wrote SLR Protocol v3 and set up the SLR files in the repo; made and fixed the Gantt chart; checked the project plan | 1.5 |
+| Sat 10 Oct | [time: fill in] | Tried the ACM search (no UDST access) and decided to use PubMed instead | [fill in] |
+| Sat 10 Oct | [time: fill in] | Re-ran the Scopus search check and search and confirmed Khalid's count (1,017) | [fill in] |
+| Sat 10 Oct | 20:07–20:46 (start may be earlier) | Wrote the protocol v4 changes and updated the repo with the search and de-duplication results | 0.65 |
+| [fill in: Fri 9 or Sat 10 Oct] | [fill in] | Collected the team's replies on Protocol v3 | [fill in] |
+| [fill in: Fri 9–Sun 11 Oct] | [fill in] | Progress Report 1: work-distribution section and Gantt chart | [fill in] |
+| Sun 11 Oct | 16:00–18:00 | Team work session on Progress Report 1 [confirm after the session] | 2 |
+| **Total** | | | **6 h 29 m** |
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.

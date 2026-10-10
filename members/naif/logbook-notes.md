@@ -12,13 +12,18 @@ Minimum: 6 hours per week. Only log days you actually worked.
 
 ## Week 7 (4 – 8 Oct)
 SLR (v3, Pair 1, screener 2): re-run Saif's IEEE Xplore search to confirm the count; add the protocol + search counts to PR1. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
+*Draft – check every line, fill in the [ ] parts, delete anything you didn't do, then commit from your own account.*
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
-| | | Read SLR Protocol v3 and reply 'changes' or 'no changes' to Abdullah (by Sat 10 Oct) | |
-| | | Re-run Saif's IEEE Xplore search and confirm the count in the Search Log tab | |
-| | | Write the SLR section of Progress Report 1 (protocol + search counts) | |
-| | | Compile Progress Report 1 and upload to D2L (due Sun 11 Oct) | |
-| **Total** | | | |
+| [fill in: Sun 4–Wed 7 Oct] | [fill in] | Researched Microsoft SEAL, node-seal and TenSEAL with Saif and checked whether they are compatible (encryption in the website front end, encrypted model on the server) | [fill in] |
+| Thu 8 Oct | 11:00–13:00 | Weekly supervisor/team meeting [confirm attendance] | 2 |
+| [fill in: Fri 9 or Sat 10 Oct] | [fill in] | Read SLR Protocol v3 and replied to Abdullah | [fill in] |
+| Sat 10 Oct | [time: fill in] | Re-ran the IEEE Xplore search and confirmed Saif's count (337) | [fill in] |
+| [fill in: Fri 9–Sun 11 Oct] | [fill in] | Progress Report 1: SLR section and compiling the report | [fill in] |
+| Sun 11 Oct | 16:00–18:00 | Team work session on Progress Report 1 [confirm after the session] | 2 |
+| **Total** | | | **4 h** |
+
+*Short by 2 h: add real work you did this week (date, time, task).*
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.
