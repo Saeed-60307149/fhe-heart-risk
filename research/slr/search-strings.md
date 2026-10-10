@@ -1,6 +1,15 @@
 # Search strings
 
-Source: SLR Protocol v3 ([protocol.md](protocol.md)), 9 Oct 2026. Copy these **exactly** – do not reformat. If a string changes, record the new string and the reason in the **Search Log** tab of the live PRISMA sheet (see [README.md](README.md)).
+## Change log
+
+| Date | Change | Why |
+|---|---|---|
+| 10 Oct 2026 | **ACM Digital Library replaced by PubMed** for Pair 2 (Sarim runs, Hassan confirms). | UDST has no ACM subscription, so filters and export were locked. PubMed is free, allows full export and covers health research. |
+| 10 Oct 2026 | **Scopus kept at the full 1,017 results** (string unchanged). | Over the 400-result limit, but narrowing concept B was tested and still gave 766 and 855 results, so the team decided to keep the full set. |
+
+Details: [SLR_Protocol_v4_changes.md](SLR_Protocol_v4_changes.md) · Results: [search-log.md](search-log.md)
+
+Source: SLR Protocol v3 ([protocol.md](protocol.md)), 9 Oct 2026, with the v4 changes above. Copy these **exactly** – do not reformat. If a string changes, record the new string and the reason in the **Search Log** tab of the live PRISMA sheet (see [README.md](README.md)).
 
 Master string: **A (encryption) AND B (machine learning) AND C (health)**.
 
@@ -15,13 +24,14 @@ The first person in each pair runs the logged search and fills the Search Log ta
 - **Filters:** Publication Year 2016 to 2026; Conferences and Journals.
 - This string uses **8 wildcards**; IEEE Xplore allows at most 10 per search, so do not add more.
 
-## ACM Digital Library (Advanced Search, Edit Query) – Pair 2: Sarim runs, Hassan confirms
+## PubMed (Advanced search) – Pair 2: Sarim runs, Hassan confirms
 
 ```
-Abstract:("homomorphic encryption" OR "fully homomorphic" OR FHE OR CKKS OR BFV OR BGV OR TenSEAL OR "Microsoft SEAL") AND Abstract:("machine learning" OR "logistic regression" OR "neural network" OR "deep learning" OR classif* OR predict* OR inference) AND Abstract:(health* OR medical OR biomedical OR clinical OR patient* OR disease* OR diagnos* OR genom* OR cancer OR diabet* OR "heart disease" OR cardiovascular)
+("homomorphic encryption"[tiab] OR "fully homomorphic"[tiab] OR FHE[tiab] OR CKKS[tiab] OR BFV[tiab] OR BGV[tiab] OR TenSEAL[tiab] OR "Microsoft SEAL"[tiab]) AND ("machine learning"[tiab] OR "logistic regression"[tiab] OR "neural network"[tiab] OR "deep learning"[tiab] OR classif*[tiab] OR predict*[tiab] OR inference[tiab]) AND (health*[tiab] OR medical[tiab] OR biomedical[tiab] OR clinical[tiab] OR patient*[tiab] OR disease*[tiab] OR diagnos*[tiab] OR genom*[tiab] OR cancer[tiab] OR diabet*[tiab] OR "heart disease"[tiab] OR cardiovascular[tiab]) AND 2016:2026[dp] AND english[la]
 ```
 
-- **Filters:** Publication date 2016 to 2026; content type Research Article.
+- **Filters:** in the string – publication date 2016 to 2026 (`2016:2026[dp]`) and English (`english[la]`). `[tiab]` searches the title and abstract.
+- Replaces ACM Digital Library from 10 Oct 2026 (see the change log above).
 
 ## Scopus (Advanced document search) – Pair 3: Khalid runs, Abdullah confirms
 
@@ -34,9 +44,10 @@ TITLE-ABS-KEY ( "homomorphic encryption" OR "fully homomorphic" OR fhe OR ckks O
 
 ## Rules
 
-1. IEEE Xplore and ACM search the abstract only, while Scopus searches title, abstract, and keywords. Abstracts almost always repeat the title's key terms, so this difference is small, but it is reported as a limitation.
+1. IEEE Xplore searches the abstract only, PubMed (`[tiab]`) searches title and abstract, and Scopus searches title, abstract, and keywords. Abstracts almost always repeat the title's key terms, so this difference is small, but it is reported as a limitation.
 2. Test each string before the logged run, and record the exact string actually used, the date, and the result count.
 3. If any database returns more than about 400 results, narrow concept B to its first four terms (`"machine learning"`, `"logistic regression"`, `"neural network"`, `"deep learning"`) in **all three** databases, not just that one, so the search stays the same everywhere. Record the change in the search log.
+   - **Exception (10 Oct 2026):** Scopus returned 1,017. Narrowing was tested (766 and 855 results, still over the limit), so the team kept the full 1,017 and did not narrow any database. See the change log.
 
 ## Search check (Scopus, before the logged run – Khalid, confirmed by Abdullah)
 

@@ -1,6 +1,6 @@
 # Systematic Literature Review (SLR)
 
-A **systematic literature review** answers fixed research questions by searching set databases with a written, repeatable search string, then screening every result against criteria agreed in advance. Every decision (search string, date, counts, why each paper was excluded) is logged, so anyone can repeat the review and get the same papers. The numbers feed a **PRISMA** flow diagram showing how many records were found, removed and finally included. Our review asks how FHE has been used for ML inference on health data, and at what cost. The full rules are in [protocol.md](protocol.md) (Protocol v3; PDF: [SLR_Protocol_v3.pdf](SLR_Protocol_v3.pdf)).
+A **systematic literature review** answers fixed research questions by searching set databases with a written, repeatable search string, then screening every result against criteria agreed in advance. Every decision (search string, date, counts, why each paper was excluded) is logged, so anyone can repeat the review and get the same papers. The numbers feed a **PRISMA** flow diagram showing how many records were found, removed and finally included. Our review asks how FHE has been used for ML inference on health data, and at what cost. The full rules are in [protocol.md](protocol.md) (Protocol v3; PDF: [SLR_Protocol_v3.pdf](SLR_Protocol_v3.pdf)), with the 10 Oct changes in [SLR_Protocol_v4_changes.md](SLR_Protocol_v4_changes.md).
 
 ## Where the live files are
 
@@ -20,7 +20,7 @@ LIVE LINK: <add link>
 | 1 | Research questions + PICOC | [protocol.md](protocol.md) |
 | 2 | Inclusion / exclusion criteria (I1–I5, E1–E6) | [protocol.md](protocol.md) |
 | 3 | Search string | [search-strings.md](search-strings.md) |
-| 4 | Search IEEE Xplore / ACM DL / Scopus | Sheet → **Search Log** tab |
+| 4 | Search IEEE Xplore / PubMed / Scopus | Sheet → **Search Log** tab; repo record: [search-log.md](search-log.md), exports in [exports/](exports/) |
 | 5 | Remove duplicates (RefWorks), split into Sets 1–3 | Sheet → **PRISMA Counts** + **Screening Log** tabs |
 | 6 | Title / abstract screening (both pair members, independently) | Sheet → **Screening Log** (screener 1 = column G, screener 2 = column H) |
 | 7 | Full-text screening | Sheet → **Screening Log** (full-text reader, decision, exclusion code) |
@@ -33,7 +33,7 @@ LIVE LINK: <add link>
 | Pair | Members | Search (runs / confirms) | Screening set | Synthesis |
 |---|---|---|---|---|
 | Pair 1 | Saif, Naif | IEEE Xplore (Saif runs, Naif confirms) | Set 1 | RQ1, RQ4 |
-| Pair 2 | Sarim, Hassan | ACM Digital Library (Sarim runs, Hassan confirms) | Set 2 | RQ3 |
+| Pair 2 | Sarim, Hassan | PubMed (Sarim runs, Hassan confirms) | Set 2 | RQ3 |
 | Pair 3 | Khalid, Abdullah | Scopus + search check (Khalid runs, Abdullah confirms) | Set 3 | RQ2 |
 
 Extra roles:
@@ -50,7 +50,7 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 - [ ] Each of the six (Naif, Saif, Sarim, Khalid, Hassan, Abdullah): reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**. Done when all six replies are ticked in `members/abdullah-dar/slr/TASKS.md`
 - [ ] Khalid + Abdullah: Scopus search check first, then Scopus search
 - [ ] Saif + Naif: IEEE Xplore search
-- [ ] Sarim + Hassan: ACM Digital Library search
+- [ ] Sarim + Hassan: PubMed search (replaces ACM Digital Library, see [v4 changes](SLR_Protocol_v4_changes.md))
 - [ ] First person in each pair runs it and fills the **Search Log** tab; partner re-runs it to confirm the count
 - [ ] Hassan: de-duplicate in RefWorks, enter the count, split records at random into Pair 1/2/3 in the **Screening Log**
 - [ ] Naif: add protocol + counts to Progress Report 1
@@ -61,7 +61,10 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 |---|---|---|
 | `SLR_Protocol_v3.pdf` | Protocol v3 (snapshot of the live protocol) | Abdullah |
 | `protocol.md` | Same protocol, readable on GitHub | Abdullah |
-| `search-strings.md` | The three exact search strings, filters and rules | Everyone (change only if the team agrees) |
+| `SLR_Protocol_v4_changes.md` | Changes from v3 made on 10 Oct: ACM → PubMed; Scopus kept at 1,017 | Abdullah |
+| `search-strings.md` | The three exact search strings, filters and rules, with a dated change log | Everyone (change only if the team agrees) |
+| `search-log.md` | Search results of 10 Oct: IEEE 337, PubMed 172, Scopus 1,017 (total 1,526) | Pairs 1–3; Hassan adds duplicates removed |
+| `exports/` | Raw search exports (RIS / NBIB) for RefWorks | Pairs 1–3 |
 | `PRISMA_Tracking_Sheet_2026-10-09.xlsx` | Snapshot of the PRISMA sheet (tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log). Replaces the old search-log and PRISMA CSVs | Hassan |
 | `data-extraction.csv` | One row per included paper (answers RQ1–RQ4); `checked_by` = partner who spot-checked | Full-text reader |
 | `quality-assessment.csv` | Q1–Q5 score per included paper; `checked_by` = partner | Full-text reader |

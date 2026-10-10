@@ -2,13 +2,15 @@
 
 Tool used: RefWorks / Rayyan (circle one) · Date: ______
 
+Export files are in [research/slr/exports/](../../../research/slr/exports/); search counts are in [search-log.md](../../../research/slr/search-log.md).
+
 ## Records imported
 
 | Database | Export file | Records imported | Matches Search Log tab count? |
 |---|---|---|---|
-| IEEE Xplore | | | |
-| ACM Digital Library | | | |
-| Scopus | | | |
+| IEEE Xplore | `IEEE_2026-10-10_p1.ris` – `p4.ris` | | |
+| PubMed | `PubMed_2026-10-10.nbib` | | |
+| Scopus | `Scopus_2026-10-10.ris` | | |
 | **Total identified** | | | |
 
 ## Duplicates

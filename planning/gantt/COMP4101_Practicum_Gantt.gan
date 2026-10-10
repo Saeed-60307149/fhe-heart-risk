@@ -57,7 +57,7 @@
             <task id="7" uid="806c1ec3c24a46f8b71ed190757979a8" name="2.3 Search strings" color="#eb6834" meeting="false" start="2026-10-04" duration="2" complete="0" expand="true">
                 <depend id="8" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="8" uid="d5d35e81886546aa980cb4213e39d178" name="2.4 Database searches (IEEE, ACM, Scopus; run + same-day confirm)" color="#eb6834" meeting="false" start="2026-10-06" duration="4" complete="0" expand="true">
+            <task id="8" uid="d5d35e81886546aa980cb4213e39d178" name="2.4 Database searches (IEEE, PubMed, Scopus; run + same-day confirm)" color="#eb6834" meeting="false" start="2026-10-06" duration="4" complete="0" expand="true">
                 <depend id="10" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="9" uid="fb2866ae50794d93bb91263179fafcff" name="2.5 PRISMA tracking sheet &amp; de-duplication" color="#eb6834" meeting="false" start="2026-10-04" duration="6" complete="0" expand="true"/>
