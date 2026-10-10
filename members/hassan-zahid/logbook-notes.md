@@ -12,16 +12,20 @@ Minimum: 6 hours per week. Only log days you actually worked.
 
 ## Week 7 (4 – 8 Oct)
 SLR (v3, Pair 2, screener 2): re-run Sarim's ACM search to confirm the count; de-duplicate in RefWorks, enter the count, split records at random into Pair 1/2/3 in the Screening Log. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
+*Draft – check every line, fill in the [ ] parts, delete anything you didn't do, then commit from your own account.*
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
-| | | Build the PRISMA tracking sheet | |
-| | | Read SLR Protocol v3 and reply 'changes' or 'no changes' to Abdullah (by Sat 10 Oct) | |
-| | | Re-run Sarim's ACM search and confirm the count in the Search Log tab | |
-| | | De-duplicate in RefWorks, enter 'Duplicate records removed' on the PRISMA Counts tab, split records at random into Pairs 1–3 in the Screening Log | |
-| | | Commit the first dated PRISMA sheet snapshot | |
-| | | Write the PR1 data statement with Sarim | |
-| | | Write the ethics/data note with Sarim (`research/ethics-data-note.md`) | |
-| **Total** | | | |
+| [fill in: Sun 4–Wed 7 Oct] | [fill in] | Researched IRB requirements for the project with Abdullah | [fill in] |
+| Thu 8 Oct | 11:00–13:00 | Weekly supervisor/team meeting [confirm attendance] | 2 |
+| [fill in: Fri 9 or Sat 10 Oct] | [fill in] | Read SLR Protocol v3 and replied to Abdullah | [fill in] |
+| Sat 10 Oct | [time: fill in] | Re-ran the PubMed search and confirmed Sarim's count (172) | [fill in] |
+| Sat 10 Oct | [start: fill in]–20:25 | De-duplicated the three search exports (482 duplicates removed, 1,044 left) and split them into 3 screening sets | [fill in] |
+| Sat 10 Oct | [start: fill in]–20:46 | Set up the new PRISMA tracking sheet with the records and counts | [fill in] |
+| [fill in: Fri 9–Sun 11 Oct] | [fill in] | Progress Report 1: data statement and ethics note with Sarim | [fill in] |
+| Sun 11 Oct | 16:00–18:00 | Team work session on Progress Report 1 [confirm after the session] | 2 |
+| **Total** | | | **4 h** |
+
+*Short by 2 h: add real work you did this week (date, time, task).*
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.

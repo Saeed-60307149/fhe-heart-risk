@@ -12,13 +12,18 @@ Minimum: 6 hours per week. Only log days you actually worked.
 
 ## Week 7 (4 – 8 Oct)
 SLR (v3, Pair 1, screener 1): run the IEEE Xplore search, fill the Search Log tab of the live PRISMA sheet; Naif confirms the count. Reply 'changes' or 'no changes' on Protocol v3 to Abdullah by Sat 10 Oct. Checklist: [slr/TASKS.md](slr/TASKS.md)
+*Draft – check every line, fill in the [ ] parts, delete anything you didn't do, then commit from your own account.*
 | Day / Date | Time | What I did | Hours |
 |---|---|---|---|
-| | | Draft the search strings | |
-| | | Read SLR Protocol v3 and reply 'changes' or 'no changes' to Abdullah (by Sat 10 Oct) | |
-| | | Run the IEEE Xplore search and fill the IEEE row of the Search Log tab (string, date, filters, count) | |
-| | | Write the PR1 feasibility/risk paragraph | |
-| **Total** | | | |
+| [fill in: Sun 4–Wed 7 Oct] | [fill in] | Researched Microsoft SEAL, node-seal and TenSEAL with Naif and checked whether they are compatible (encryption in the website front end, encrypted model on the server) | [fill in] |
+| Thu 8 Oct | 11:00–13:00 | Weekly supervisor/team meeting [confirm attendance] | 2 |
+| [fill in: Fri 9 or Sat 10 Oct] | [fill in] | Read SLR Protocol v3 and replied to Abdullah | [fill in] |
+| Sat 10 Oct | [start: fill in]–18:56 | Ran the IEEE Xplore search (337 results), exported the results and filled the search notes | [fill in] |
+| [fill in: Fri 9–Sun 11 Oct] | [fill in] | Progress Report 1: feasibility/risk paragraph | [fill in] |
+| Sun 11 Oct | 16:00–18:00 | Team work session on Progress Report 1 [confirm after the session] | 2 |
+| **Total** | | | **4 h** |
+
+*Short by 2 h: add real work you did this week (date, time, task).*
 
 ## Week 8 (11 – 15 Oct)
 No logbook (mid-term) – keep notes.
