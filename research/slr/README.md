@@ -4,7 +4,7 @@ A **systematic literature review** answers fixed research questions by searching
 
 ## Where the files are
 
-**Everything lives in this repo. There is no OneDrive copy.**
+**Everything lives in this repo.**
 
 - **PRISMA tracking sheet:** the newest `PRISMA_Tracking_Sheet_YYYY-MM-DD.xlsx` in this folder (now `PRISMA_Tracking_Sheet_2026-10-10.xlsx`). To update it: `git pull`, edit it in Excel, then commit and push straight away.
 - **One person edits the sheet at a time.** Excel files can't be merged, so if two people edit at once, one person's changes are lost. Say in the team chat before you start and when you've pushed.
@@ -48,11 +48,12 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 ## Due Sun 11 Oct
 
 - [ ] Each of the six (Naif, Saif, Sarim, Khalid, Hassan, Abdullah): reply 'changes' or 'no changes' on the protocol to Abdullah by **Sat 10 Oct**. Done when all six replies are ticked in `members/abdullah-dar/slr/TASKS.md`
-- [ ] Khalid + Abdullah: Scopus search check first, then Scopus search
-- [ ] Saif + Naif: IEEE Xplore search
-- [ ] Sarim + Hassan: PubMed search (replaces ACM Digital Library, see [v4 changes](SLR_Protocol_v4_changes.md))
+- [x] Khalid + Abdullah: Scopus search check first, then Scopus search (Scopus 1,017; search check: see [search-log.md](search-log.md#search-check-10-oct-2026-all-databases))
+- [x] Saif + Naif: IEEE Xplore search (337)
+- [x] Sarim + Hassan: PubMed search (172; replaces ACM Digital Library, see [v4 changes](SLR_Protocol_v4_changes.md))
 - [ ] First person in each pair runs it and fills the **Search Log** tab; partner re-runs it to confirm the count
-- [ ] Hassan: de-duplicate in RefWorks, enter the count, split records at random into Pair 1/2/3 in the **Screening Log**
+- [x] Hassan: de-duplicate and split records at random into Pair 1/2/3 – done by script, not RefWorks (482 duplicates removed, 1,044 records, 3 sets of 348; see [dedup/](dedup/))
+- [ ] Hassan: paste the Screening Log and counts into a new repo sheet, `PRISMA_Tracking_Sheet_2026-10-11.xlsx`, **before screening starts Mon 12 Oct** (steps in [search-log.md](search-log.md))
 - [ ] Naif: add protocol + counts to Progress Report 1
 
 ## Files in this folder
@@ -61,10 +62,11 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 |---|---|---|
 | `SLR_Protocol_v3.pdf` | Protocol v3 (PDF) | Abdullah |
 | `protocol.md` | Same protocol, readable on GitHub | Abdullah |
-| `SLR_Protocol_v4_changes.md` | Changes from v3 made on 10 Oct: ACM → PubMed; Scopus kept at 1,017 | Abdullah |
+| `SLR_Protocol_v4_changes.md` | Changes from v3 made on 10 Oct: ACM → PubMed; Scopus kept at 1,017; de-duplication by script; Kim JMIR search-check fix | Abdullah |
 | `search-strings.md` | The three exact search strings, filters and rules, with a dated change log | Everyone (change only if the team agrees) |
-| `search-log.md` | Search results of 10 Oct: IEEE 337, PubMed 172, Scopus 1,017 (total 1,526) | Pairs 1–3; Hassan adds duplicates removed |
-| `exports/` | Raw search exports (RIS / NBIB) for RefWorks | Pairs 1–3 |
+| `search-log.md` | Search results of 10 Oct: IEEE 337, PubMed 172, Scopus 1,017 (total 1,526); 482 duplicates removed, 1,044 to screen; search check | Pairs 1–3; Hassan |
+| `exports/` | Raw search exports (RIS / NBIB) | Pairs 1–3 |
+| `dedup/SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx` | De-duplication and screening sets: 1,044 records split into Sets 1–3 (348 each), the 482 removed duplicates, PRISMA counts and the search check | Hassan |
 | `PRISMA_Tracking_Sheet_2026-10-10.xlsx` | The PRISMA sheet (tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log). Search Log filled with the 10 Oct searches (IEEE 337, PubMed 172, Scopus 1,017). Replaces the old search-log and PRISMA CSVs | Hassan |
 | `data-extraction.csv` | One row per included paper (answers RQ1–RQ4); `checked_by` = partner who spot-checked | Full-text reader |
 | `quality-assessment.csv` | Q1–Q5 score per included paper; `checked_by` = partner | Full-text reader |
