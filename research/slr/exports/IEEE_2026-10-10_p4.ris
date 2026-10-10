@@ -1,0 +1,1335 @@
+TY  - CONF
+TI  - Challenging Federated Learning for Drug–Gene Interaction Prediction: A Comparative Study of FedAvg and FedProx Feasibility
+T2  - 2025 7th International Conference on Innovative Data Communication Technologies and Application (ICIDCA)
+SP  - 1005
+EP  - 1011
+AU  - M. J. Mashrafi
+AU  - H. Ahamed Alif
+AU  - U. Haldar
+AU  - M. M. Rahman
+AU  - M. Alamgir Miah
+AU  - M. H. Hasan
+PY  - 2025
+KW  - Training
+KW  - Differential privacy
+KW  - Privacy
+KW  - Quantization (signal)
+KW  - Federated learning
+KW  - Graph convolutional networks
+KW  - Scalability
+KW  - Precision medicine
+KW  - Predictive models
+KW  - Homomorphic encryption
+KW  - Drug–gene interaction
+KW  - federated learning
+KW  - graph convolutional networks
+KW  - differential privacy
+KW  - homomorphic encryption
+KW  - FedAvg
+KW  - FedProx
+KW  - biomedical AI
+DO  - 10.1109/ICIDCA66325.2025.11280589
+JO  - 2025 7th International Conference on Innovative Data Communication Technologies and Application (ICIDCA)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 7th International Conference on Innovative Data Communication Technologies and Application (ICIDCA)
+Y1  - 6-8 Oct. 2025
+AB  - Drug-gene interaction (DGI) prediction is essential for precision medicine, but centralized model training raises privacy and regulatory concerns. This study uses two approaches to evaluate federated learning (FL) for modeling sparse bipartite drug–gene networks. The first integrates graph convolutional encoders with differential privacy and homomorphic encryption simulations to ensure data confidentiality. The second applies FedAvg and FedProx across simulated institutions, enhanced with gradient sparsification and quantization. Comparative experiments show that FL approaches underperform centralized models by 30–40% in ROC-AUC and incur significant communication costs under high sparsity. Differential privacy further reduces model expressiveness, and FedProx yields only marginal convergence improvement relative to FedAvg. These results indicate that, under extreme data heterogeneity and sparsity conditions, FL provides limited practical benefit for DGI tasks. Our findings highlight the trade-offs between privacy, scalability, and predictive performance, suggesting centralized architectures remain preferable for high-stakes biomedical applications.
+ER  - 
+
+TY  - JOUR
+TI  - Verifiable Privacy-Preserving Heart Rate Estimation Based on LSTM
+T2  - IEEE Internet of Things Journal
+SP  - 1719
+EP  - 1731
+AU  - M. Bian
+AU  - G. He
+AU  - G. Feng
+AU  - X. Zhang
+AU  - Y. Ren
+PY  - 2024
+KW  - Data models
+KW  - Protocols
+KW  - Heart rate
+KW  - Training
+KW  - Computational modeling
+KW  - Security
+KW  - Estimation
+KW  - Heart rate (HR) estimation
+KW  - long short-term memory (LSTM)
+KW  - outsourcing computation
+KW  - privacy preserving
+KW  - verifiability
+DO  - 10.1109/JIOT.2023.3290651
+JO  - IEEE Internet of Things Journal
+IS  - 1
+SN  - 2327-4662
+VO  - 11
+VL  - 11
+JA  - IEEE Internet of Things Journal
+Y1  - 1 Jan.1, 2024
+AB  - Remote heart rate (HR) estimation via facial videos has emerged as an attractive application for healthcare monitoring. Long short-term memory (LSTM) is a kind of deep recurrent neural network architecture used for modeling sequential information, which can be utilized for remote HR estimation. Outsourcing computation is an emerging paradigm for enterprises or individuals with a huge volume of private data but limited computing power for data modeling and analysis, but the risks of privacy leakage cannot be ignored. Prior privacy-preserving LSTM-based protocols only protect sensitive data or model parameters, or approximate nonlinear functions with somewhat utility degradation. To mitigate the aforementioned issues, we propose a verifiable outsourcing protocol of LSTM training for HR estimation (VOLHR) based on batch homomorphic encryption, which not only ensures the confidentiality of the local data and model parameters but also guarantees the verifiability of the model predictions to resist the deceptive attacks. Theoretical analysis proves that VOLHR provides a higher level of privacy protection than the prior works. Computational cost analysis demonstrates that VOLHR can reduce the computational overhead greatly compared with the original LSTM models with different structures. To exhibit the practical utility, we implement VOLHR on two real-world data sets for HR estimation. Extensive evaluations demonstrate that VOLHR achieves almost the same performance as the original LSTM model and outperforms prior related protocols.
+ER  - 
+
+TY  - CONF
+TI  - Privacy Preserving Machine Learning: Secure Training and Deployment of Models on Sensitive Data
+T2  - 2025 International Conference on Intelligent Computing and Control Systems (ICICCS)
+SP  - 1199
+EP  - 1206
+AU  - N. Ganesh
+AU  - M. T. Kumar Reddy
+AU  - G. S. Gnana Selvi
+PY  - 2025
+KW  - Training
+KW  - Privacy
+KW  - Differential privacy
+KW  - Federated learning
+KW  - Computational modeling
+KW  - Multi-party computation
+KW  - Data models
+KW  - Computational efficiency
+KW  - Homomorphic encryption
+KW  - Protection
+KW  - Privacy-preserving machine learning
+KW  - federated learning
+KW  - differential privacy
+KW  - secure multi-party computation
+KW  - homomorphic encryption
+KW  - secure deployment
+DO  - 10.1109/ICICCS65191.2025.10984800
+JO  - 2025 International Conference on Intelligent Computing and Control Systems (ICICCS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Intelligent Computing and Control Systems (ICICCS)
+Y1  - 19-21 March 2025
+AB  - Privacy-Preserving Machine Learning (PPML) is essential for securing sensitive data during model training and deployment. This paper proposes an integrated framework combining Federated Learning (FL), Differential Privacy (DP), Secure Multi-Party Computation (SMPC), and Homomorphic Encryption (HE) to enhance data privacy while maintaining model utility. FL enables decentralized training without data sharing, DP ensures individual data anonymity, SMPC facilitates collaborative learning without exposing private data, and HE allows computations on encrypted data. We analyze the computational complexity, privacy guarantees, and model effectiveness through empirical evaluation. Results demonstrate that FL and DP achieve an optimal balance of privacy and accuracy, while HE ensures maximum security at a higher computational cost. Privacy audits confirm strong resilience against membership inference and model inversion attacks. The study also highlights practical limitations and trade-offs, offering insights into scalable and efficient deployment of PPML techniques in healthcare, finance, and IoT applications.
+ER  - 
+
+TY  - JOUR
+TI  - Securing a Local Training Dataset Size in Federated Learning
+T2  - IEEE Access
+SP  - 104135
+EP  - 104143
+AU  - Y. A. Shin
+AU  - G. Noh
+AU  - I. R. Jeong
+AU  - J. Y. Chun
+PY  - 2022
+KW  - Servers
+KW  - Federated learning
+KW  - Training data
+KW  - Data privacy
+KW  - Cryptography
+KW  - Computational modeling
+KW  - Data models
+KW  - Homomorphic encryption
+KW  - Federated learning
+KW  - homomorphic encryption
+KW  - privacy-preserving
+KW  - training dataset
+DO  - 10.1109/ACCESS.2022.3210702
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 10
+VL  - 10
+JA  - IEEE Access
+Y1  - 2022
+AB  - Federated learning (FL) is an emerging paradigm that helps to train a global machine learning (ML) model by utilizing decentralized data among clients without sharing them. Although FL is a more secure way of model training than a general ML, industries where training data are primarily personal information, such as MRI images or Electronic Health Records (EHR), should be more precautious of privacy and security issues when using FL. For example, unbalanced dataset sizes may denote some meaningful information that can lead to security vulnerabilities even if the training data of the clients are not exposed. In this paper, we present a Privacy-Preserving Federated Averaging ( $\mathbf {PP-FedAvg}$ ) protocol specialized for healthcare settings to limit user data privacy leakage in FL. We particularly protect the size of datasets as well as the aggregated local update parameters by securely computing among clients based on homomorphic encryption. This approach ensures that the server does not access the size of datasets and local update parameters while updating the global model. Our protocol has the advantage of protecting the size of datasets when datasets are not uniformly distributed among clients and when some clients drop out each iteration.
+ER  - 
+
+TY  - JOUR
+TI  - Privacy-Preserving Federated Learning for Intrusion Detection in IoT Environments: A Survey
+T2  - IEEE Access
+SP  - 127018
+EP  - 127050
+AU  - A. Vyas
+AU  - P. -C. Lin
+AU  - R. -H. Hwang
+AU  - M. Tripathi
+PY  - 2024
+KW  - Surveys
+KW  - Internet of Things
+KW  - Intrusion detection
+KW  - Federated learning
+KW  - Vectors
+KW  - Privacy
+KW  - Data privacy
+KW  - Privacy preservation
+KW  - federated learning
+KW  - intrusion detection system
+KW  - Internet of Things
+DO  - 10.1109/ACCESS.2024.3454211
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 12
+VL  - 12
+JA  - IEEE Access
+Y1  - 2024
+AB  - With the rapid development of artificial intelligence and a new generation of network technologies, the Internet of Things (IoT) is expanding worldwide. Malicious agents consistently exploit new technical vulnerabilities to access the various IoT systems used in critical industries, medical diagnosis, military, and defense systems. To mitigate these threats, IoT networks should be equipped with intrusion detection systems capable of detecting threat vectors in an attempt to compromise the systems. Moreover, many researchers have integrated privacy-preserving technologies such as homomorphic encryption, differential privacy, and secure multiparty computation with machine learning algorithms. Furthermore, federated learning, which shares only model parameters rather than data, provides distributed privacy-preserving learning; therefore, federated learning is secure and reliable for the implementation of intrusion detection systems in IoT environments. This survey examined the utilization and applications of privacy-preserving mechanisms, explicitly focusing on privacy-preserving federated learning for intrusion detection systems in IoT environments. This survey also highlights future research directions and open research questions. Privacy-preserving federated learning can significantly contribute to the rapid and efficient detection and prevention of various threat vectors that target IoT ecosystems.
+ER  - 
+
+TY  - JOUR
+TI  - Enhancing Intrusion Detection Through Federated Learning With Enhanced Ghost_BiNet and Homomorphic Encryption
+T2  - IEEE Access
+SP  - 24879
+EP  - 24893
+AU  - O. K. ChandraUmakantham
+AU  - S. Gajendran
+AU  - S. Marappan
+PY  - 2024
+KW  - Data models
+KW  - Intrusion detection
+KW  - Federated learning
+KW  - Data privacy
+KW  - Machine learning
+KW  - Training
+KW  - Security
+KW  - Deep learning
+KW  - Homomorphic encryption
+KW  - Federated learning
+KW  - intrusion detection
+KW  - hybrid deep learning
+KW  - homomorphic encryption
+KW  - enhanced Ghost_BiNet
+KW  - privacy
+DO  - 10.1109/ACCESS.2024.3362347
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 12
+VL  - 12
+JA  - IEEE Access
+Y1  - 2024
+AB  - Intrusion detection is essential for safeguarding computer systems and networks against unauthorized access, malicious activities, and security breaches. Its application domains include network security, information security, and cybersecurity across various sectors such as finance, healthcare, government, and industry. Federated learning-based intrusion detection offers improved performance compared to conventional mechanisms by leveraging decentralized data sources, preserving data privacy, and enhancing model generalization through collaboration among multiple organizations. However, challenges faced by existing federated learning-based intrusion detection mechanisms include ensuring data privacy and security, mitigating communication overhead, and enhancing detection accuracy. In order to overcome these issues, this research article proposes a federated learning-based intrusion detection methodology that leverages Enhanced Ghost_BiNet, a novel deep learning model, to enhance the security of information sharing and detection accuracy. Federated learning, a privacy-preserving machine learning technique, is utilized to enable multiple entities to collaboratively train a global intrusion detection model without sharing sensitive data. The proposed system first trains local models using Enhanced Ghost_BiNet, which integrates GhostNet and Bidirectional Gated Recurrent Unit (BiGRU). To optimize the model’s performance, the Chaotic Chebyshev Artificial Humming Bird (CAh) algorithm is employed. Homomorphic encryption is applied to encrypt the local model updates, enhancing data privacy and security. Server-side aggregation of updates and collaborative optimization are introduced to minimize communication rounds during data aggregation. The results demonstrate that the Enhanced Ghost_BiNet outperforms traditional models like GhostNet, BiGRU, RNN, Auto Encoder, and CNN in terms of accuracy, precision, recall, F-Score, and mean square error (MSE). For instance, the Enhanced Ghost_BiNet achieves an accuracy of 99.24% on the KDD CUP 99 dataset, surpassing the other models by a significant margin. The proposed methodology provides a robust and secure approach to intrusion detection, ensuring the confidentiality of sensitive data while improving detection accuracy.
+ER  - 
+
+TY  - CONF
+TI  - Secure Feature Selection for Vertical Federated Learning in eHealth Systems
+T2  - ICC 2022 - IEEE International Conference on Communications
+SP  - 1257
+EP  - 1262
+AU  - R. Zhang
+AU  - H. Li
+AU  - M. Hao
+AU  - H. Chen
+AU  - Y. Zhang
+PY  - 2022
+KW  - Protocols
+KW  - Runtime
+KW  - Costs
+KW  - Machine learning
+KW  - Feature extraction
+KW  - Collaborative work
+KW  - Data models
+KW  - eHealth
+KW  - vertical federated learning
+KW  - privacy protection
+KW  - feature selection
+DO  - 10.1109/ICC45855.2022.9838917
+JO  - ICC 2022 - IEEE International Conference on Communications
+IS  - 
+SN  - 1938-1883
+VO  - 
+VL  - 
+JA  - ICC 2022 - IEEE International Conference on Communications
+Y1  - 16-20 May 2022
+AB  - Privacy-preserving vertical federated learning (VFL) has been widely applied in electronic health (eHealth) systems. However, existing VFL schemes rarely consider the data pre-processing step including feature selection, which will lead to poor convergence rate and even damaging the model utility. In this paper, we propose an efficient and privacy-preserving feature selection scheme for VFL. Specifically, we first propose a general Gini-impurity based feature selection framework, which is compatible with most existing machine learning models in VFL. With the framework, we present two concrete protocols (dubbed πSS−FS and πH−FS, respectively) customized for different eHealth scenarios. πSS−FS exploits a lightweight additive secret sharing technique, such that it can be executed in comparable time as the evaluation of the plaintext scheme. πH−FS is a hybrid feature selection protocol that additionally utilizes a linear homomorphic encryption technique, to reduce the communication overhead at the cost of a moderate runtime. Moreover, extensive evaluations conducted on real-world medical datasets demonstrate that our scheme realizes up to 27% accuracy gains.
+ER  - 
+
+TY  - CONF
+TI  - Federated SCFGWO for Secure and High-Accuracy Brain Tumor Detection Across Multi-Center MRI
+T2  - 2025 International Research Conference on Smart Computing and Systems Engineering (SCSE)
+SP  - 1
+EP  - 6
+AU  - A. J
+AU  - V. S. Kumari
+PY  - 2025
+KW  - Accuracy
+KW  - Federated learning
+KW  - Computational modeling
+KW  - Magnetic resonance imaging
+KW  - Data security
+KW  - Brain tumors
+KW  - Brain modeling
+KW  - Real-time systems
+KW  - Optimization
+KW  - Biomedical imaging
+KW  - federated learning
+KW  - medical imaging
+KW  - optimization
+KW  - sine and cosine fitness grey wolf optimization (scfgwo)
+DO  - 10.1109/SCSE65633.2025.11031001
+JO  - 2025 International Research Conference on Smart Computing and Systems Engineering (SCSE)
+IS  - 
+SN  - 2997-7363
+VO  - 
+VL  - 
+JA  - 2025 International Research Conference on Smart Computing and Systems Engineering (SCSE)
+Y1  - 3-3 April 2025
+AB  - Privacy preservation and security concerns in medical imaging have led to the implementation of federated learning (FL) as an alternative to centralized machine learning approaches. This study introduces a novel Sine and Cosine Fitness Grey Wolf Optimization (SCFGWO) algorithm integrated into an FL framework to enhance the accuracy and efficiency of brain tumor detection across multi-center MRI datasets. SCFGWO addresses traditional Grey Wolf Optimization (GWO) limitations, such as early convergence and local optima, by incorporating adaptive sine-cosine strategies for improved global exploration and local exploitation. Compared to existing methods, the proposed SCFGWO-based framework achieves superior accuracy (97.2%), Dice Similarity Coefficient (0.94), and Intersection over Union (0.90) while maintaining computational efficiency (0.015s per slice). Innovative privacy-preserving methods, including differential privacy and homomorphic encryption, ensure data security across the dataset. These contributions establish SCFGWO as a robust optimization tool for federated learning applications in medical imaging, offering improved performance and enhanced data security.
+ER  - 
+
+TY  - CONF
+TI  - Federated Learning and Privacy-Preserving Techniques: A Comprehensive Review of Advancements and Challenges
+T2  - 2025 International Conference on Emerging Technologies in Electronics and Green Energy (ICETEG)
+SP  - 1
+EP  - 5
+AU  - Reshma
+AU  - P. K. Keyal
+AU  - S. S. Saini
+PY  - 2025
+KW  - Internet of Things
+KW  - Protocols
+KW  - Communication systems
+KW  - Internet
+KW  - HTTP
+KW  - Communications technology
+KW  - Radio access networks
+KW  - Regional area networks
+KW  - Federated learning
+KW  - Learning (artificial intelligence)
+KW  - Federated Learning
+KW  - Privacy-Preserving Techniques
+KW  - Machine Learning
+KW  - Decentralized Learning
+KW  - Differential Privacy
+KW  - Secure Multi-Party Computation
+KW  - Homomorphic Encryption
+KW  - Internet of Things (IoT)
+KW  - Edge Devices
+DO  - 10.1109/ICETEG66194.2025.11472906
+JO  - 2025 International Conference on Emerging Technologies in Electronics and Green Energy (ICETEG)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Emerging Technologies in Electronics and Green Energy (ICETEG)
+Y1  - 10-11 Oct. 2025
+AB  - Federated Learning (FL) learning models and Privacy Protection Techniques (PPT) are important in machine learning. They meet the urgent need for distributed learning while maintaining data security and privacy. This overview article provides an in-depth overview of the latest developments and problems of FL and PPT, and provides a thorough understanding of their importance in various areas such as the Internet of Things (IoT) applications, healthcare and finance. Starting with homomorphic encryption, secure multi-party computing, trusted execution environments, and differential privacy, the study goes on to explain the basic ideas of FL and several PPT approaches. The discussion then dives into the latest developments in FL designs, optimization algorithms, and safe model aggregation strategies, emphasizing the progress made in improving communication effectiveness and protecting data privacy during model updates. This paper goes into great length about the challenges FL faces, despite its potential. Device heterogeneity, communication obstacles, and possible security vulnerabilities are some of these difficulties. The article also proposes future research topics, such the integration of FL with edge computing, blockchain, and secure multi-party computing, to close existing gaps and improve the field. To highlight the importance of FL and PPT to enable secure and comprehensive machine learning applications, this article concludes by highlighting the need for concerted efforts to overcome remaining obstacles and realize the full potential of learning models decentralized and maintain confidentiality.
+ER  - 
+
+TY  - CONF
+TI  - DECML: Distributed Edge Consensus Machine Learning Framework
+T2  - 2024 IEEE Global Conference on Artificial Intelligence and Internet of Things (GCAIoT)
+SP  - 1
+EP  - 7
+AU  - C. Verdeyen
+AU  - C. Shepherd
+AU  - K. Markantonakis
+AU  - R. N. Akram
+AU  - R. Milroy
+AU  - S. A. Ghazalah
+AU  - D. Sauveron
+PY  - 2024
+KW  - Privacy
+KW  - Federated learning
+KW  - Smart homes
+KW  - Medical services
+KW  - Fourth Industrial Revolution
+KW  - Internet of Things
+KW  - Stakeholders
+KW  - Homomorphic encryption
+KW  - Standards
+KW  - Financial services
+KW  - Machine Learning
+KW  - Edge Computing
+KW  - Distributed Computing
+KW  - Data Privacy
+DO  - 10.1109/GCAIoT63427.2024.10833588
+JO  - 2024 IEEE Global Conference on Artificial Intelligence and Internet of Things (GCAIoT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2024 IEEE Global Conference on Artificial Intelligence and Internet of Things (GCAIoT)
+Y1  - 19-21 Nov. 2024
+AB  - The increasing reliance on interdependent datadriven services in the Internet of Things (IoT), smart homes, and Industry 4.0 is hindered by siloed security and privacy measures. Existing solutions like federated learning and distributed machine learning, with their various approaches such as differential privacy and homomorphic encryption, while promising, face challenges in ensuring robust security and privacy. We introduce Distributed Edge Consensus Machine Learning (DECML), a novel framework that enables secure, privacypreserving insights sharing among multiple stakeholders without exposing underlying data or models. DECML distributes queries and aggregates responses through independent nodes, achieving accuracy comparable to local deployments with minimal added latency. Our evaluation, using standard datasets and a 20-node network, demonstrates DECML's potential for collaborative decision-making without compromising privacy. This has significant implications for domains such as cybersecurity, healthcare, and financial services, where privacy concerns hinder data sharing.
+ER  - 
+
+TY  - JOUR
+TI  - Federated Learning Approaches in Precision Agriculture: A Systematic Review of Current Trends, Challenges, and Opportunities
+T2  - IEEE Access
+SP  - 30513
+EP  - 30538
+AU  - S. M. Shawon
+AU  - I. A. Adan
+AU  - M. Moniruzzaman
+AU  - O. H. Sinan
+AU  - M. J. Abed
+AU  - M. Al Qwaid
+AU  - M. T. Sarker
+AU  - H. B. A. Karim
+PY  - 2026
+KW  - Agriculture
+KW  - Federated learning
+KW  - Precision agriculture
+KW  - Internet of Things
+KW  - Training
+KW  - Data models
+KW  - Diseases
+KW  - Computational modeling
+KW  - Systematic literature review
+KW  - Computer architecture
+KW  - Federated learning
+KW  - precision agriculture
+KW  - differential privacy
+KW  - homomorphic encryption
+KW  - crop disease detection
+KW  - crop yield prediction
+KW  - non-IID data
+KW  - sustainable agriculture
+DO  - 10.1109/ACCESS.2026.3667548
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 14
+VL  - 14
+JA  - IEEE Access
+Y1  - 2026
+AB  - The rapid expansion of digital agriculture driven by sensors, drones, IoT devices, and remote sensing technologies has generated unprecedented volumes of farm-level data, intensifying concerns surrounding privacy, ownership, and secure data sharing. Federated Learning (FL) has emerged as a promising paradigm that enables distributed model training without exposing raw data, making it well suited for precision agriculture. This systematic review examines 90 peer-reviewed studies published between 2022 and 2025 across major academic databases to evaluate how FL is being applied to enhance agricultural intelligence while reducing raw-data sharing and, in fewer studies, using explicit privacy mechanisms. This review distinguishes between (i) baseline FL, where privacy is primarily achieved by keeping raw data local and (ii) FL augmented with explicit privacy-preserving mechanisms such as differential privacy, homomorphic encryption and secure multi-party computation. Besides, it highlights that horizontal and cross-silo FL architectures dominate current research, particularly in crop disease detection, yield prediction, smart irrigation, and IoT-based farm monitoring. A key finding is that most agricultural FL studies still rely on baseline FL without formal privacy guarantees, and the adoption of DP/HE/SMPC remains limited highlighting a major research gap. Although FL often matches centralized deep-learning accuracy, real-world adoption is limited by non-IID data, communication costs, and constrained compute/connectivity in rural settings. This review summarizes FL architectures, agricultural applications, and the limited use of explicit privacy mechanisms, highlighting key gaps and research directions (personalized/hierarchical FL, federated reinforcement learning, explainable and energy-efficient models, and quantum-enhanced FL).
+ER  - 
+
+TY  - CONF
+TI  - Application of Cryptography in Privacy-Preserving Machine Learning
+T2  - 2025 2nd International Symposium on Parallel Computing and Distributed Systems (PCDS)
+SP  - 1
+EP  - 6
+AU  - T. Negi
+AU  - R. Rubi
+AU  - S. Shallu
+AU  - A. Devi
+AU  - H. Salarian
+AU  - S. S. Chaeikar
+PY  - 2025
+KW  - Learning systems
+KW  - Privacy
+KW  - Machine learning algorithms
+KW  - Federated learning
+KW  - Finance
+KW  - Parallel processing
+KW  - Multi-party computation
+KW  - Homomorphic encryption
+KW  - Protection
+KW  - National security
+KW  - privacy-preserving machine learning
+KW  - cryptography
+KW  - homomorphic encryption
+KW  - secure multi-party computation
+KW  - federated learning
+DO  - 10.1109/PCDS68697.2025.11415278
+JO  - 2025 2nd International Symposium on Parallel Computing and Distributed Systems (PCDS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 2nd International Symposium on Parallel Computing and Distributed Systems (PCDS)
+Y1  - 11-13 Dec. 2025
+AB  - Many people are now concerned because Machine Learning (ML) that its applications have been growing rapidly in health, finance and national security. As learning systems store a lot of user information now, it is important to protect user privacy without damaging the way ML algorithms learn. Privacy Preserving Machine Learning (PPML) is able to solve this problem by including privacy protections within the learning algorithms. To make sure computation and data are secure, cryptography is one of the most important techniques today. In this paper, we focus on the use of new cryptographic tools in PPML, looking at their main ideas, frameworks for applying them and how well they perform compared to others. We analyze how Homomorphic Encryption (HE), Secure Multiparty Computation (SMPC), Differential Privacy (DP) and Functional Encryption can be used in centralized and federated ML configurations. We reviewed how effective each technique is, how it performs under high load, and what kinds of security risks exist – making it easier to decide if they can be used in practice.
+ER  - 
+
+TY  - CONF
+TI  - Secure and Privacy-Preserving Fine-Tuning of Large Language Models via Homomorphic Gradient Aggregation
+T2  - 2026 International Conference on Computational Robotics, Testing and Engineering Evaluation (ICCRTEE)
+SP  - 1
+EP  - 6
+AU  - R. Adiyattil
+AU  - S. Singh
+AU  - J. G. Thatipudi
+AU  - A. K. Sahu
+AU  - S. Deivasigamani
+AU  - C. Ravichandran
+PY  - 2026
+KW  - Modeling
+KW  - Privacy
+KW  - Tuning
+KW  - Federated learning
+KW  - Printing
+KW  - Training
+KW  - Encryption
+KW  - Large language models
+KW  - Equations
+KW  - Timing
+KW  - Large Language Models
+KW  - Federated Learning
+KW  - Privacy Preservation
+KW  - Homomorphic Encryption
+KW  - CKKS
+KW  - LLaMA
+KW  - Secure Aggregation
+KW  - Gradient Leakage
+KW  - Encrypted Fine-Tuning
+KW  - Differential Privacy
+DO  - 10.1109/ICCRTEE68719.2026.11566161
+JO  - 2026 International Conference on Computational Robotics, Testing and Engineering Evaluation (ICCRTEE)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2026 International Conference on Computational Robotics, Testing and Engineering Evaluation (ICCRTEE)
+Y1  - 14-16 May 2026
+AB  - The exponential growth of Large Language Models (LLMs) has catalyzed breakthroughs in natural language processing, yet their deployment in sensitive domains such as healthcare, finance, and education raises significant privacy concerns. The classic fine-tuning on the centralized model exposes user data to a risk of leakage, and even the federated methods are vulnerable to gradient inversion attacks. The paper suggests a new model of privacy-sensitive fine-tuning of LLaMs in the form of homomorphic aggregation of encrypted gradients. Our vision is to create a secure federated network with LLaMA 7B as the foundation architecture, where each client node computes the gradient on private data and encrypts them with the CKKS scheme, allowing to train in a secure end-to-end fashion without exposing sensitive data. A homomorphic operation is performed to aggregate the encrypted gradients at a central server which is re-distributed allowing the collaborative fine-tuning of the model across parties that do not trust each other. The results of the experiments done on the benchmark datasets (AG News and SST-2) indicate that the proposed method has a 90.33 % accuracy, which is just a 0.93 % lower than centralized fine-tuning (91.26) and provides a high level of privacy protection. Gradient sparsification and quantization were used to optimize communication overhead and encryption latency to ensure a total per-round overhead of less than 1.7 seconds. Besides, system proved to be resistant to gradient leakage and membership inference attacks, with less than 0.01 probability of leakage.
+ER  - 
+
+TY  - CONF
+TI  - Ethical AI Redefined: Pioneering Transparency with Hybrid Explainable Models
+T2  - 2025 International Conference on Multi-Agent Systems for Collaborative Intelligence (ICMSCI)
+SP  - 1872
+EP  - 1878
+AU  - J. Gayathri
+AU  - K. S. Vimal Chandran
+AU  - F. D. Rathna Mala
+AU  - A. M. S
+AU  - K. S
+AU  - A. Maheshwaran
+PY  - 2025
+KW  - Ethics
+KW  - Privacy
+KW  - Ethnicity
+KW  - Explainable AI
+KW  - Heuristic algorithms
+KW  - Finance
+KW  - Medical services
+KW  - Transformers
+KW  - Artificial intelligence
+KW  - Homomorphic encryption
+KW  - Ethical AI
+KW  - Hybrid Explainable Models
+KW  - SHAP
+KW  - Transparency
+KW  - Fairness
+KW  - Bias Detection
+KW  - Privacy Preservation
+KW  - Deep Learning
+KW  - Transformer Models
+KW  - Responsible AI
+DO  - 10.1109/ICMSCI62561.2025.10894436
+JO  - 2025 International Conference on Multi-Agent Systems for Collaborative Intelligence (ICMSCI)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Multi-Agent Systems for Collaborative Intelligence (ICMSCI)
+Y1  - 20-22 Jan. 2025
+AB  - The rapid proliferation of artificial intelligence (AI) in critical domains like healthcare, finance, and governance has necessitated the development of ethical, transparent, and responsible AI systems. This study proposes a hybrid explainable AI model to achieve ethical, transparent, and high-performance artificial intelligence solutions. Combining black-box models such as Transformers with explainable techniques like SHAP, the proposed methodology addresses key challenges in AI, including fairness, interpretability, and privacy. The model tested on a diverse and representative dataset, focusing on performance, bias detection, and explainability. Results demonstrate that the proposed model achieved a 97.71% accuracy with an F1-score of 0.96, outperforming baseline models such as CNN (87.50%) and Transformer-Causal combinations (94.10%). SHAP analysis identified key features like Age, Blood Pressure, and Cholesterol Level as the most influential predictors, ensuring transparency and trustworthiness. Fairness evaluation across sensitive attributes, including gender and ethnicity, showed Demographic Parity of 96.40% and Equal Opportunity of 94.40%, indicating minimal bias. Privacy-preserving techniques such as Differential Privacy and Homomorphic Encryption implemented, achieving robust data protection with minor trade-offs. This hybrid approach successfully balances performance, fairness, interpretability, and privacy, presenting a scalable framework for ethical AI development.
+ER  - 
+
+TY  - JOUR
+TI  - Lattice-Based Public Key Cryptosystem for Internet of Things Environment: Challenges and Solutions
+T2  - IEEE Internet of Things Journal
+SP  - 4897
+EP  - 4909
+AU  - R. Chaudhary
+AU  - G. S. Aujla
+AU  - N. Kumar
+AU  - S. Zeadally
+PY  - 2019
+KW  - Authentication
+KW  - Quantum computing
+KW  - Internet of Things
+KW  - Computers
+KW  - Encryption
+KW  - Internet of Things (IoT)
+KW  - key-exchange authentication
+KW  - lattice cryptography
+KW  - public-key cryptography (PKC)
+KW  - quantum computers
+DO  - 10.1109/JIOT.2018.2878707
+JO  - IEEE Internet of Things Journal
+IS  - 3
+SN  - 2327-4662
+VO  - 6
+VL  - 6
+JA  - IEEE Internet of Things Journal
+Y1  - June 2019
+AB  - Due to its widespread popularity and usage in many applications (smart transport, energy management, e-healthcare, smart ecosystem, and so on), the Internet of Things (IoT) has become popular among end users over the last few years. However, with an exponential increase in the usage of IoT technologies, we have been witnessing an increase in the number of cyber attacks on the IoT environment. An adversary can capture the private key shared between users and devices and can launch various attacks, such as IoT ransomware, Mirai botnet, man-in-the-middle, denial of service, chosen plaintext, and chosen ciphertext. To mitigate these security attacks on the IoT environment, the traditional public key cryptographic primitives are inadequate because of their high computational and communication costs. Therefore, lattice-based public-key cryptosystem (LB-PKC) is a promising technique for secure communication. We discuss the taxonomy of two major problems, namely, the shortest path and the closest path problems with respect to the applicability of lattice-based cryptographic primitives for IoT devices. Moreover, we also discuss various LB-PKC techniques, such as NTRU, learning with errors (LWEs), and ring-LWE (R-LWE) which are often used to solve shortest path and lattice NP-hard problems in a polynomial time. We further classify the R-LWE into three categories, namely identity-based encryption, homomorphic encryption, and secure authentication key exchange. We describe the operations and algorithms adopted in each of these encryption mechanisms. Finally, we discuss the challenges, open issues, and future directions for applying LB-PKC in the IoT environment.
+ER  - 
+
+TY  - CONF
+TI  - Privacy-Preserving Model for Cyber Threat Intelligence, Sharing Across Multi-Organizational Platforms
+T2  - 2025 IEEE 14th International Conference on Communication Systems and Network Technologies (CSNT)
+SP  - 437
+EP  - 442
+AU  - S. Pandey
+AU  - H. Azath
+AU  - R. U. Rahman
+AU  - H. Lamkuche
+PY  - 2025
+KW  - Differential privacy
+KW  - Privacy
+KW  - Accuracy
+KW  - Federated learning
+KW  - Collaboration
+KW  - Organizations
+KW  - Threat assessment
+KW  - Cyber threat intelligence
+KW  - Homomorphic encryption
+KW  - Computer security
+KW  - Cyber Threat Intelligence
+KW  - Federated Learning
+KW  - Differential Privacy
+KW  - Homomorphic Encryption
+KW  - Data Privacy
+KW  - Regulatory Compliance
+KW  - Collaborative Cybersecurity
+DO  - 10.1109/CSNT64827.2025.10968450
+JO  - 2025 IEEE 14th International Conference on Communication Systems and Network Technologies (CSNT)
+IS  - 
+SN  - 2473-5655
+VO  - 
+VL  - 
+JA  - 2025 IEEE 14th International Conference on Communication Systems and Network Technologies (CSNT)
+Y1  - 7-9 March 2025
+AB  - The research presents a privacy-preserving structure for secure Cyber Threat Intelligence (CTI) exchanging, using cutting-edge AI techniques to increase cooperative IT delicacy while keeping secret information safe. We propose a system based on Federated Learning, Differential Privacy and Homomorphic Encryption to model training in multiple organizations without exchanging the raw data. Using these privacy-preserving techniques together, organizations can collaborate to enhance their overall threat detection and response capabilities while maintaining the confidentiality of sensitive data. The implemented results indicate significant advancements with a 50%-55% detection accuracy overall for role intention measurement, model accuracy increase to 82% (predicting the next role intention), 30% computational overhead improvement, and a 10% improvement in novel threat detection. It provides 85% compliance against regulatory standards including GDPR and NIST. The applicability of the proposed solution on real-world data in the financial and healthcare domains demonstrates the proposed solution achieves a balance between privacy protection and CTI sharing still providing a powerful method for distributed, scalable and efficient collaboration in secure cybersecurity .
+ER  - 
+
+TY  - CONF
+TI  - Experimental Evaluation of Cryptographic Models for Blockchain Security and Privacy in Smart Environments
+T2  - 2025 International Conference on Emerging Engineering Technologies and Applications (IC-EETA)
+SP  - 851
+EP  - 856
+AU  - A. Singh
+AU  - M. Singh
+AU  - J. Rani
+AU  - S. Chauhan
+AU  - A. Kaur
+AU  - D. Juneja
+PY  - 2025
+KW  - Modeling
+KW  - Privacy
+KW  - Cryptography
+KW  - Timing
+KW  - Internet of Things
+KW  - Printing
+KW  - Loading
+KW  - Testing
+KW  - Metadata
+KW  - Blockchains
+KW  - Blockchain Privacy
+KW  - Zero-Knowledge Proofs
+KW  - Homomorphic Encryption
+KW  - Differential Privacy
+KW  - Hyperledger
+KW  - Secure Smart Environments
+KW  - Privacy Preserving Cryptography
+KW  - Real World Dataset Validation
+DO  - 10.1109/IC-EETA66496.2025.11548209
+JO  - 2025 International Conference on Emerging Engineering Technologies and Applications (IC-EETA)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Emerging Engineering Technologies and Applications (IC-EETA)
+Y1  - 6-8 Nov. 2025
+AB  - Blockchain technology into the healthcare sector, logistics, finance, and massive IoT system, this technology is making its way into it. With the issue of privacy becoming much more critical than before in the adoption phases. Even though blockchains provide integrity and resistant storage against tampering, numerous implementations still expose behavioural evidence, time-based data, besides other forms of metadata, which may be compromised by inference attacks. These breaches become more apparent when there is an exchange or near real-time processing of sensitive information. This paper will analyze the performance of three widely discussed privacy-saving methods Zero-Knowledge Proofs (ZKP), Homomorphic Encryption (HE), not to mention Differential Privacy (DP) in a practical blockchain architecture and not in isolation. A testbed made of Hyperledger Fabric and Ethereum instances privately owned was constructed to enable each of the methods to be tested under the same conditions. The experiments made trade-offs of transaction suspensions, added computational load, and exposure to metadata-based attacks.The results demonstrate that ZKP-based settings store observable metadata substantially and restricted the amount that an adversary would deduce regarding transaction patterns. HE was a good implementation in areas where safe computation was needed but with significant latency overhead. The least significant communication impact was on DP, which was, however, to be carefully tuned in terms of its privacy parameters to prevent the decline in protection. We further conducted simulated attacks to research into the reaction of each approach to pressure and detail how validation can be extended in the future with the aid of open datasets through the MIMIC-III, OpenAQ, and TII cybersecurity logs. On the whole, the findings provide useful insights to teams, who want to embed cryptographic privacy tools in production-scale blockchain systems in particular in those industries where confidentiality and data protection cannot be jeopardized.
+ER  - 
+
+TY  - CONF
+TI  - FMLEE: Federated Meta-Learning with Enhanced Encryption for Secure Collaborative Training
+T2  - 2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)
+SP  - 1
+EP  - 7
+AU  - C. Chaitanya
+AU  - M. M. Dhabu
+AU  - A. Tiwari
+PY  - 2024
+KW  - Metalearning
+KW  - Training
+KW  - Privacy
+KW  - Federated learning
+KW  - Computational modeling
+KW  - Finance
+KW  - Collaboration
+KW  - Medical services
+KW  - Data models
+KW  - Homomorphic encryption
+KW  - CKKS
+KW  - federated meta learning
+KW  - homomorphic encryption
+KW  - image segmentation
+KW  - privacy preserving
+KW  - secure channel
+DO  - 10.1109/ICCCNT61001.2024.10724680
+JO  - 2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)
+IS  - 
+SN  - 2473-7674
+VO  - 
+VL  - 
+JA  - 2024 15th International Conference on Computing Communication and Networking Technologies (ICCCNT)
+Y1  - 24-28 June 2024
+AB  - Federated Learning (FL) trains models on distributed devices by aggregating model updates or parameters from multiple clients, enhancing data privacy by keeping data local. However, FL still poses risks of inversion attacks and potential malicious behavior by aggregators. Homomorphic encryption (HE) and other privacy-preserving techniques, while necessary, can be vulnerable to attacks such as adversarial attacks, membership inference attacks, and model inversion attacks by clients with access to the HE private key. This paper introduces Federated Meta-Learning with Enhanced Encryption (FMLEE), a novel framework that integrates HE, symmetric session key encryption to secure multi-party computation. FMLEE allows for collaborative training and refining of a meta-learning model without disclosing sensitive data and model weights, even without completely trusting the aggregator. HE safeguards model weights, enabling the aggregator to perform aggregation without accessing the actual data. Symmetric key encryption secures communication between the aggregator and clients, protecting model weights from being exposed to other clients as well. This dual-layer encryption approach ensures data security during both computation and communication, effectively addressing passive and active security threats. By incorporating meta-learning, FMLEE facilitates the development of robust models with less data. The use of symmetric session keys ensures the secure transmission of model weights without requiring trust in the communication channel. Extensive experiments demonstrate that FMLEE preserves data and model parameter privacy with minimal efficiency loss. This sets a new benchmark for secure federated learning by balancing privacy, security, and performance, making FMLEE highly applicable in sensitive domains such as healthcare, finance, and national security.
+ER  - 
+
+TY  - CONF
+TI  - Learning privately: Privacy-preserving canonical correlation analysis for cross-media retrieval
+T2  - IEEE INFOCOM 2017 - IEEE Conference on Computer Communications
+SP  - 1
+EP  - 9
+AU  - Q. Wang
+AU  - S. Hu
+AU  - M. Du
+AU  - J. Wang
+AU  - K. Ren
+PY  - 2017
+KW  - Cryptography
+KW  - Correlation
+KW  - Servers
+KW  - Wires
+KW  - Eigenvalues and eigenfunctions
+KW  - Protocols
+KW  - Big Data
+DO  - 10.1109/INFOCOM.2017.8056955
+JO  - IEEE INFOCOM 2017 - IEEE Conference on Computer Communications
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - IEEE INFOCOM 2017 - IEEE Conference on Computer Communications
+Y1  - 1-4 May 2017
+AB  - A massive explosion of various types of data has been triggered in the “Big Data” era. In big data systems, machine learning plays an important role due to its effectiveness in discovering hidden information and valuable knowledge. Data privacy, however, becomes an unavoidable concern since big data usually involve multiple organizations, e.g., different healthcare systems and hospitals, who are not in the same trust domain and may be reluctant to share their data publicly. Applying traditional cryptographic tools is a straightforward approach to protect sensitive information, but it often renders learning algorithms useless inevitably. In this work, we, for the first time, propose a novel privacy-preserving scheme for canonical correlation analysis (CCA), which is a well-known learning technique and has been widely used in cross-media retrieval system. We first develop a library of building blocks to support various arithmetics over encrypted real numbers by leveraging additively homomorphic encryption and garbled circuits. Then we encrypt private data by randomly splitting the numerical data, formalize CCA problem and reduce it to a symmetric eigenvalue problem by designing new protocols for privacy-preserving QR decomposition. Finally, we solve all the eigenvalues and the corresponding eigenvectors by running Newton-Raphson method and inverse power method over the ciphertext domain. We carefully analyze the security and extensively evaluate the effectiveness of our design. The results show that our scheme is practically secure, incurs negligible errors compared with performing CCA in the clear and performs comparably in cross-media retrieval systems.
+ER  - 
+
+TY  - JOUR
+TI  - A Comprehensive Review of Cryptographic Techniques in Federated Learning for Secure Data Sharing and Applications
+T2  - IEEE Access
+SP  - 135138
+EP  - 135164
+AU  - A. Sen
+AU  - S. -H. Heng
+AU  - S. -C. Tan
+PY  - 2025
+KW  - Cryptography
+KW  - Reviews
+KW  - Security
+KW  - Data models
+KW  - Computational modeling
+KW  - Computational efficiency
+KW  - Medical services
+KW  - Scalability
+KW  - Federated learning
+KW  - Training
+KW  - Secure data sharing
+KW  - federated learning
+KW  - homomorphic encryption
+KW  - secure multi-party computation
+KW  - differential privacy
+DO  - 10.1109/ACCESS.2025.3593953
+JO  - IEEE Access
+IS  - 
+SN  - 2169-3536
+VO  - 13
+VL  - 13
+JA  - IEEE Access
+Y1  - 2025
+AB  - The demand for secure data sharing is growing fast in sensitive domains like healthcare, finance, and IoT. Federated Learning (FL) introduces a decentralised machine learning paradigm whereby models can be trained over distributed nodes without sharing data. Despite its promise, FL faces significant security challenges, such as gradient inversion, model poisoning, and privacy leakage, which involve strong cryptographic techniques. Some cryptographic techniques have been proposed to address potential security concerns in the FL environment. This study provides an overview of the major techniques that include Homomorphic Encryption (HE), Secure Multi-Party Computation (SMPC), Differential Privacy (DP), blockchain integration, and emerging hybrid approaches, and their applications from different perspectives. The techniques, along with their respective strengths and weaknesses, are systematically compared to ensure the identification of appropriate application domains. This review addresses hybrid approaches that combine multiple techniques to achieve an optimal trade-off between privacy, computational efficiency, and scalability. Key challenges such as computational overhead, scalability limitations, and the privacy-utility trade-off are identified, along with notable research gaps in the field. Future directions emphasise on the development of optimised hybrid techniques and strategies to alleviate computational and communication overheads in resource-constrained environments. This study therefore reviews those aspects that might provide useful insights to researchers and practitioners in the development of secure, scalable, and computationally efficient FL systems, and hence facilitate their practical implementation in privacy-sensitive domains.
+ER  - 
+
+TY  - CONF
+TI  - Practical Anonymous Two-Party Gradient Boosting Decision Tree
+T2  - 2026 IEEE Symposium on Security and Privacy (SP)
+SP  - 2023
+EP  - 2041
+AU  - C. Huang
+AU  - F. Zhang
+AU  - M. Du
+AU  - S. S. M. Chow
+AU  - H. Chen
+AU  - H. Rao
+AU  - D. Huang
+AU  - B. Qian
+AU  - P. Chen
+PY  - 2026
+KW  - Printing
+KW  - Protocols
+KW  - Timing
+KW  - Training
+KW  - Circuits
+KW  - Pediatrics
+KW  - Payloads
+KW  - Receivers
+KW  - Trees (botanical)
+KW  - Vegetation
+KW  - multi-party computation
+KW  - private-set intersection
+KW  - gbdt
+KW  - federated learning
+DO  - 10.1109/SP63933.2026.00084
+JO  - 2026 IEEE Symposium on Security and Privacy (SP)
+IS  - 
+SN  - 2375-1207
+VO  - 
+VL  - 
+JA  - 2026 IEEE Symposium on Security and Privacy (SP)
+Y1  - 18-21 May 2026
+AB  - Structured data is well handled by gradient-boosted decision trees (GBDT), which are usually trained on vertically partitioned features across mutually distrustful parties. High speed and interpretability make GBDTs popular in finance and healthcare, where neural networks may fall short. Enabling secure computation for GBDTs poses unique challenges, requiring secure record alignment for comparison. Relying on private set intersection (PSI) is a de facto approach. Mistaking PSI for a safety measure actually exposes which record identifiers (IDs) are shared between the datasets. Although circuit-PSI could help, it is costly for generic uses. New ideas are needed to efficiently train in a “dark forest.” Aiming to hide the IDs, we initiate the study of anonymous GBDT training on split data held by two parties. Dual circuit-PSI in our design lets the parties alternate as receiver to run pick-then-sum over local features. Via oblivious programmable pseudorandom functions, we propagate circuit-PSI outputs as shared state across runs. Avoiding universal alignment, we resolve the neglected dilemma that ID hiding incurs a cost that scales with domain size. Next, we halve the cost of ciphertext packing used to convert single-instruction multiple-data homomorphic encryption from (ring) learning with errors in prior secure GBDT (Usenix Security '23) and related secure machine-learning computations. Comparative experiments show our protocol remains competitive with leaky approaches in efficiency. Enabling ID-hiding aggregation, our techniques can extend to other vertically partitioned analytics.
+ER  - 
+
+TY  - CONF
+TI  - A Security-First Approach to Federated Feature Engineering and Model Training in Cross-Cloud Ecosystems
+T2  - 2025 International Conference on Computing Technologies (ICOCT)
+SP  - 1
+EP  - 7
+AU  - P. C. Jakku
+AU  - S. Chippagiri
+AU  - B. Madupati
+AU  - M. S. Bandrevu
+PY  - 2025
+KW  - Training
+KW  - Differential privacy
+KW  - Adaptation models
+KW  - Federated learning
+KW  - Biological system modeling
+KW  - Computational modeling
+KW  - Ecosystems
+KW  - Data protection
+KW  - Data models
+KW  - Homomorphic encryption
+KW  - Federated Learning
+KW  - Cross-Cloud Ecosystems
+KW  - Feature Engineering
+KW  - Privacy-Preserving Machine Learning
+KW  - Secure Multiparty Computation
+KW  - Homomorphic Encryption
+KW  - Differential Privacy
+KW  - Model Poisoning
+KW  - Zero-Trust Architecture
+KW  - Distributed Model Training
+DO  - 10.1109/ICOCT64433.2025.11118359
+JO  - 2025 International Conference on Computing Technologies (ICOCT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Computing Technologies (ICOCT)
+Y1  - 13-14 June 2025
+AB  - The increasing demand for raw data protection and organizational data lockdown conditions created an opportunity for federated learning (FL) to become an essential solution that enables collaborative training of machine learning models without exposing original data. The combination of different cloud environments in cross-cloud systems makes it hard to provide both data protection and consistent features. The proposed security-first federated framework incorporates secure multiparty feature engineering together with differential privacy mechanisms as well as homomorphic encryption into the FL lifecycle. The introduced approach implements zerotrust security protocols during inter-cloud communications and uses adaptive harmonization methods to maintain data usefulness. The proposed framework incorporates a privacy-protected federated training scheme which enables independent asynchronous model updates within distributed cloud systems to bolster protection against model corruption during training and inferential attacks. Analytical tests performed on authentic healthcare and financial system data revealed an 28% decrease in privacy breaches while raising training resilience by 34% and matching model precision levels relative to traditional FL systems. The research work forms an essential base for deploying trustworthy federated learning systems that enable secure and reliable operations between multiple cloud environments.
+ER  - 
+
+TY  - CONF
+TI  - Secure Personalized Federated Learning Based on Oblivious Transfer
+T2  - 2025 34th International Conference on Computer Communications and Networks (ICCCN)
+SP  - 1
+EP  - 6
+AU  - Y. Cao
+AU  - M. Odiathevar
+AU  - W. K. G. Seah
+AU  - G. Xu
+AU  - F. Zhang
+PY  - 2025
+KW  - Adaptation models
+KW  - Privacy
+KW  - Data privacy
+KW  - Accuracy
+KW  - Federated learning
+KW  - Computational modeling
+KW  - Clustering algorithms
+KW  - Data models
+KW  - Protection
+KW  - Homomorphic encryption
+KW  - Oblivious transfer
+KW  - Federated learning security
+KW  - Clustering federated learning
+KW  - Data heterogeneity
+DO  - 10.1109/ICCCN65249.2025.11133849
+JO  - 2025 34th International Conference on Computer Communications and Networks (ICCCN)
+IS  - 
+SN  - 2637-9430
+VO  - 
+VL  - 
+JA  - 2025 34th International Conference on Computer Communications and Networks (ICCCN)
+Y1  - 4-7 Aug. 2025
+AB  - Federated learning(FL) is a machine learning paradigm designed to protect data privacy and security among multiple clients. It is widely used in industries such as healthcare, finance, and insurance. However, common personalization techniques such as clustering, data augmentation, and knowledge distillation often increase privacy risks or incur high computational costs with methods like homomorphic encryption. To address these challenges, this paper proposes the Secure Personalized Federated Learning (SPFL) algorithm, combining Clustered Federated Learning (CFL) and Oblivious Transfer (OT). Using the Affinity Propagation (AP) clustering algorithm, SPFL groups clients by model similarity to create personalized global models without additional information sharing. OT has achieved efficient delivery of security models. Experimental results show SPFL enhances security, adapts to Non-Independent and Identically Distributed (Non-IID) data, improves global model accuracy by more than 6.5%, and reduces the overall running time under three alpha values by more than 19.82% compared to Paillier encryption.
+ER  - 
+
+TY  - CONF
+TI  - Privacy-Aware Federated Large Language Model Adaptation Using Encrypted Gradient Aggregation
+T2  - 2026 International Conference on Electronic Systems and Intelligent Computing (ICESIC)
+SP  - 420
+EP  - 425
+AU  - G. S. Kumar
+AU  - B. Vankudothu
+AU  - A. K. Tiwari
+AU  - V. P. G. Pushparathi
+AU  - B. Sathiya
+AU  - U. D. Prasan
+PY  - 2026
+KW  - Filtering
+KW  - Filters
+KW  - Circuits and systems
+KW  - System-on-chip
+KW  - Electronic mail
+KW  - Protocols
+KW  - Communication systems
+KW  - Message systems
+KW  - HTTP
+KW  - Postal services
+KW  - Privacy-Preserving Learning
+KW  - Large Language Models
+KW  - Encrypted Gradient Aggregation
+KW  - Federated Learning
+DO  - 10.1109/ICESIC67389.2026.11496607
+JO  - 2026 International Conference on Electronic Systems and Intelligent Computing (ICESIC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2026 International Conference on Electronic Systems and Intelligent Computing (ICESIC)
+Y1  - 13-14 March 2026
+AB  - Large Language Models (LLMs) have demonstrated exceptional capabilities in language understanding and generation but pose significant risks when fine-tuned using sensitive, user-specific data. Conventional methods either compromise privacy or degrade performance due to excessive noise and inefficient encryption schemes. The article introduces the new privacy preserving fine-tuning framework, namely PP-EGA-LLM, which is an alternative to homomorphic encryption system but considers interpretability at the cost of gradient filtering during the federation process. Every client calculates encrypted gradients on their own and sums them up in the framework of Secure Multi-Party Computation without sharing the content of the data. SHAP-based filtering masks sensitive components of gradient before update of a model. On sensitive medical and legal datasets, PP-EGA-LLM is more accurate (93.4%) than baselines based on differentially private and encrypted models and has a much lower leakage risk (MIR: 0.18). The model shows nearly centralized performance and acceptable inference latency on edge devices. We are optimized with utility, privacy and efficiency and thus fit quite well in the real-world application in the privacy sensitive field. The architecture can upgrade cryptographically and is therefore post quantum threat extendible. The study is leading the art of secure and ethical fine-tuning of LLMs without losing the accuracy of the data.
+ER  - 
+
+TY  - CONF
+TI  - Efficient Data Transfer in Internet of Things (IoT) Networks: Privacy-Preserving Techniques for Edge-Cloud Collaborative Computing in Resource-Limited Settings
+T2  - 2026 International Conference on Smart Futuristic Technology
+SP  - 1
+EP  - 6
+AU  - K. Sivaraman
+AU  - S. Kottur
+AU  - M. Rekha
+AU  - S. D
+AU  - G. Karthikeyan
+AU  - M. S
+PY  - 2026
+KW  - Clouds
+KW  - Internet of Things
+KW  - Privacy
+KW  - Modeling
+KW  - Federated learning
+KW  - Encryption
+KW  - Printing
+KW  - Loading
+KW  - Optimization
+KW  - Limiting
+KW  - Edge–Cloud Collaboration
+KW  - Differential Privacy
+KW  - Privacy Preservation
+KW  - Resource-Limited Devices
+KW  - Homomorphic Encryption
+DO  - 10.1109/ICSFT66733.2026.11506847
+JO  - 2026 International Conference on Smart Futuristic Technology
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2026 International Conference on Smart Futuristic Technology
+Y1  - 2-3 Jan. 2026
+AB  - It has never been seen before that opportunities for data-driven automation, monitoring, and intelligent decision-making have evolved as a result of the rapid proliferation of ecosystems that are connected to the Internet of Things (IoT). The adoption of the Internet of Things can be difficult in settings where resources are restricted, such as rural areas, low-power industrial installations, and remote sensor networks. This is because of obstacles such as limits on bandwidth and computation capacity, as well as issues around privacy. An investigation into data-transfer protocols that are specifically geared to ensure the privacy of users in edge–cloud collaboration systems is the objective of this study. Application development for the Internet of Things that is scalable and adheres to the principles of data security, dependable connectivity, and resource efficiency is the goal of this project. The hybrid computing architecture is utilized in the research project in order to reduce the quantity of data that is collected at the edge as a result of Internet of Things sensors. This is done prior to the transmission of the raw data to the cloud for further analysis. Differential privacy, homomorphic encryption, secure multi-party computation, and federated learning are all examples of techniques that can maintain the usefulness of the information that is extracted while simultaneously protecting sensitive material. These measures lower the danger of unauthorized access and data loss, especially in limited environments with poor security. The proposed method was tested using simulated IoT networks. Poor bandwidth, unpredictable connectivity, and varied device capabilities plagued these networks. We assessed latency, energy, data reduction, prediction accuracy, and privacy. Edge-based preprocessing, adaptive compression, and encrypted feature extraction cut transmission load by 60% without compromising accuracy. Privacy-enhanced approaches were hard to eavesdrop, guess, and analyze metadata. The collaborative architecture makes the system more scalable and less cloud-dependent, allowing data processing virtually in real time even with poor networks. This study emphasises privacy-preserving and resource-efficient communication in modern IoT systems. Collaborative edge-cloud computing and strengthened data transfer protocols are used to build strong IoT infrastructures in resource-constrained contexts. The findings enable safe, rapid, and easy IoT ecosystem growth for smart agriculture, remote healthcare, and smart transportation systems.
+ER  - 
+
+TY  - CONF
+TI  - AI-Augmented Cybersecurity Architectures for Privacy-Preserving Data Pipelines in Dynamic Smart Environments
+T2  - 2025 IEEE International Conference on Innovate for Humanitarian: Tech Solutions for Global Challenge (ICIH)
+SP  - 1
+EP  - 6
+AU  - P. Ediga
+AU  - P. Vyas
+AU  - G. D. Sowjanya
+AU  - M. Chandana
+AU  - Swati.
+AU  - D. Upodhyay
+PY  - 2025
+KW  - Modeling
+KW  - Artificial intelligence
+KW  - Timing
+KW  - Privacy
+KW  - Internet of Things
+KW  - Printing
+KW  - Computer security
+KW  - Federated learning
+KW  - Equations
+KW  - Machine learning
+KW  - GNN
+KW  - DL-AIFCM
+KW  - SHRE
+KW  - AI
+KW  - RL
+KW  - ML
+KW  - ATIL
+DO  - 10.1109/ICIH67754.2025.11608625
+JO  - 2025 IEEE International Conference on Innovate for Humanitarian: Tech Solutions for Global Challenge (ICIH)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 IEEE International Conference on Innovate for Humanitarian: Tech Solutions for Global Challenge (ICIH)
+Y1  - 21-22 Nov. 2025
+AB  - A secure and privacy preserving data flow within distributed and dynamic large scale environments has become an essential issue in the age of hyper connected smart environments. In this study, a new Dual Layer AI Augmented Federated Confidentiality Model DL AIFCM that can protect data pipelines and still be highly efficient and protect the privacy of users is presented. The suggested architecture combines federated learning with homomorphic encryption and differential privacy to make sure that sensitive data does not leave its local setting in the process of distributed training and, therefore, does not necessitate the need of exchanging raw data. The proposed DL AIFCM framework has been evaluated in a simulated smart city environment with multiple IoT devices, demonstrating its capability to detect cyber threats in real-time while preserving user privacy, making it suitable for practical deployment in urban infrastructure, healthcare, and intelligent transportation systems. Adaptive Threat Intelligence Layer ATIL is a reinforcement learning that operates independently to identify anomalies, judge trust, and react real-time throughout the system. Moreover, such verification protocol can be based on Zero Knowledge Proofs and guarantee integrity of data without flash over to confidentiality. In order to mitigate the complexity and topology volatility of smart environments, a Graph Neural Network GNN module performs on-demand mapping of changes in the network and flaws. It also enhances the architecture with Self- Healing Response Engine SHRE that allows automatic mitigation by mode of policy reconfiguration and isolating routes. The composite nature of these constructed elements creates a high quality AI enhanced cybersecurity system against rapidly changing cyber threats without data privacy compromises, which is highly applicable in the actual application of smart infrastructures. The suggested DL AIFCM technique attains an overall accuracy of 96.1 percent in identifying and alleviating cybersecurity risks in dynamic smart settings.
+ER  - 
+
+TY  - JOUR
+TI  - Private, Accurate and Communication Efficient Clustering Over Vertically Distributed Dataset
+T2  - IEEE Transactions on Information Forensics and Security
+SP  - 5094
+EP  - 5108
+AU  - S. Yuan
+AU  - K. Xue
+AU  - J. Zhao
+AU  - D. S. L. Wei
+PY  - 2025
+KW  - Encoding
+KW  - Protocols
+KW  - Measurement
+KW  - Servers
+KW  - Accuracy
+KW  - Polynomials
+KW  - Computational efficiency
+KW  - Homomorphic encryption
+KW  - Distributed databases
+KW  - Cryptography
+KW  - Federated clustering
+KW  - vertical distributed dataset
+KW  - privacy enhancing technology
+DO  - 10.1109/TIFS.2025.3567914
+JO  - IEEE Transactions on Information Forensics and Security
+IS  - 
+SN  - 1556-6021
+VO  - 20
+VL  - 20
+JA  - IEEE Transactions on Information Forensics and Security
+Y1  - 2025
+AB  - Clustering is a crucial unsupervised machine learning algorithm extensively used in various practical applications, such as patient refinement and fraud detection, which often involve vertically distributed data across multiple data centers. However, sharing datasets directly is typically prohibited under GDPR due to potential privacy breaches. Therefore, privacy-preserving joint clustering for vertically distributed datasets is highly desired. In this paper, we propose Privacy-Preserving Vertically Federated Clustering (PPVFC), a solution that not only achieves this goal but also significantly reduces computational and communication overhead for each data owner (DO). Unlike most previous works that achieve the goal with a single privacy-enhancing technology, PPVFC jointly leverages multiparty homomorphic encryption (MHE) and multiparty computation (MPC) to efficiently interleave communication-lightweight homomorphic computations on the local dataset with operations over collectively secret-shared intermediate data. Specifically, we design a coefficient-wise encoding for MHE to pack large datasets and minimize communication costs. Additionally, we develop a round-efficient bit extraction protocol for determining the minimum distance. Through extensive experiments and security analysis, we demonstrate the practical performance and robust security guarantees of PPVFC.
+ER  - 
+
+TY  - CONF
+TI  - Cybersecurity Enabled Improved BigData Privacy Management Measures to Preserve Information With Privacy Concerns
+T2  - 2024 Ninth International Conference on Science Technology Engineering and Mathematics (ICONSTEM)
+SP  - 1
+EP  - 7
+AU  - S. R
+AU  - A. C. T
+AU  - W. A. Daden
+AU  - M. M
+AU  - V. M
+AU  - R. K. G
+PY  - 2024
+KW  - Training
+KW  - Data privacy
+KW  - Privacy
+KW  - Protocols
+KW  - Organizations
+KW  - Big Data
+KW  - Threat assessment
+KW  - Cybersecurity
+KW  - Big Data
+KW  - Privacy Management
+KW  - Framework
+KW  - Data Encryption
+KW  - Access Controls
+KW  - Anonymization Techniques
+KW  - Threat Detection
+KW  - Incident Response
+KW  - Regulatory Compliance
+DO  - 10.1109/ICONSTEM60960.2024.10568845
+JO  - 2024 Ninth International Conference on Science Technology Engineering and Mathematics (ICONSTEM)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2024 Ninth International Conference on Science Technology Engineering and Mathematics (ICONSTEM)
+Y1  - 4-5 April 2024
+AB  - In today's data-driven landscape, preserving the privacy and security of sensitive information within Big Data environments, particularly in sectors like healthcare, is of paramount importance. This paper introduces a comprehensive framework for Cybersecurity Enabled Improved Big Data Privacy Management Measures (IBPMM) tailored to address the challenges of safeguarding privacy while harnessing the potential of vast datasets. The framework integrates advanced cybersecurity measures with privacy management strategies, incorporating key components such as data encryption, access controls, anonymization techniques, threat detection, and incident response protocols. Regulatory compliance requirements, including GDPR and HIPAA, are carefully considered throughout the framework's development. Additionally, methodologies for data classification, risk assessment, and continuous monitoring ensure that privacy risks are systematically identified and mitigated. Privacy-preserving technologies such as differential privacy and homomorphic encryption enable secure data analysis while protecting individual privacy. Employee training and awareness initiatives foster a culture of privacy and security within organizations. The framework also includes robust incident response procedures to address security breaches promptly. By implementing the IBPMM framework, organizations can effectively balance the benefits of Big Data analytics with the imperative to preserve information with privacy concerns.
+ER  - 
+
+TY  - CONF
+TI  - Encrypted Classification for Prevention of Adversarial Perturbation and Individual Identification in Health-Monitoring
+T2  - 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)
+SP  - 1153
+EP  - 1158
+AU  - H. Kawase
+AU  - W. Meinhold
+AU  - C. Zeagler
+AU  - T. P. Miles
+AU  - J. Ueda
+PY  - 2023
+KW  - Temperature measurement
+KW  - Support vector machines
+KW  - Temperature distribution
+KW  - Sociology
+KW  - Training data
+KW  - Medical services
+KW  - Cryptography
+DO  - 10.1109/AIM46323.2023.10196163
+JO  - 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)
+IS  - 
+SN  - 2159-6255
+VO  - 
+VL  - 
+JA  - 2023 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)
+Y1  - 28-30 June 2023
+AB  - Developments in sensing and analysis methods have significantly increased the scope of physiological monitoring for healthcare purposes. While the continuous monitoring of physiological measurements enables improved detection and management of many illnesses, accompanying cybersecurity concerns continue to evolve. The large amounts of individualized data necessary to enable learned models for analysis must be sufficiently protected. In addition, the analysis and classification methods themselves should not be vulnerable to attack. This work addresses adversarial individual identification with multiple forms of physiological data, as well as potential performance interruption attacks. The paper proposes a homomorphic encryption scheme to mitigate both of these threats.
+ER  - 
+
+TY  - JOUR
+TI  - Secure Phrase Search for Intelligent Processing of Encrypted Data in Cloud-Based IoT
+T2  - IEEE Internet of Things Journal
+SP  - 1998
+EP  - 2008
+AU  - M. Shen
+AU  - B. Ma
+AU  - L. Zhu
+AU  - X. Du
+AU  - K. Xu
+PY  - 2019
+KW  - Cloud computing
+KW  - Indexes
+KW  - Servers
+KW  - Privacy
+KW  - Encryption
+KW  - Artificial intelligence
+KW  - cloud
+KW  - encrypted data
+KW  - Internet of Things (IoT)
+KW  - phrase search
+DO  - 10.1109/JIOT.2018.2871607
+JO  - IEEE Internet of Things Journal
+IS  - 2
+SN  - 2327-4662
+VO  - 6
+VL  - 6
+JA  - IEEE Internet of Things Journal
+Y1  - April 2019
+AB  - Phrase search allows retrieval of documents containing an exact phrase, which plays an important role in many machine learning applications for cloud-based Internet of Things (IoT), such as intelligent medical data analytics. In order to protect sensitive information from being leaked by service providers, documents (e.g., clinic records) are usually encrypted by data owners before being outsourced to the cloud. This, however, makes the search operation an extremely challenging task. Existing searchable encryption schemes for multikeyword search operations fail to perform phrase search, as they are unable to determine the location relationship of multiple keywords in a queried phrase over encrypted data on the cloud server side. In this paper, we propose P3, an efficient privacy-preserving phrase search scheme for intelligent encrypted data processing in cloud-based IoT. Our scheme exploits the homomorphic encryption and bilinear map to determine the location relationship of multiple queried keywords over encrypted data. It also utilizes a probabilistic trapdoor generation algorithm to protect users' search patterns. Thorough security analysis demonstrates the security guarantees achieved by P3. We implement a prototype and conduct extensive experiments on real-world datasets. The evaluation results show that compared with existing multikeyword search schemes, P3 can greatly improve the search accuracy with moderate overheads.
+ER  - 
+
+TY  - JOUR
+TI  - Practical and Robust Federated Learning With Highly Scalable Regression Training
+T2  - IEEE Transactions on Neural Networks and Learning Systems
+SP  - 13801
+EP  - 13815
+AU  - S. Han
+AU  - H. Ding
+AU  - S. Zhao
+AU  - S. Ren
+AU  - Z. Wang
+AU  - J. Lin
+AU  - S. Zhou
+PY  - 2024
+KW  - Training
+KW  - Privacy
+KW  - Federated learning
+KW  - Diseases
+KW  - Computational modeling
+KW  - COVID-19
+KW  - Servers
+KW  - COVID-19 prediction
+KW  - Internet of Medical Things (IoMT)
+KW  - noninteractive federated learning
+KW  - Parkinson’s disease prediction
+KW  - privacy-preserving computation
+KW  - privacy-preserving machine learning (ML)
+KW  - regression training
+DO  - 10.1109/TNNLS.2023.3271859
+JO  - IEEE Transactions on Neural Networks and Learning Systems
+IS  - 10
+SN  - 2162-2388
+VO  - 35
+VL  - 35
+JA  - IEEE Transactions on Neural Networks and Learning Systems
+Y1  - Oct. 2024
+AB  - Privacy-preserving federated learning, as one of the privacy-preserving computation techniques, is a promising distributed and privacy-preserving machine learning (ML) approach for Internet of Medical Things (IoMT), due to its ability to train a regression model without collecting raw data of data owners (DOs). However, traditional interactive federated regression training (IFRT) schemes rely on multiple rounds of communication to train a global model and are still under various privacy and security threats. To overcome these problems, several noninteractive federated regression training (NFRT) schemes have been proposed and applied in a variety of scenarios. However, there are still several challenges: 1) how to protect the privacy of DOs’ local dataset; 2) how to realize highly scalable regression training without linear dependence on sample dimension; 3) how to tolerate DOs’ dropout; and 4) how to enable DOs to verify the correctness of aggregated results returned from the cloud service provider (CSP). In this article, we propose two practical noninteractive federated learning schemes with privacy-preserving for IoMT, named homomorphic encryption based NFRT (HE-NFRT) and double-masking protocol based NFRT (Mask-NFRT), respectively, which are based on a comprehensive consideration of NFRT, privacy concerns, high-efficiency, robustness, and verification mechanism. The security analyses display that our proposed schemes are able to protect the privacy of DOs’ local training data, resist collusion attack, and support strong verification to each DO. The performance evaluation results demonstrate that our proposed HE-NFRT scheme is desirable for a high-dimensional and high-security IoMT application while Mask-NFRT scheme is desirable for a high-dimensional and large-scale IoMT application.
+ER  - 
+
+TY  - CONF
+TI  - Encrypted system identification as-a-service via reliable encrypted matrix inversion
+T2  - 2024 IEEE 63rd Conference on Decision and Control (CDC)
+SP  - 4582
+EP  - 4588
+AU  - J. Adamek
+AU  - P. Binfet
+AU  - N. Schlüter
+AU  - M. S. Darup
+PY  - 2024
+KW  - Privacy
+KW  - Circuits
+KW  - Finance
+KW  - Machine learning
+KW  - Control systems
+KW  - Polynomials
+KW  - System identification
+KW  - Iterative methods
+KW  - Integrated circuit reliability
+KW  - Homomorphic encryption
+KW  - Control systems privacy
+KW  - cyber-physical security
+KW  - system identification
+KW  - homomorphic encryption
+DO  - 10.1109/CDC56724.2024.10886076
+JO  - 2024 IEEE 63rd Conference on Decision and Control (CDC)
+IS  - 
+SN  - 2576-2370
+VO  - 
+VL  - 
+JA  - 2024 IEEE 63rd Conference on Decision and Control (CDC)
+Y1  - 16-19 Dec. 2024
+AB  - Encrypted computation opens up promising avenues across a plethora of application domains, including machine learning, health-care, finance, and control. Arithmetic homomorphic encryption, in particular, is a natural fit for cloud-based computational services. However, computations are essentially limited to polynomial circuits, while comparisons, transcendental functions, and iterative algorithms are notoriously hard to realize. Against this background, the paper presents an encrypted system identification service enabled by a reliable encrypted solution to least squares problems. More precisely, we devise an iterative algorithm for matrix inversion and present reliable initializations as well as certificates for the achieved accuracy without compromising the privacy of provided I/O-data. The effectiveness of the approach is illustrated with three popular identification tasks.
+ER  - 
+
+TY  - CONF
+TI  - Performance Evaluation and Optimization of Homomorphic Encryption for Secure Cloud Computing Applications
+T2  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+SP  - 1
+EP  - 6
+AU  - R. K
+AU  - S. N. Prabhu
+PY  - 2025
+KW  - Performance evaluation
+KW  - Cloud computing
+KW  - Data privacy
+KW  - Scalability
+KW  - Memory management
+KW  - Organizations
+KW  - Mathematical models
+KW  - Outsourcing
+KW  - Homomorphic encryption
+KW  - Optimization
+KW  - Homomorphic Encryption
+KW  - Cloud Computing
+KW  - Data Privacy
+KW  - AES
+KW  - RSA
+KW  - Hybrid Cryptosystem
+KW  - Performance Evaluation
+DO  - 10.1109/ICAFT66710.2025.11452781
+JO  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 1st International Conference on Advancement in Futuristic Technologies (ICAFT)
+Y1  - 19-21 Dec. 2025
+AB  - The rise of cloud computing has revolutionized data storage and computation paradigms, enabling organizations to leverage scalable infrastructure. However, data confidentiality remains a critical concern when outsourcing computation to third-party cloud providers. Homomorphic Encryption (HE) allows computation to be performed on encrypted data without decryption, providing a mathematically sound approach to privacy preservation. This paper presents an extended performance evaluation and optimization analysis of HE techniques compared to conventional encryption schemes such as AES and RSA in representative cloud environments. We simulate three real-world use cases — Electronic Health Records (EHR), Financial Data Processing, and Machine Learning Model Evaluation — to assess the computational overhead, latency, and memory requirements. Further, we propose a hybrid cryptographic architecture that combines partial HE operations with symmetric encryption to balance security, efficiency, and scalability. The study ends with recommendations for improvement. These include batching ciphertext, using parallel computation, and applying compression strategies.
+ER  - 
+
+TY  - CONF
+TI  - Privacy-Preserving and Scalable Secure Aggregation for Federated Learning in Edge Computing
+T2  - 2025 Second International Conference on Cognitive Robotics and Intelligent Systems (ICC - ROBINS)
+SP  - 182
+EP  - 188
+AU  - P. S N
+AU  - D. K. J. B. Saini
+AU  - N. Shelke
+AU  - A. Pimpalkar
+AU  - G. H. Kumar
+AU  - V. V
+PY  - 2025
+KW  - Privacy
+KW  - Differential privacy
+KW  - Costs
+KW  - Federated learning
+KW  - Computational modeling
+KW  - Medical services
+KW  - Computer architecture
+KW  - Homomorphic encryption
+KW  - Next generation networking
+KW  - Edge computing
+KW  - Federated Learning
+KW  - Secure Aggregation
+KW  - Privacy-Preserving Machine Learning
+KW  - Edge Computing and Homomorphic Encryption
+DO  - 10.1109/ICC-ROBINS64345.2025.11086126
+JO  - 2025 Second International Conference on Cognitive Robotics and Intelligent Systems (ICC - ROBINS)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 Second International Conference on Cognitive Robotics and Intelligent Systems (ICC - ROBINS)
+Y1  - 25-26 June 2025
+AB  - Federated Learning (FL) has been identified as a leading approach to decentralize machine learning processes, particularly in edge computing contexts where user data privacy is a critical issue. While previous work has made strides in privacypreserving secure aggregation techniques, traditional secure aggregation methods are not scalable, computationally efficient, and robust against attack. Therefore, this work proposes a scalable and Privacy-Preserving Secure Aggregation (PSSA) architecture that advances the onward efficiency and security of FL model updates. The proposed solution provides a solution to robust aggregation through the integration of homomorphic encryption, differential privacy, and adaptive compression to effectively reduce communication overheads. Importantly, in differentiating from prior work, PSSA dynamically updates encryption level based on network conditions: this capability makes PSSA more operationally feasible for resource-constrained edge devices when compared to traditional secure aggregation methods. Based on an extensive evaluation on benchmark datasets, it is found that PSSA achieves and offers up to a 40 % reduced communication cost and 25 % faster aggregation time for FL without sacrificing model accuracy. Finally, based on the theoretical analysis, initial evidence that PSSA is robust against gradient inversion attacks and collusion attacks, has been provided. In enabling efficient, scalable and secure model updates, PSSA advances the practical applicability of federated learning to real-world settings, including health care, cyber security, and smart cities. This work ultimately advances the case for next generation federated learning architectures that prioritizes both secure performance and privacy considerations and the associated deployment in AI-driven toward future edge ecosystems.
+ER  - 
+
+TY  - CONF
+TI  - A Cryptographic Federated Learning-Based Channel Estimation for Next-Generation Networks
+T2  - 2023 IEEE Virtual Conference on Communications (VCC)
+SP  - 92
+EP  - 97
+AU  - F. O. Catak
+AU  - M. Kuzlu
+PY  - 2023
+KW  - Training
+KW  - Solid modeling
+KW  - Privacy
+KW  - Computational modeling
+KW  - Channel estimation
+KW  - Data models
+KW  - Safety
+KW  - Cybersecurity
+KW  - next-generation networks
+KW  - federated learning
+KW  - channel estimation
+DO  - 10.1109/VCC60689.2023.10474729
+JO  - 2023 IEEE Virtual Conference on Communications (VCC)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2023 IEEE Virtual Conference on Communications (VCC)
+Y1  - 28-30 Nov. 2023
+AB  - In recent years, advancements in Artificial Intelligence (AI) have significantly improved communication systems in terms of data transmission rate, latency, and accuracy, along with high demand to support a variety of new applications and services, including Virtual Reality (VR) and Augmented Reality (AR), Metaverse, large-scale Internet of Things (IoT), e-health, autonomous and flying vehicles. AI is pivotal in developing next-generation communication systems, such as 5G and beyond, and is expected to play an even more significant role in the future. However, using AI methods brings significant challenges due to centralized high computing demand, data diversity, and security concerns. Fortunately, Federated Learning (FL) is a decentralized form of machine learning that offers a promising solution to these challenges. This paper proposes a cryptographic FL-based channel estimation model using AI models for next-generation networks to encrypt the data to prevent privacy attacks. The study uses homomorphic encryption (HE) to address this issue, providing a secure multi-party computation protocol (SMCP) to safeguard AI-based channel estimation models.
+ER  - 
+
+TY  - CONF
+TI  - An Optimized Key Distribution Protocol to Perform Secure Wireless Data Transmission in Heterogeneous WSN Environment
+T2  - 2025 International Conference on Recent Innovation in Science Engineering and Technology (ICRISET)
+SP  - 1
+EP  - 10
+AU  - G. D. Vignesh
+AU  - A. Suliman Hussein
+AU  - O. Prasad
+AU  - KMuralibabu
+AU  - P. Nishitha
+AU  - S. Purushotham
+PY  - 2025
+KW  - Wireless communication
+KW  - Wireless sensor networks
+KW  - Energy consumption
+KW  - Protocols
+KW  - Intrusion detection
+KW  - Data aggregation
+KW  - Real-time systems
+KW  - Energy efficiency
+KW  - Data communication
+KW  - Optimization
+KW  - Wireless Sensor Networks
+KW  - Key Distribution
+KW  - Heterogeneous Nodes
+KW  - Cryptographic Security
+KW  - Energy Efficiency
+KW  - Firefly Optimization
+KW  - Elliptic Curve Cryptography
+KW  - Trust Management
+KW  - Intrusion Detection
+KW  - Secure Data Aggregation
+DO  - 10.1109/ICRISET64803.2025.11252516
+JO  - 2025 International Conference on Recent Innovation in Science Engineering and Technology (ICRISET)
+IS  - 
+SN  - 
+VO  - 
+VL  - 
+JA  - 2025 International Conference on Recent Innovation in Science Engineering and Technology (ICRISET)
+Y1  - 1-2 Aug. 2025
+AB  - Securing wireless communication in heterogeneous Wireless Sensor Networks (WSNs) remains a critical challenge due to the diversity of node capabilities and constrained resources. This paper introduces an Optimized Key Distribution Protocol (OKDP) designed to ensure secure, energy-efficient, and scalable data transmission in such heterogeneous environments. The methodology integrates node classification into high-capacity cluster heads and low-power sensing nodes, followed by identity-based lightweight authentication. A Firefly Optimization Algorithm is used over a matrix-based key pre-distribution approach, with minimum memory overhead and maximum key-sharing likelihood. Forward and backward secrecy is achieved by use of dynamic key establishment through elliptic curve Diffie-Hellman (ECDH) and hash-based rekeying. The protocol is also reinforced by the fact that a trust-aware intrusion detection module is in place isolating compromise nodes in real time. The proposed OKDP achieved an average key sharing probability of 94.18%, compromised node tolerance of 85.26%, energy consumption of 1.45 J, and an operational accuracy of 96.42% across various simulation scenarios. Its significantly higher performance in resilience, energy consumption, and communication overhead are confirmed by comparative results against well-known benchmark protocols (LEAP+, ECC-KPS, SPINS, etc.). The privacy-sensitive characteristics of the privacy-preserving data aggregation are secured through the adoption of the homomorphic encryption, which does not hinder the computational tractability. OKDP architecture is highly scalable and flexible and could therefore be well suited to the IoT present-day use cases such as smart farming, combat surveillance, and medical supervision. This paper, therefore, proposes a secure and effective protocol that is lightweight, less CPU intensive and optimized to support real-time secure transmission of data in WSNs composed of heterogeneous nodes.
+ER  - 
+
+TY  - CONF
+TI  - [Front cover]
+T2  - 2016 4th IEEE International Colloquium on Information Science and Technology (CiSt)
+SP  - c1
+EP  - c1
+PY  - 2016
+DO  - 10.1109/CIST.2016.7804841
+JO  - 2016 4th IEEE International Colloquium on Information Science and Technology (CiSt)
+IS  - 
+SN  - 2327-1884
+VO  - 
+VL  - 
+JA  - 2016 4th IEEE International Colloquium on Information Science and Technology (CiSt)
+Y1  - 24-26 Oct. 2016
+AB  - The following topics are dealt with: enterprise architecture; E-learning; finance management system; ontology; SME; drug supply; inventory management; lean-maintenance; hospital logistics; FLOSS ERP system; UTAUT2; SEM; R; vertical handover; MIH architecture; intelligence E-CRM; ITIL framework; data quality; data warehouse security; good governance monitoring; TestNG tests; UML sequence diagrams; Scrum process; health data management system; Hadoop-Agent; data mining; RIA interfaces; XML technology; Web applications; social networks; spanning tree; PSO algorithm; MDA; CIM; PIM; SoaML; IFML; supply chain demand forecasts; game theory; business process verification; intrusion detection; stateful pattern matching; neural network; big incremental dynamic case-based reasoning-multi-agents system; BIDCBR-MAS; cloud computing; EA readiness instrument; reverse engineering; Web mining; information system security risk management; object oriented programs; partitioning filter; memetic hunting search algorithm; traveling salesman problem; SYSML language; KPI; project portfolio management information systems; information entropy; PPMIS; XBRL; GUI; Java source code analysis; crowdsourcing; critical infrastructures; CCSD; TOPSIS; AprioriMin; stock market price prediction; HP filter; association rules; k-means algorithm; automatic keyphrase extraction; distributed test architecture; dictionary Al-Qamus; text summarization; sign language; community question answering; distributional semantics; feature extraction; sentiment analysis; information retrieval; Lahajat; rule-based converter; data hiding; image cropping; LSB steganography; bag of features model; sampling theory; 3D segmentation algorithms; DSWT; DCT; GPU; adaptive learning system; Bayesian network; ALS_CORR[LP]; virtual labs; intelligent tutoring systems; MOOC; metadata; recommender system; smart curriculum sequencing; software engineering learning; IDE 2.0; Moodle; university of the future; dynamic programming; traffic signal control system; PHM as a service; mobile cloud; honeypots; genetic algorithm; QFN electronic package; response surface approach; EST.Stemmer; cloud database; homomorphic encryption; interoperability; IDS-AM-Clust; O&M cost simulation; fluid-structure interaction problems; spectrum allocation; cognitive radio system; vehicle path planning problem; tube hydroforming; liquidity; wind turbine blade; air-flow; identity management systems; harmony search algorithm; SCOR model; ARIS; embedded system; Pennes bioheat equation; max-cut problem; min-conflict heuristic; AHP method; Tr-OrBAC model; Q-learning; smart cities; extended Kalman filter; evolutionary machine learning; indoor localization; particle map matching; activity recognition; back-propagation algorithm; 4th generation heterogeneous wireless network; vehicular navigation spoofing detection; 2-D DOA estimation; MUSIC algorithm; uniform circular array; smart grid; residential microgrid; signaling DoS attacks; 3G mobile networks; safety instrumented system; routing process; VANET; intelligent transportation systems; wireless sensor networks; FPGA; pipelined AES S-box; disaster emergency system; alert message dissemination protocol; LEACH protocol; metacognitive learning management system; and self-regulated learning.
+ER  - 
+
+
