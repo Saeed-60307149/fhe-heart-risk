@@ -9,7 +9,7 @@
 
 Details: [SLR_Protocol_v4_changes.md](SLR_Protocol_v4_changes.md) · Results: [search-log.md](search-log.md)
 
-Source: SLR Protocol v3 ([protocol.md](protocol.md)), 9 Oct 2026, with the v4 changes above. Copy these **exactly** – do not reformat. If a string changes, record the new string and the reason in the **Search Log** tab of the live PRISMA sheet (see [README.md](README.md)).
+Source: SLR Protocol v3 ([protocol.md](protocol.md)), 9 Oct 2026, with the v4 changes above. Copy these **exactly** – do not reformat. If a string changes, record the new string and the reason in the **Search Log** tab of the PRISMA sheet in this folder (see [README.md](README.md)).
 
 Master string: **A (encryption) AND B (machine learning) AND C (health)**.
 

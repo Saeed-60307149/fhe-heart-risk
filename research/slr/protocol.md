@@ -5,7 +5,7 @@
 Privacy-Preserving Heart Disease Risk Prediction Using FHE · COMP4101 Practicum · UDST
 Oct 9, 2026 · v3 · Abdullah Dar
 
-> Markdown copy of [SLR_Protocol_v3.pdf](SLR_Protocol_v3.pdf). The live protocol is edited in OneDrive, not here (see [README.md](README.md)). The v2 copy is in [archive/](archive/).
+> Markdown copy of [SLR_Protocol_v3.pdf](SLR_Protocol_v3.pdf). This file and the PDF are the master copies (see [README.md](README.md)). The v2 copy is in [archive/](archive/).
 
 ## Review questions
 

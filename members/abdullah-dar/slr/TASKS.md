@@ -1,13 +1,12 @@
 # Abdullah – SLR tasks (Protocol v3)
 
 **Pair 3** with Khalid · **Screener 2** (column H in the Screening Log) · Database: Scopus (confirm) · Set 3 · Synthesis: RQ2 · **Protocol owner · Tie-breaker for Pair 1**
-Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · Work in the **live** sheet (link in the [SLR README](../../../research/slr/README.md)), not the repo copy. v2 tasks: [archive/](archive/)
+Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · PRISMA sheet: the newest `PRISMA_Tracking_Sheet_*.xlsx` in [research/slr/](../../../research/slr/) – pull, edit, commit and push straight away; one person at a time. v2 tasks: [archive/](archive/)
 
 ## Protocol + searches (due Sun 11 Oct)
-- [ ] Get a 'changes' or 'no changes' reply from all six by **Sat 10 Oct** (done when all six are ticked), then update the live protocol:
+- [ ] Get a 'changes' or 'no changes' reply from all six by **Sat 10 Oct** (done when all six are ticked), then update [protocol.md](../../../research/slr/protocol.md):
   - [ ] Naif  - [ ] Saif  - [ ] Sarim  - [ ] Khalid  - [ ] Hassan  - [ ] Abdullah (self-review)
 - [ ] If the version changes: commit the new docx/pdf + [protocol.md](../../../research/slr/protocol.md), move the old version to `research/slr/archive/`
-- [ ] Add the live sheet + protocol link to `LIVE LINK:` in the [SLR README](../../../research/slr/README.md)
 - [ ] Confirm Khalid's **Scopus search check** (3/3 papers found)
 - [ ] Re-run Khalid's **Scopus** search the same day and confirm the count in the **Search Log** tab
 
