@@ -4,7 +4,7 @@
 
 Owner: Hassan Zahid
 
-| Stage | IEEE | ACM | Scopus | Total |
+| Stage | IEEE | PubMed | Scopus | Total |
 |---|---|---|---|---|
 | Records found | | | | |
 | Duplicates removed | | | | |

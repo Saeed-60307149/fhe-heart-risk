@@ -31,7 +31,7 @@ Owner: Abdullah Dar (Wk 7)
 | 2.1 | Initial reading lists (FHE, heart-disease ML, sigmoid approx.) | Saif, Naif, Sarim, Khalid | 27/09/2026 | 01/10/2026 |
 | 2.2 | SLR protocol v3 (questions, PICOC, criteria, team roles) | Abdullah, Naif, Saif | 04/10/2026 | 08/10/2026 |
 | 2.3 | Search strings | Saif | 04/10/2026 | 05/10/2026 |
-| 2.4 | Database searches (IEEE, ACM, Scopus; run + same-day confirm) | Saif + all | 06/10/2026 | 11/10/2026 |
+| 2.4 | Database searches (IEEE, PubMed, Scopus; run + same-day confirm) | Saif + all | 06/10/2026 | 11/10/2026 |
 | 2.5 | PRISMA tracking sheet & de-duplication | Hassan | 04/10/2026 | 11/10/2026 |
 | 2.6 | Title/abstract screening (pairs, every record screened twice) | Saif + all | 12/10/2026 | 15/10/2026 |
 | 2.7a | Full-text screening decisions (Screening Log, columns L-O) | Naif + all | 25/10/2026 | 29/10/2026 |

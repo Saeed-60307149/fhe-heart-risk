@@ -13,7 +13,7 @@
 
 ## Search counts (from the **Search Log** and **PRISMA Counts** tabs of the live PRISMA sheet – link in the [SLR README](../../../research/slr/README.md))
 - [ ] IEEE Xplore result count (Saif, confirmed by Naif): ____
-- [ ] ACM DL result count (Sarim, confirmed by Hassan): ____
+- [ ] PubMed result count (Sarim, confirmed by Hassan): ____ (PubMed replaced ACM DL – see [v4 changes](../../../research/slr/SLR_Protocol_v4_changes.md))
 - [ ] Scopus result count (Khalid, confirmed by Abdullah): ____
 - [ ] Scopus search check passed (3/3 known papers found)
 - [ ] Any change to the strings, with reason (e.g. concept B narrowed)

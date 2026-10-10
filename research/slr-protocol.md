@@ -24,4 +24,4 @@ Owner: Abdullah (see slr/)
 -
 
 ## Databases
-- IEEE Xplore (Saif) · ACM Digital Library (Sarim) · Scopus (Khalid) *(confirm with supervisor decision)*
+- IEEE Xplore (Saif) · PubMed (Sarim; replaced ACM Digital Library) · Scopus (Khalid) *(confirm with supervisor decision)*
