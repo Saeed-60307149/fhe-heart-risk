@@ -10,7 +10,7 @@ RES = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), 
 
 def load(ds, name):
     p = os.path.join(RES, ds, name)
-    return json.load(open(p)) if os.path.exists(p) else None
+    return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else None
 
 
 def f(x, d=3):
@@ -57,5 +57,5 @@ for ds in datasets:
                      f"{f(p['decision_match_encrypted_vs_plain_sigmoid'])} |")
 lines += ["", "Times are means over the test patients on the machine recorded in each JSON file (`environment`).", ""]
 os.makedirs(RES, exist_ok=True)
-open(os.path.join(RES, "README.md"), "w").write("\n".join(lines))
+open(os.path.join(RES, "README.md"), "w", encoding="utf-8").write("\n".join(lines))
 print("wrote", os.path.join(RES, "README.md"))
