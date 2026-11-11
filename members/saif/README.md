@@ -22,3 +22,20 @@
     - `logbook-notes.md` – what you did each day + times (copy into the official logbook template)
     - `research-notes.md` – papers you read and what you learned
     - `slr/` – your SLR checklist (`TASKS.md`) and working files
+
+## Status after Progress Report 2 (11 Nov 2026)
+Taken from PR2 Table 4 and your Week 10–11 logbook. Correct anything that is wrong.
+
+**Done (Weeks 10–11)**
+- Pilot environment with pinned versions (Python 3.12, Node 22, node-seal 7.0.0, TenSEAL 0.3.16)
+- Toy examples; node-seal encrypt/decrypt check, sizes and max error (29 Oct)
+- Encrypted pilot on UCI Cleveland (PR2 Table 5) and re-run before submission
+- Cross-library round trip node-seal → TenSEAL → node-seal (z = 0.877, Wk 11)
+- Re-ran and confirmed the IEEE Xplore count; screened own 6 (Kim 2018, Naresh & Reddi, Murali, Poonam, MediVault, ICSCSP)
+
+**Next (Weeks 12–13)** – the SLR now uses the refined set in [`research/slr/refined-2026-10-29/`](../../research/slr/refined-2026-10-29/); the old Set 1–3 screening tasks in `slr/TASKS.md` are superseded.
+- [ ] Run `bash code/scripts/run_pilot.sh` on your machine → official numbers for both datasets and both layouts; commit `code/results/`
+- [ ] Screen P011 (Janagama 2026) – decision #14
+- [ ] Report the per-feature + encrypted-sigmoid numbers (relin keys instead of 164 MB Galois keys) – the chosen layout, decision #15
+- [ ] Verify the seeded extraction rows P035 (Kim) and P014 (Naresh & Reddi) against the papers
+- [ ] Draft final report: Background (FHE schemes) + cryptographic methodology + pilot results; RQ1 + RQ4 with Naif

@@ -25,6 +25,20 @@ Thumbs.db
 .idea/
 ~$*
 
+# Pilot / round-trip artefacts (ciphertexts, keys, exported patient)
+*.b64
+model_patient.json
+code/data/processed/
+code/results/raw/
+.pytest_cache/
+coverage/
+
 # SLR tracking sheets are not datasets: keep them in git
 !research/slr/*.csv
+!research/slr/**/*.csv
 !members/*/slr/*.csv
+# Small, committed results tables (no patient rows)
+!code/results/*.csv
+
+# Round-trip scratch output
+code/pilots/node-seal-roundtrip/out/

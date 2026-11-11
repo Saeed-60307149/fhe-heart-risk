@@ -1,0 +1,12 @@
+{
+  "name": "fhe-heart-node-seal-roundtrip",
+  "private": true,
+  "type": "module",
+  "description": "PR2 cross-library round-trip: node-seal encrypt -> TenSEAL compute -> node-seal decrypt",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "demo": "node encrypt_demo.mjs && python server_demo.py && node decrypt_demo.mjs",
+    "real": "python train_export.py && node encrypt_real.mjs && python server_real.py && node decrypt_real.mjs"
+  },
+  "dependencies": { "node-seal": "7.0.0" }
+}

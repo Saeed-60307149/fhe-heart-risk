@@ -22,3 +22,16 @@
     - `logbook-notes.md` – what you did each day + times (copy into the official logbook template)
     - `research-notes.md` – papers you read and what you learned
     - `slr/` – your SLR checklist (`TASKS.md`) and working files
+
+## Status after Progress Report 2 (11 Nov 2026)
+Taken from PR2 Table 4 and your Week 10–11 logbook. Correct anything that is wrong.
+
+**Done (Weeks 10–11)**
+- Team planning 25 Oct; supervisor meeting 29 Oct; checked PRISMA exclusion labels and outlined the RQ3 cost-evidence table (31 Oct)
+- Screened own records 3–5 Nov: GuardML, Nguyen (DASC), Sayyad & Kulkarni, Naresh & Varma (retracted), Yadkar, Sravani & Kumar
+
+**Next (Weeks 12–13)** – the SLR now uses the refined set in [`research/slr/refined-2026-10-29/`](../../research/slr/refined-2026-10-29/); the old Set 1–3 screening tasks in `slr/TASKS.md` are superseded.
+- [ ] Run `python code/pilots/sigmoid/fit_sigmoid.py` on both datasets; check the plot `code/results/<ds>/sigmoid_vs_poly.png`; pass at ≥90% decision match (RQ-A), and say whether the 95% expected result is reached (decision #16)
+- [ ] Verify seeded extraction rows P034 (GuardML) and P005 (Nguyen) against the papers
+- [ ] Get full texts: Sayyad & Kulkarni, Yadkar et al., Sravani & Kumar
+- [ ] Draft final report: sigmoid approximation methodology/results; RQ2 with Abdullah

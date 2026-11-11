@@ -1,5 +1,24 @@
 # Search strings
 
+> ## Current strings – Protocol v5 (from 29 Oct 2026)
+> The broad strings below are **superseded**. After the supervisor meeting on 29 Oct 2026 the team
+> adopted exact strings that require encryption AND machine learning AND heart disease together.
+> PubMed and the broad Concept C are no longer searched. Details: [SLR_Protocol_v5_changes.md](SLR_Protocol_v5_changes.md).
+>
+> **IEEE Xplore** (Command Search, Abstract; 2016–2026; Conferences and Journals) – run by Naif, confirmed by Saif:
+> ```
+> ("Abstract":"homomorphic encryption" OR "Abstract":"fully homomorphic" OR "Abstract":FHE) AND "Abstract":"machine learning" AND "Abstract":"heart disease"
+> ```
+> **Scopus** (Advanced search; 2016–2026; English) – run by Naif, confirmed by Abdullah:
+> ```
+> TITLE-ABS-KEY(("homomorphic encryption" OR "fully homomorphic" OR FHE) AND "machine learning" AND "heart disease")
+> ```
+>
+> | Date | Change | Why |
+> |---|---|---|
+> | 29 Oct 2026 | Strings replaced by the exact v5 strings above; PubMed dropped | Broad strings gave 1,044 mostly irrelevant records; supervisor advice. Scopus covers ~6,700 of ~7,000 MEDLINE titles |
+
+
 ## Change log
 
 | Date | Change | Why |

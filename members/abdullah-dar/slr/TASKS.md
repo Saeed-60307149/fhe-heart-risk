@@ -1,5 +1,7 @@
 # Abdullah – SLR tasks (Protocol v3)
 
+> **Superseded on 29 Oct 2026** by the refined search (Protocol v5): records are no longer split into pair sets. Your current SLR tasks are in your [README](../README.md#status-after-progress-report-2-11-nov-2026) and [research/slr/refined-2026-10-29/README.md](../../../research/slr/refined-2026-10-29/README.md).
+
 **Pair 3** with Khalid · **Screener 2** (column H in the Screening Log) · Database: Scopus (confirm) · Set 3 · Synthesis: RQ2 · **Protocol owner · Tie-breaker for Pair 1**
 Shared SLR folder: [research/slr/](../../../research/slr/) · Protocol: [protocol.md](../../../research/slr/protocol.md) · PRISMA sheet: the newest `PRISMA_Tracking_Sheet_*.xlsx` in [research/slr/](../../../research/slr/) – pull, edit, commit and push straight away; one person at a time. v2 tasks: [archive/](archive/)
 

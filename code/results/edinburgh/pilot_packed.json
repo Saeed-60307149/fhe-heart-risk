@@ -1,0 +1,87 @@
+{
+  "dataset": "edinburgh",
+  "layout": "packed",
+  "patients": 314,
+  "params": {
+    "poly_modulus_degree": 16384,
+    "coeff_mod_bit_sizes": [
+      60,
+      40,
+      40,
+      40,
+      40,
+      60
+    ],
+    "scale_bits": 40,
+    "security": "128-bit (SEAL tc128)"
+  },
+  "sigmoid_poly": [
+    0.5,
+    0.14902127599041215,
+    0.0,
+    -0.0015533526392321852
+  ],
+  "accuracy": {
+    "plain_sigmoid": {
+      "n": 314,
+      "accuracy": 0.9267515923566879,
+      "precision": 0.8709677419354839,
+      "recall": 0.782608695652174,
+      "f1": 0.8244274809160306,
+      "roc_auc": 0.9628512274475007
+    },
+    "plain_poly": {
+      "n": 314,
+      "accuracy": 0.9267515923566879,
+      "precision": 0.8709677419354839,
+      "recall": 0.782608695652174,
+      "f1": 0.8244274809160306,
+      "roc_auc": 0.9635019225081337
+    },
+    "encrypted_poly": {
+      "n": 314,
+      "accuracy": 0.9267515923566879,
+      "precision": 0.8709677419354839,
+      "recall": 0.782608695652174,
+      "f1": 0.8244274809160306,
+      "roc_auc": 0.9632948831706596
+    }
+  },
+  "decision_match_encrypted_vs_plain_sigmoid": 1.0,
+  "decision_match_encrypted_vs_plain_poly": 1.0,
+  "max_abs_error_encrypted_vs_plain_poly": 1.3209876008613008e-05,
+  "pass_rq_a_90": true,
+  "meets_expected_95": true,
+  "sigmoid_approx_mae": 0.033147987945328125,
+  "cost": {
+    "keygen_s": 1.6293571999995038,
+    "encrypt_ms": {
+      "mean": 12.614444587424185,
+      "median": 12.06470001488924,
+      "min": 11.48959994316101,
+      "max": 25.573800085112453
+    },
+    "inference_ms": {
+      "mean": 67.87347516258527,
+      "median": 64.69145003939047,
+      "min": 61.10450008418411,
+      "max": 136.21889997739345
+    },
+    "decrypt_ms": {
+      "mean": 1.8613503127696978,
+      "median": 1.7724499921314418,
+      "min": 1.664099982008338,
+      "max": 5.475899903103709
+    },
+    "ciphertext_per_patient_MB": 1.0048933029174805,
+    "public_context_MB": 7.535374641418457,
+    "context_with_secret_key_MB": 1.8807249069213867,
+    "galois_keys_MB": 163.87931537628174
+  },
+  "environment": {
+    "python": "3.13.15",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

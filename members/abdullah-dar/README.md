@@ -23,3 +23,19 @@
     - `logbook-notes.md` – what you did each day + times (copy into the official logbook template)
     - `research-notes.md` – papers you read and what you learned
     - `slr/` – your SLR checklist (`TASKS.md`) and working files
+
+## Status after Progress Report 2 (11 Nov 2026)
+Taken from PR2 Table 4 and your Week 10–11 logbook. Correct anything that is wrong.
+
+**Done (Weeks 10–11)**
+- Architecture diagram + API contract draft (26–29 Oct; 2 endpoints, 7 error codes); protocol E1–E5 vs E1–E6 mismatch found
+- Re-ran and confirmed the Scopus count (refined search)
+- Screened own 6 records 1–5 Nov: AutoPro-RHC, Nisha, TrustFedHealth, Cenitta, IC-ICN, Heartify
+
+**Next (Weeks 12–13)** – the SLR now uses the refined set in [`research/slr/refined-2026-10-29/`](../../research/slr/refined-2026-10-29/); the old Set 1–3 screening tasks in `slr/TASKS.md` are superseded.
+- [ ] Screen P023 (ICIC 2019 proceedings) – decision #14
+- [ ] Review `design/api-contract.md` v2 (final, 8 error codes – decision #18), `design/architecture.md` v2, `design/pilot-workflow.md`, `design/openapi.yaml`
+- [ ] Update the Gantt PNG for Practicum → Capstone 2 (`planning/gantt/`)
+- [ ] Turn on branch protection for `main` + require the CI checks (`.github/workflows/ci.yml`)
+- [ ] Verify seeded extraction rows P024, P006, P026; read the TrustFedHealth full text
+- [ ] Draft final report: architecture, Gantt, challenges; RQ2 with Khalid

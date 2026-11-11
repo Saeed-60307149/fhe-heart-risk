@@ -1,0 +1,89 @@
+{
+  "dataset": "cleveland",
+  "layout": "per_feature",
+  "patients": 75,
+  "params": {
+    "poly_modulus_degree": 16384,
+    "coeff_mod_bit_sizes": [
+      60,
+      40,
+      40,
+      40,
+      40,
+      60
+    ],
+    "scale_bits": 40,
+    "security": "128-bit (SEAL tc128)"
+  },
+  "sigmoid_poly": [
+    0.5,
+    0.17440823348365816,
+    0.0,
+    -0.0027135616140109998
+  ],
+  "accuracy": {
+    "plain_sigmoid": {
+      "n": 75,
+      "accuracy": 0.8533333333333334,
+      "precision": 0.8529411764705882,
+      "recall": 0.8285714285714286,
+      "f1": 0.8405797101449275,
+      "roc_auc": 0.9471428571428572
+    },
+    "plain_poly": {
+      "n": 75,
+      "accuracy": 0.8533333333333334,
+      "precision": 0.8529411764705882,
+      "recall": 0.8285714285714286,
+      "f1": 0.8405797101449275,
+      "roc_auc": 0.9471428571428572
+    },
+    "encrypted_poly": {
+      "n": 75,
+      "accuracy": 0.8533333333333334,
+      "precision": 0.8529411764705882,
+      "recall": 0.8285714285714286,
+      "f1": 0.8405797101449275,
+      "roc_auc": 0.9471428571428572
+    }
+  },
+  "decision_match_encrypted_vs_plain_sigmoid": 1.0,
+  "decision_match_encrypted_vs_plain_poly": 1.0,
+  "max_abs_error_encrypted_vs_plain_poly": 2.0065683314918203e-06,
+  "pass_rq_a_90": true,
+  "meets_expected_95": true,
+  "sigmoid_approx_mae": 0.03555390123575053,
+  "cost": {
+    "keygen_s": 0.7693319999380037,
+    "encrypt_ms": {
+      "mean": 354.07243867249537,
+      "median": 341.992300003767,
+      "min": 311.4984000567347,
+      "max": 687.0848999824375
+    },
+    "inference_ms": {
+      "mean": 212.64571732996652,
+      "median": 207.52350008115172,
+      "min": 193.87449999339879,
+      "max": 426.1944000609219
+    },
+    "decrypt_ms": {
+      "mean": 4.953161332135399,
+      "median": 4.739299998618662,
+      "min": 3.955199965275824,
+      "max": 10.004799929447472
+    },
+    "ciphertexts_per_patient_MB": 13.060933113098145,
+    "result_ciphertext_MB": 0.4377470016479492,
+    "parms_KB": 0.091796875,
+    "relin_keys_MB": 6.280587196350098,
+    "galois_keys_MB": 0.0,
+    "note": "inference_ms includes loading the ciphertexts from bytes (server path)"
+  },
+  "environment": {
+    "python": "3.13.15",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

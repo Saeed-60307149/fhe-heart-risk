@@ -32,3 +32,40 @@ SLR: screen all of Set 3 (Screening Log, column G) independently of Abdullah; co
 |---|---|---|---|
 | | | | |
 | **Total** | | | |
+
+## Week 9 (18 – 22 Oct)
+Semester break – no logbook.
+
+## Week 10 (25 – 29 Oct) – as submitted
+
+Copied word for word from the submitted logbook PDF (Logbook_3_60306117.pdf); only line breaks were changed. Do not edit – it is the record of what was handed in.
+
+| Day / Date | Time | What I did | Hours |
+|---|---|---|---|
+| Sun 25 Oct | 4:00–6:00 PM | I took part in a team planning session focused on the systematic literature review (SLR) and project responsibilities. I reviewed the current search pool of 1,044 unique records from IEEE Xplore, PubMed and Scopus after deduplication. We discussed how the review should use a documented protocol and reproducible selection decisions rather than AI-based paper ranking. I considered the three-pair allocation, the four research questions (FHE schemes/libraries, model accuracy and sigmoid approximations, computational cost, and key management/client encryption), and the need to maintain PRISMA screening records. Topics I referenced in the discussion: confirming inclusion/exclusion criteria, independent title/abstract screening and disagreement resolution, and preparing for full-text review. | 2 |
+| Thu 29 Oct | 11:00 AM–1:00 PM | I attended a supervisory meeting with Dr. Abdulatif Shikfa, as recorded in the reference logbook. During the meeting, our team raised concerns about having over 1,000 SLR records remaining after the initial filtering process. The supervisor clarified our questions and discussed techniques that could help narrow down the pool of research papers. Following the meeting, I discussed the key points with my team and helped divide the follow-up tasks.<br><br>My key SLR follow-up responsibilities included tightening and consistently applying the eligibility criteria, documenting every exclusion in the PRISMA record, independently screening records and resolving disagreements with the team, prioritizing relevant FHE-on-healthcare ML papers for full-text review, extracting comparable benchmark and accuracy data, and maintaining a reproducible research protocol. These follow-up actions reflect the guidance and tasks established through our team discussion rather than a verbatim account of the meeting. | 2 |
+| Sat 31 Oct | 6:00–8:00 PM | I dedicated a two-hour weekend work block to reviewing the SLR references and organizing the research evidence. I revisited the written screening criteria, checked the consistency of the PRISMA exclusion labels, and outlined the RQ3 evidence table focusing on FHE performance costs.<br><br>I also reviewed how different studies report encryption, encrypted inference, and decryption times, identifying missing hardware specifications and parameter details. Additionally, I considered why performance measurements obtained using different machines and hardware configurations should not be directly compared.<br><br>This entry describes the suggested activities for the two-hour work block; individual task completion has not been independently verified. | 2 |
+| **Total** | | | **6 h** |
+
+## Week 11 (1 – 5 Nov) – as submitted
+
+Copied word for word from the submitted logbook PDF (Logbook_Week11_603036117.pdf); only line breaks were changed. Do not edit – it is the record of what was handed in.
+
+| Day / Date | Time | What I did | Hours |
+|---|---|---|---|
+| Tue 3 Nov | 6:00–8:00 PM | Reviewed GuardML (Frimpong et al., 2024), which uses Hybrid HE (PASTA + BFV) with Microsoft SEAL on MIT-BIH ECG data (13,245 train/test samples). Models use a 4-bit integer quantized fully connected layer achieving 87.55% encrypted accuracy (~0.65% accuracy gap). Encrypted outputs are sent to the analyst, indicating sigmoid activation occurs post-decryption. BFV requires integer quantization, unlike our CKKS floating-point approach.<br>Reference: Frimpong, E., et al. (2024). GuardML: Efficient Privacy-Preserving Machine Learning Services Through Hybrid Homomorphic Encryption. ACM SAC. https://doi.org/10.1145/3605098.3635983 | 2 |
+| Wed 4 Nov | 3:00–5:00 PM | Analyzed Nguyen et al. (2024) from IEEE DASC. Shares the same author team, PASTA + BFV scheme, and MIT-BIH dataset as GuardML, representing overlapping project evidence. For RQ4, it introduces a trusted-hardware variant for key generation alongside analyst generation. Exact accuracy numbers and execution timings were not reported in the accessible text, requiring careful screening to avoid duplicate counting.<br>Reference: Nguyen, K., et al. (2024). A Pervasive, Efficient and Private Future: Realizing Privacy-Preserving Machine Learning Through Hybrid Homomorphic Encryption. IEEE DASC. https://doi.org/10.1109/DASC64200.2024.00013 | 2 |
+| Thu 5 Nov | 1:00–3:00 PM | Extracted findings for Sayyad & Kulkarni (2022), which uses HElib on our exact target dataset (UCI Heart Disease); accuracy figures and model specs were not reported. Naresh & Varma (2025) uses CKKS with Federated Learning on stroke data (5,111 samples) achieving ~96% accuracy with ~17% overhead. Yadkar et al. (2025) and Sravani & Kumar (2025) were cataloged for full retrieval.<br>References: Sayyad, S., & Kulkarni, D. (2022). IJISAE, 10(3), 129–134. Naresh, V. S., & Varma, G. T. (2025). Smart Health, 37, 100594. https://doi.org/10.1016/j.smhl.2025.100594 Yadkar, M. S., et al. (2025). IEEE ICBATS. https://doi.org/10.1109/ICBATS66542.2025.11258322 Sravani, K. V., & Kumar, A. P. S. (2025). CRC Press. https://doi.org/10.1201/9781003685364-11 | 2 |
+| **Total** | | | **6 h** |
+
+## Week 12 (8 – 12 Nov)
+Logbook due Sun 15 Nov. **Write these rows yourself, the same day you work** – the course treats AI-written logbook entries as academic dishonesty. The prompts below are only reminders of what to record (from your README's next steps); delete them as you fill in real entries.
+
+| Day / Date | Time | What I did | Hours |
+|---|---|---|---|
+| | | fit_sigmoid.py on both datasets – MAE and decision match you got | |
+| | | Target agreed: 90% or 95%? pass/fail | |
+| | | Extraction rows verified (P034, P005) | |
+| | | Full texts requested: Sayyad & Kulkarni, Yadkar, Sravani & Kumar – result | |
+| | | Final report sigmoid section; RQ2 with Abdullah | |
+| **Total** | | | |

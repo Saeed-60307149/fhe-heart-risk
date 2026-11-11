@@ -22,3 +22,18 @@
     - `logbook-notes.md` – what you did each day + times (copy into the official logbook template)
     - `research-notes.md` – papers you read and what you learned
     - `slr/` – your SLR checklist (`TASKS.md`) and working files
+
+## Status after Progress Report 2 (11 Nov 2026)
+Taken from PR2 Table 4 and your Week 10–11 logbook. Correct anything that is wrong.
+
+**Done (Weeks 10–11)**
+- Screened own records 1–5 Nov (PR2 Table 3): Data mining Cloud-IoT, Singh & Alphy, Concrete ML, FL-for-heart-disease review, Heartify
+- (Your Week 10–11 logbook was not in the 11 Nov update – add anything else you did)
+
+**Next (Weeks 12–13)** – the SLR now uses the refined set in [`research/slr/refined-2026-10-29/`](../../research/slr/refined-2026-10-29/); the old Set 1–3 screening tasks in `slr/TASKS.md` are superseded.
+- [ ] Screen P029 (Dakhare 2024) – decision #14
+- [ ] Review `design/benchmark-plan.md` (your Week 10 task, draft added 11 Nov); add machine details (CPU, RAM)
+- [ ] After Saif's run: `python code/scripts/summarise_results.py` → tables in `code/results/README.md`
+- [ ] PRISMA 2020 diagram for the report from `research/slr/refined-2026-10-29/prisma-flow.md` (re-run `prisma_counts.py --write` first)
+- [ ] Verify seeded extraction rows P013, P028, P001; snowball the FL review (P016)
+- [ ] Draft data/code availability, acknowledgements, references (IEEE); RQ3 with Sarim

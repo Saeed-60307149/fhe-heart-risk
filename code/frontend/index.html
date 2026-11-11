@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private heart-risk check</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Private heart-risk check</h1>
+      <p class="lede">Your answers are encrypted in this browser before they are sent. The server
+        computes the risk score on encrypted data and cannot read your answers or the result.
+        Only this page holds the key to decrypt it.</p>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Your details</h2>
+      <form id="patient-form" novalidate>
+        <div class="row">
+          <label for="dataset">Model</label>
+          <select id="dataset" name="dataset">
+            <option value="cleveland">UCI Heart Disease (Cleveland, 13 questions)</option>
+            <option value="edinburgh">Edinburgh myocardial infarction (9 yes/no items)</option>
+          </select>
+        </div>
+        <div id="fields"></div>
+        <details class="advanced">
+          <summary>Advanced</summary>
+          <div class="row">
+            <label for="token">API token</label>
+            <input id="token" name="token" type="password" autocomplete="off" placeholder="Bearer token from the team">
+          </div>
+          <div class="row">
+            <label for="output">Sigmoid computed</label>
+            <select id="output" name="output">
+              <option value="probability_poly">on the server, encrypted (needs relinearization keys)</option>
+              <option value="logit">here, after decryption (smaller upload)</option>
+            </select>
+          </div>
+          <button type="button" id="fill-example" class="secondary">Fill with an example patient</button>
+        </details>
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <button type="submit" id="submit">Encrypt and check risk</button>
+      </form>
+    </section>
+
+    <section class="card" aria-live="polite" aria-labelledby="result-title">
+      <h2 id="result-title">Result</h2>
+      <ol id="steps" class="steps">
+        <li data-step="keys">Create keys in this browser</li>
+        <li data-step="encrypt">Encrypt your answers</li>
+        <li data-step="send">Send ciphertext to the server</li>
+        <li data-step="decrypt">Decrypt the encrypted score here</li>
+      </ol>
+      <div id="result" class="result" hidden>
+        <p class="verdict" id="verdict"></p>
+        <p id="prob"></p>
+        <p class="muted" id="note"></p>
+      </div>
+      <details id="wire" class="wire" hidden>
+        <summary>What the server received</summary>
+        <p id="wire-summary"></p>
+        <pre id="wire-sample"></pre>
+      </details>
+      <p class="muted small">Research prototype (COMP4101 / Capstone 2). Not a medical device and not
+        medical advice.</p>
+    </section>
+  </main>
+</body>
+</html>

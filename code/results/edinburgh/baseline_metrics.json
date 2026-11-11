@@ -1,0 +1,46 @@
+{
+  "dataset": "edinburgh",
+  "rows_after_cleaning": 1253,
+  "n_features": 9,
+  "positives": 274,
+  "train_rows": 939,
+  "test_rows": 314,
+  "split": {
+    "test_size": 0.25,
+    "random_state": 42,
+    "stratified": true
+  },
+  "model": {
+    "type": "LogisticRegression",
+    "C": 1.0,
+    "tuned": false
+  },
+  "test": {
+    "n": 314,
+    "accuracy": 0.9267515923566879,
+    "precision": 0.8709677419354839,
+    "recall": 0.782608695652174,
+    "f1": 0.8244274809160306,
+    "roc_auc": 0.9628512274475007
+  },
+  "train": {
+    "n": 939,
+    "accuracy": 0.9158679446219382,
+    "precision": 0.828125,
+    "recall": 0.775609756097561,
+    "f1": 0.801007556675063,
+    "roc_auc": 0.9663753572140626
+  },
+  "logit_range_train": [
+    -4.22906546051618,
+    9.366519123346327
+  ],
+  "logit_range_test": [
+    -4.22906546051618,
+    9.35870420094158
+  ],
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}
