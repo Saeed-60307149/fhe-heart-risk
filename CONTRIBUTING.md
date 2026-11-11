@@ -20,5 +20,15 @@ git commit -m "name: what you did"
 git push
 ```
 
-## Semester 2 (code)
+## Code (from now on)
 Branch per task (`name/task`) → Pull Request → 1 review → merge. No direct pushes to `main` for code.
+- CI (`.github/workflows/ci.yml`) must be green: Python tests, backend tests, end-to-end round trip.
+- Before a PR: `(cd code/fhe-ml-service && python -m pytest)` and `(cd code/backend && npm test)`.
+- Do **not** upgrade `tenseal` (pinned 0.3.16) or `node-seal` (pinned 7.0.0) – see `code/pilots/compat/`.
+- Never commit `code/data/raw/`, `*.b64`, `*.seal`, `model_patient.json` or `.env` (all git-ignored).
+- Results you report go in `code/results/` (regenerate with `bash code/scripts/run_pilot.sh`).
+
+## SLR records
+- The decision record is `research/slr/refined-2026-10-29/screening-decisions.csv`. Update it after
+  every decision, then `python research/slr/scripts/prisma_counts.py --write`.
+- Keep the Excel sheet in step with the CSV (one person edits the sheet at a time).

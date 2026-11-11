@@ -22,3 +22,15 @@
     - `logbook-notes.md` – what you did each day + times (copy into the official logbook template)
     - `research-notes.md` – papers you read and what you learned
     - `slr/` – your SLR checklist (`TASKS.md`) and working files
+
+## Status after Progress Report 2 (11 Nov 2026)
+Taken from PR2 Table 4 and your Week 10–11 logbook. Correct anything that is wrong.
+
+**Done (Weeks 10–11)**
+- Screened own records 1–5 Nov (PR2 Table 3): Behera, Kapila, Shruthi & Naidu, Gogoi & Valan; second reader for Sayyad & Kulkarni and ICSCSP 2018
+- (Your Week 10–11 logbook was not in the 11 Nov update – add anything else you did)
+
+**Next (Weeks 12–13)** – the SLR now uses the refined set in [`research/slr/refined-2026-10-29/`](../../research/slr/refined-2026-10-29/); the old Set 1–3 screening tasks in `slr/TASKS.md` are superseded.
+- [ ] Finalise the plaintext baselines on both datasets: `python code/pilots/baseline/train_baseline.py` (decide default C vs `--tune`); record the numbers
+- [ ] Get the full texts of Behera et al. and Kapila et al. through UDST (ask the librarian before E4)
+- [ ] Draft final report: data + baseline methodology/results (use `code/data/DATA_DICTIONARY.md`); RQ3 with Hassan

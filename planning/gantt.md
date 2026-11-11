@@ -4,6 +4,36 @@ Owner: Abdullah Dar (Wk 7)
 ![COMP4101 Practicum Gantt chart](gantt/COMP4101_Practicum_Gantt.png)
 *Gantt chart, Weeks 6–15 (updated 9 Oct: Week 9 break kept free, SLR stages per Protocol v3). Dotted arrows are flexible (Rubber) dependencies. **Owners are in the task table below** (the PNG shows bars only). Working week is Sunday–Thursday. Source file: [gantt/COMP4101_Practicum_Gantt.gan](gantt/COMP4101_Practicum_Gantt.gan) – open it in [GanttProject](https://www.ganttproject.biz/), edit, then re-export the PNG over the old one.*
 
+## Status after Progress Report 2 (11 Nov 2026)
+
+The PNG still shows the 9 Oct plan; PR2 Figure 2 has the updated chart (Practicum Weeks 6–15 →
+Capstone 2 Weeks 1–16). **Abdullah: export that chart to `gantt/` and replace the PNG.**
+
+| Task | Status 11 Nov |
+|---|---|
+| 2.6 Title/abstract screening (old 1,044 set) | Stopped – replaced by the refined search (decision #9) |
+| 2.4b Refined searches + PRISMA rebuild (new) | ✅ 29 Oct – 7 Nov |
+| 2.6b Screening of the refined set (new) | 31/35 done 1–5 Nov; 4 records left (Week 12) |
+| 2.7a Full-text decisions | In progress: 6 awaiting access, 1 abstract-only include; borderline settled (#17) |
+| 2.7b Extraction + quality | Started: form seeded 11 Nov, verification Week 12 |
+| 2.7c Snowballing | Week 12 (3 reviews) |
+| 2.8a PRISMA diagram | Generated draft: `research/slr/refined-2026-10-29/prisma-flow.md` |
+| 3.5 Architecture + API contract | ✅ v1 Wk 10 · v2 11 Nov |
+| 3.6a/b Threat model | Draft 11 Nov (`design/threat-model.md`) – Naif to finalise |
+| 4.1 Benchmark plan | Draft 11 Nov (`design/benchmark-plan.md`) |
+| 4.2 TenSEAL toy pilot | ✅ Wk 10 |
+| 4.3 / 4.6 Baseline + evaluation | Cleveland ✅ (PR2 Table 5); both datasets scripted – Week 12 run |
+| 4.4 / 4.7 Sigmoid fit + validation | Cleveland ✅ (MAE 0.031); scripted for both – Week 12 run |
+| 4.5 node-seal compatibility + Plan A/B | ✅ Wk 11 – Plan A feasible (decision #12) |
+| 4.8 PoC timing | ✅ PR2 Table 5; scripted (`code/scripts/run_pilot.sh`) |
+| 4.9a Pilot workflow notes | ✅ 11 Nov (`design/pilot-workflow.md`) |
+| 5.2 PR2 | ✅ submitted (`reports/progress-report-2/`) |
+
+**Capstone 2 head start (11 Nov):** working skeleton in `code/` – browser encryption (node-seal),
+Node API with auth/validation/rate limit, FastAPI FHE service, Plan B client, 44 automated tests
+and CI. Runbook steps 13–24 and 26 have a first implementation; steps 25, 27, 28 are scripted or
+have test scaffolding.
+
 ## Milestones by week
 
 | Week | Dates | Main milestone |

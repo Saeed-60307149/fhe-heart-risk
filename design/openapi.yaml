@@ -1,0 +1,150 @@
+openapi: 3.1.0
+info:
+  title: fhe-heart-risk public API
+  version: 2.0.0
+  description: >
+    Privacy-preserving heart-disease risk prediction. The client encrypts each scaled feature with
+    CKKS (node-seal 7.0.0 / SEAL 4.1.2), the server computes on ciphertext only (TenSEAL 0.3.16)
+    and returns an encrypted score that only the client can decrypt. See design/api-contract.md.
+servers:
+  - url: http://127.0.0.1:3000
+    description: local development (use HTTPS elsewhere)
+paths:
+  /api/health:
+    get:
+      summary: Liveness of the API and the FHE service
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, fhe_service]
+                properties:
+                  status: { type: string, enum: [ok] }
+                  fhe_service: { type: string, enum: [ok, unavailable] }
+                  version: { type: string }
+  /api/model/{dataset}:
+    get:
+      summary: Public model metadata needed to scale and encrypt (no weights)
+      parameters:
+        - $ref: "#/components/parameters/Dataset"
+      responses:
+        "200":
+          description: Model metadata
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ModelInfo" }
+        "400": { $ref: "#/components/responses/Error" }
+        "404": { $ref: "#/components/responses/Error" }
+        "503": { $ref: "#/components/responses/Error" }
+  /api/predict:
+    post:
+      summary: Encrypted risk prediction
+      security: [{ bearer: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/PredictRequest" }
+      responses:
+        "200":
+          description: Encrypted result
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/PredictResponse" }
+        "400": { $ref: "#/components/responses/Error" }
+        "401": { $ref: "#/components/responses/Error" }
+        "404": { $ref: "#/components/responses/Error" }
+        "413": { $ref: "#/components/responses/Error" }
+        "422": { $ref: "#/components/responses/Error" }
+        "429": { $ref: "#/components/responses/Error" }
+        "500": { $ref: "#/components/responses/Error" }
+        "503": { $ref: "#/components/responses/Error" }
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+  parameters:
+    Dataset:
+      name: dataset
+      in: path
+      required: true
+      schema: { type: string, pattern: "^[a-z0-9_-]{1,32}$", examples: [cleveland, edinburgh] }
+  schemas:
+    Base64:
+      type: string
+      pattern: "^[A-Za-z0-9+/]+={0,2}$"
+    ModelInfo:
+      type: object
+      required: [dataset, feature_names, n_features, scaler_mean, scaler_scale, threshold, params, scale_bits]
+      properties:
+        dataset: { type: string }
+        feature_names: { type: array, items: { type: string } }
+        n_features: { type: integer, minimum: 1 }
+        scaler_mean: { type: array, items: { type: number } }
+        scaler_scale: { type: array, items: { type: number } }
+        threshold: { type: number }
+        param_set: { type: string }
+        params:
+          type: object
+          properties:
+            poly_modulus_degree: { type: integer, enum: [8192, 16384] }
+            coeff_mod_bit_sizes: { type: array, items: { type: integer } }
+        scale_bits: { type: integer, const: 40 }
+        supports_probability_poly: { type: boolean }
+    PredictRequest:
+      type: object
+      required: [dataset, parms, ciphertexts]
+      properties:
+        dataset: { type: string, pattern: "^[a-z0-9_-]{1,32}$" }
+        parms:
+          allOf: [{ $ref: "#/components/schemas/Base64" }]
+          maxLength: 4096
+          description: SEAL EncryptionParameters (CKKS), no compression
+        ciphertexts:
+          type: array
+          minItems: 1
+          maxItems: 64
+          description: One ciphertext per scaled feature, in feature_names order (each <= 2,000,000 bytes decoded)
+          items: { $ref: "#/components/schemas/Base64" }
+        relin_keys:
+          oneOf: [{ $ref: "#/components/schemas/Base64" }, { type: "null" }]
+          description: Required when output = probability_poly (<= 12,000,000 bytes decoded)
+        output:
+          type: string
+          enum: [logit, probability_poly]
+          default: logit
+    PredictResponse:
+      type: object
+      required: [encrypted_result, output, request_id]
+      properties:
+        encrypted_result: { $ref: "#/components/schemas/Base64" }
+        output: { type: string, enum: [logit, probability_poly] }
+        threshold: { type: number }
+        timings_ms:
+          type: object
+          additionalProperties: { type: number }
+        request_id: { type: string }
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code:
+              type: string
+              enum: [BAD_REQUEST, UNAUTHORIZED, NOT_FOUND, PAYLOAD_TOO_LARGE, INVALID_CIPHERTEXT,
+                     RATE_LIMITED, INTERNAL_ERROR, FHE_SERVICE_UNAVAILABLE]
+            message: { type: string }
+            request_id: { type: string }
+  responses:
+    Error:
+      description: Error (never echoes the request body)
+      content:
+        application/json:
+          schema: { $ref: "#/components/schemas/Error" }

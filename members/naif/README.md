@@ -22,3 +22,21 @@
     - `logbook-notes.md` – what you did each day + times (copy into the official logbook template)
     - `research-notes.md` – papers you read and what you learned
     - `slr/` – your SLR checklist (`TASKS.md`) and working files
+
+## Status after Progress Report 2 (11 Nov 2026)
+Taken from PR2 Table 4 and your Week 10–11 logbook. Correct anything that is wrong.
+
+**Done (Weeks 10–11)**
+- Supervisor meeting 29 Oct: refined search strings; re-ran IEEE Xplore (8) and Scopus (35 rows)
+- Rebuilt the PRISMA sheet 6–7 Nov (43 identified, 9 duplicates, 34 to screen)
+- Divided the 34 records across the team (1 Nov); screened own 5 (ANN estimators, Akter, Sun, Wang, ICDSIS)
+- Encrypted pilot and cross-library round trip with Saif; technical facts for the threat model (Wk 10)
+- Compiled and submitted Progress Report 2
+
+**Next (Weeks 12–13)** – the SLR now uses the refined set in [`research/slr/refined-2026-10-29/`](../../research/slr/refined-2026-10-29/); the old Set 1–3 screening tasks in `slr/TASKS.md` are superseded.
+- [ ] Screen P002 (Dziri 2025) – one of the 4 records missed in the first round (decision #14)
+- [ ] Assign second reviewers for the 11 excluded records
+- [ ] Add the IEEE Xplore export to `research/slr/refined-2026-10-29/exports/`
+- [ ] Review and own `design/threat-model.md` (draft structure added 11 Nov)
+- [ ] Read decisions #14–#18 (closed 11 Nov) and use them in the final report
+- [ ] Draft final report: Introduction, Project Scope, Feasibility; SLR synthesis RQ1 + RQ4 with Saif

@@ -1,5 +1,23 @@
 # Search log
 
+> ## Refined searches – Protocol v5 (29 Oct – 6 Nov 2026) – CURRENT
+>
+> | Database | Run by | Confirmed by | Exact string | Filters | Results |
+> |---|---|---|---|---|---|
+> | IEEE Xplore | Naif | Saif | v5 IEEE string ([search-strings.md](search-strings.md)) | Abstract; 2016–2026; Conferences and Journals | **8** |
+> | Scopus | Naif | Abdullah | v5 Scopus string | Title-abstract-keywords; 2016–2026; English | **35 rows (34 unique)** |
+> | **Total identified** | | | | | **43** |
+> | Duplicates removed | Naif | Saif | | 8 same DOI (all IEEE records are in Scopus) + 1 listed twice in Scopus (ICSCSP 2018 proceedings) | **9** |
+> | **Records to screen** | | | | | **34** |
+> | Other sources | Saif | – | Kim A. et al. 2018 (search-check paper, screened by Saif) | | **1** |
+>
+> Note: Naif's logbook (29 Oct) records that he could not log in to IEEE Xplore that day; the IEEE
+> count was confirmed by Saif's re-run. Exports: [refined-2026-10-29/exports/](refined-2026-10-29/exports/)
+> (IEEE export file still to be added). Screening and PRISMA: [refined-2026-10-29/](refined-2026-10-29/).
+>
+> Everything below is the **superseded** 10 Oct broad search, kept as history.
+
+
 Database searches for the SLR, run on **10 Oct 2026**. These numbers are the Identification stage of the PRISMA diagram: record them exactly and never estimate.
 
 > The same numbers are in the **Search Log** tab of `PRISMA_Tracking_Sheet_2026-10-11.xlsx`: IEEE Xplore **337**, PubMed **172**, Scopus **1,017**. Its **PRISMA Counts** tab adds them up (1,526).

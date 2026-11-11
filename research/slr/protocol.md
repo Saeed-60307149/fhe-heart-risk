@@ -1,5 +1,7 @@
 # SLR Protocol
 
+> **v5 changes (29 Oct 2026): search strings replaced by exact strings, PubMed dropped, single-reviewer screening with a second check of exclusions, codes E1–E5 – see [SLR_Protocol_v5_changes.md](SLR_Protocol_v5_changes.md).**
+>
 > **v4 changes (10 Oct 2026):** ACM Digital Library was replaced by PubMed, and Scopus was kept at 1,017 results. This file stays as the v3 record; see [SLR_Protocol_v4_changes.md](SLR_Protocol_v4_changes.md).
 
 Privacy-Preserving Heart Disease Risk Prediction Using FHE · COMP4101 Practicum · UDST

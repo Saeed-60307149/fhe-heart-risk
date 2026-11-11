@@ -1,0 +1,18 @@
+{
+  "name": "fhe-heart-backend",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Node.js API: authenticates, validates and forwards ciphertexts to the FHE-ML service. Never sees plaintext.",
+  "engines": { "node": ">=22" },
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "AUTH_DISABLED=1 node src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-seal": "7.0.0"
+  }
+}

@@ -1,5 +1,11 @@
 # Systematic Literature Review (SLR)
 
+> **Current state (11 Nov 2026): the review now uses the refined search of 29 Oct (Protocol v5).**
+> Start at [refined-2026-10-29/](refined-2026-10-29/) – 43 records identified, 9 duplicates, 34 to
+> screen (+1 from other sources), PRISMA flow in [refined-2026-10-29/prisma-flow.md](refined-2026-10-29/prisma-flow.md).
+> What changed and why: [SLR_Protocol_v5_changes.md](SLR_Protocol_v5_changes.md). The rest of this page
+> describes the superseded 10 Oct broad search (1,044 records) and the pair-based screening of Protocol v3.
+
 A **systematic literature review** answers fixed research questions by searching set databases with a written, repeatable search string, then screening every result against criteria agreed in advance. Every decision (search string, date, counts, why each paper was excluded) is logged, so anyone can repeat the review and get the same papers. The numbers feed a **PRISMA** flow diagram showing how many records were found, removed and finally included. Our review asks how FHE has been used for ML inference on health data, and at what cost. The full rules are in [protocol.md](protocol.md) (Protocol v3; PDF: [SLR_Protocol_v3.pdf](SLR_Protocol_v3.pdf)), with the 10 Oct changes in [SLR_Protocol_v4_changes.md](SLR_Protocol_v4_changes.md).
 
 ## Where the files are
