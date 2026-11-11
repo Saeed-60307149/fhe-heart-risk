@@ -1,0 +1,94 @@
+{
+  "dataset": "cleveland",
+  "target_decision_match": 0.9,
+  "baseline_test": {
+    "n": 75,
+    "accuracy": 0.8533333333333334,
+    "precision": 0.8529411764705882,
+    "recall": 0.8285714285714286,
+    "f1": 0.8405797101449275,
+    "roc_auc": 0.9471428571428572
+  },
+  "chosen": "least-squares cubic on [-6.4, 6.4]",
+  "candidates": [
+    {
+      "name": "least-squares cubic on [-6.4, 6.4]",
+      "coeffs_ascending": [
+        0.5,
+        0.17440823348365816,
+        0.0,
+        -0.0027135616140109998
+      ],
+      "interval": [
+        -6.367389255361511,
+        6.367389255361511
+      ],
+      "mae_vs_sigmoid_test": 0.03555390123575053,
+      "max_abs_err_test": 0.06508629924489934,
+      "decision_match_vs_sigmoid": 1.0,
+      "test_logits_outside_interval": 0,
+      "metrics": {
+        "n": 75,
+        "accuracy": 0.8533333333333334,
+        "precision": 0.8529411764705882,
+        "recall": 0.8285714285714286,
+        "f1": 0.8405797101449275,
+        "roc_auc": 0.9471428571428572
+      },
+      "pass": true,
+      "pass_rq_a_90": true,
+      "meets_expected_95": true
+    },
+    {
+      "name": "Kim et al. 2018 cubic [-8, 8]",
+      "coeffs_ascending": [
+        0.5,
+        0.15012,
+        0.0,
+        -0.001593
+      ],
+      "interval": [
+        -8.0,
+        8.0
+      ],
+      "mae_vs_sigmoid_test": 0.056753855364470134,
+      "max_abs_err_test": 0.09837366230681244,
+      "decision_match_vs_sigmoid": 1.0,
+      "test_logits_outside_interval": 0,
+      "metrics": {
+        "n": 75,
+        "accuracy": 0.8533333333333334,
+        "precision": 0.8529411764705882,
+        "recall": 0.8285714285714286,
+        "f1": 0.8405797101449275,
+        "roc_auc": 0.9471428571428572
+      }
+    },
+    {
+      "name": "runbook cubic [-5, 5]",
+      "coeffs_ascending": [
+        0.5,
+        0.197,
+        0.0,
+        -0.004
+      ],
+      "interval": [
+        -5.0,
+        5.0
+      ],
+      "mae_vs_sigmoid_test": 0.029101105131219416,
+      "max_abs_err_test": 0.0816569214816939,
+      "decision_match_vs_sigmoid": 1.0,
+      "test_logits_outside_interval": 3,
+      "metrics": {
+        "n": 75,
+        "accuracy": 0.8533333333333334,
+        "precision": 0.8529411764705882,
+        "recall": 0.8285714285714286,
+        "f1": 0.8405797101449275,
+        "roc_auc": 0.9450000000000001
+      }
+    }
+  ],
+  "plot": "results\\cleveland\\sigmoid_vs_poly.png"
+}

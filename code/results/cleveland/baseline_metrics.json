@@ -1,0 +1,46 @@
+{
+  "dataset": "cleveland",
+  "rows_after_cleaning": 297,
+  "n_features": 13,
+  "positives": 137,
+  "train_rows": 222,
+  "test_rows": 75,
+  "split": {
+    "test_size": 0.25,
+    "random_state": 42,
+    "stratified": true
+  },
+  "model": {
+    "type": "LogisticRegression",
+    "C": 1.0,
+    "tuned": false
+  },
+  "test": {
+    "n": 75,
+    "accuracy": 0.8533333333333334,
+    "precision": 0.8529411764705882,
+    "recall": 0.8285714285714286,
+    "f1": 0.8405797101449275,
+    "roc_auc": 0.9471428571428572
+  },
+  "train": {
+    "n": 222,
+    "accuracy": 0.8378378378378378,
+    "precision": 0.8367346938775511,
+    "recall": 0.803921568627451,
+    "f1": 0.82,
+    "roc_auc": 0.9098039215686275
+  },
+  "logit_range_train": [
+    -5.007462469758047,
+    6.302097515806215
+  ],
+  "logit_range_test": [
+    -5.123563457980433,
+    5.521738862590731
+  ],
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}
