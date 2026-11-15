@@ -11,7 +11,11 @@ Patient data is encrypted on the client, the server runs the model on the encryp
 [Patient browser: node-seal] --ciphertext--> [Node API] --> [FHE-ML service: TenSEAL] --encrypted score--> [browser] --decrypt--> risk
 ```
 
-## Where we are (11 Nov 2026, after Progress Report 2)
+## Where we are (15 Nov 2026)
+- **Design documents final (15 Nov):** System Architecture v1.0 and Threat Model v1.0 (STRIDE, T1–T15,
+  residual risks T4/T6/T11, security test plan) → [`design/`](design/), decision #19.
+
+### Status after Progress Report 2 (11 Nov 2026)
 - **SLR:** refined search of 29 Oct (Protocol v5) – 43 identified, 9 duplicates, 34 to screen + 1 other
   source; PR2: 31 screened (11 excluded, 12 included, 2 borderline, 6 awaiting full text). Since PR2 the 2
   borderline (Paillier) records are included as a partial-HE subgroup → 14 included; 4 records assigned for Week 12.

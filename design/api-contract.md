@@ -13,7 +13,7 @@ Machine-readable version: [openapi.yaml](openapi.yaml). Tests that enforce this 
 | `POST /api/predict` body `{ context, encrypted_features }` (one packed ciphertext + public context) | `{ dataset, parms, ciphertexts[], relin_keys?, output }` – one ciphertext per feature | Per-feature layout needs no Galois keys (PR2: 164 MB). `parms` (≈100 bytes) replaces the 7.7 MB public context. |
 | 2 endpoints | 3 public endpoints (added `GET /api/model/{dataset}`) | The browser needs the feature order, scaler and CKKS parameters before encrypting. |
 | 7 error codes | 8 public codes (section 4) – final (decision #18) | Added `RATE_LIMITED` (runbook step 26) |
-| – | Bearer-token auth, 48 MB body limit, rate limit, metadata-only logs | Runbook step 26, threat model T3–T6. |
+| – | Bearer-token auth, 48 MB body limit, rate limit, metadata-only logs | Runbook step 26, threat model T5, T8, T12, T14. |
 
 ## 2. Public API (browser / Plan B client → Node.js API)
 
