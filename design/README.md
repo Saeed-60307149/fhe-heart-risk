@@ -11,4 +11,6 @@ Owner: Abdullah Dar · reviewed by the team · Semester 1 = paper design + pilot
 | [`pilot-workflow.md`](pilot-workflow.md) | Pilot steps and where each PR2 number comes from | Wk 11 | Abdullah |
 | [`diagrams/architecture.md`](diagrams/architecture.md) | Mermaid: architecture, request sequence, pilot workflow | 11 Nov | Abdullah |
 
+Who does what in Week 13 (and the common sessions Thu 19 Nov 8–11 PM, Sat 21 Nov 7–10 PM): [`planning/week-13-design-plan.md`](../planning/week-13-design-plan.md).
+
 Contract tests: `code/backend/test/app.test.js`, `code/fhe-ml-service/tests/test_api.py`.
