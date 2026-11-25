@@ -16,7 +16,7 @@ Status: **proposed, team to confirm** (decision #20 in [`decision-log.md`](decis
    secret key, and the server computes the sigmoid on ciphertext.
 3. **Encryption does not improve accuracy.** It can at best match the plaintext model (Haq got
    identical numbers with and without encryption), so the main claim is *"same decisions as the plaintext model,
-   at a lower measured cost"* – which is exactly RQ-A and RQ-B. A second, optional track tries to raise accuracy by changing the model itself (section 3b).
+   at a lower measured cost"* – which is exactly RQ-A and RQ-B. A second, optional track tries to raise accuracy by changing the model itself (section 3b), under a rule that it must not undo the cost gains (section 3c).
 
 Every improvement below is an **expectation until we measure it**. Nothing here goes into a report as a
 result before it is in `code/results/`.
@@ -96,6 +96,47 @@ RQ-D: *"Does a more expressive HE-compatible model raise accuracy enough to just
 Reproduce **their** setting (N = 8192, chain `31,26×6,31`, scale 2^26) on **our machine and our data** and put
 it in the ablation table as "Haq-style configuration". That is the only comparison that is not distorted by
 different hardware, data split or sigmoid placement.
+
+## 3c. The balance: better accuracy without losing the cost gains
+
+The two tracks pull against each other: a stronger model usually needs more encrypted work. We cannot get
+both for free, so we manage it with three rules instead of hoping.
+
+**Rule 1 – Spend accuracy gains inside the box we already have.** The box is the CKKS setting chosen by the
+cost track (N, chain, scale). A model change is *free* if it fits that box (same depth, same keys) and
+*expensive* if it forces a bigger one. Try the free ones first.
+
+**Rule 2 – Judge every candidate on two numbers.** Accuracy (cross-validated, with its spread) and encrypted cost
+(upload MB, keys MB, server ms). Keep a candidate only if it is on the **frontier**: nothing else is both
+more accurate and cheaper. Accuracy gain smaller than the cross-validation spread does not count.
+
+**Rule 3 – Cost budget.** Set after the cost track finishes: a candidate may use at most the optimised LR's
+box (same N and chain) and at most about 2× its server time, unless its accuracy gain is clearly larger
+than the spread. Anything over budget is reported as a trade-off, not adopted.
+
+### How each candidate fits (hypotheses to measure, not results)
+
+| Candidate | Multiplication levels needed | Fits the LR box? | What grows |
+|---|---|---|---|
+| LR, logit-only (sigmoid in browser) | 1 | Yes, with room to spare | – |
+| LR, encrypted cubic sigmoid (current design) | about 3 | The reference box (our chain has 4 middle primes) | – |
+| Linear SVM (M2) | 1 | Yes | nothing |
+| Extra features (M3) | 1 | Yes | upload: one ciphertext per feature |
+| MLP with square activation, **logit-only** (M4) | about 3 (weights, square, weights) | **Possibly yes**, the same depth as LR with the encrypted cubic | server time: about one weighted sum per hidden unit (12–16) |
+| MLP + encrypted cubic sigmoid | about 5 | No, a bigger box | everything |
+
+**The interesting bet:** with the per-feature layout, the upload and keys depend on the box and the number of
+input features, not on the model. So an MLP that stays at depth 3 and returns the logit (sigmoid in the
+browser, lever L8) might cost mainly **server time**, not upload or keys. Haq's 18× slowdown comes from their
+setup and may not carry over. This is the one place where the two tracks can meet, and it is untested.
+
+**What this means in practice**
+1. Finish the cost track first; it fixes the box and the budget.
+2. M1 and M2: free accuracy tries, no cost change.
+3. M3: costs upload, so only if the gain beats the spread.
+4. M4 with logit-only output: measure whether it stays in the box and how much server time it adds.
+5. Report the result as a table of accuracy against cost with the frontier marked. If nothing beats LR
+   within budget, that is a valid finding: "the simplest model is the best balance".
 
 ## 4. What we can and cannot claim
 
