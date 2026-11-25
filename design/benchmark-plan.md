@@ -44,3 +44,24 @@ per-feature ciphertexts ≈16 MB per patient.
 
 The new scripts reproduce the packed sizes exactly (1.00 MB ciphertext, 163.9 MB Galois keys,
 1.9 MB secret-key context) – checked 11 Nov.
+
+## Ablation: the improvement levers (added 25 Nov; see `planning/project-direction.md`)
+
+One table per dataset, per-feature layout, same machine, same fixed split. Each row changes **one** thing
+from the row above and reports: request MB per patient (raw and base64), response bytes, relin-key MB,
+encrypt / infer / decrypt ms (mean and median), decision match vs plaintext, accuracy.
+
+| Row | N | Chain / scale | Sigmoid | Other | Lever |
+|---|---|---|---|---|---|
+| 0 | 16384 | 60,40,40,40,40,60 / 2^40 | encrypted cubic | pilot setting | reference |
+| 1 | 16384 | shortest chain that keeps 100% match | encrypted cubic | | L1 |
+| 2 | 8192 | fits 218 bits | encrypted cubic | | L2 |
+| 3 | 8192 | | encrypted cubic | + compression check (is it already on?) | L5 |
+| 4 | 8192 | | logit only | sigmoid in browser | L3 / L8 |
+| 5 | 4096 | fits 109 bits | logit only | may fail: report it either way | L3 |
+| 6 | best of 2–5 | | | + seeded encryption, + trimmed response | L4, L6 |
+| H | 8192 | 31,26×6,31 / 2^26 | logit only | **Haq-style setting on our data and machine** | fair comparison with Haq et al. |
+
+Rules: a row that drops decision match below 90% is a **fail** (RQ-A) and is still reported. No row is
+described as an improvement until its numbers are in `code/results/`. Packed layout with four rotation
+keys (L9) is a backlog row, not part of the first pass.

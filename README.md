@@ -30,6 +30,13 @@ Patient data is encrypted on the client, the server runs the model on the encryp
   final (#18) → [`planning/decision-log.md`](planning/decision-log.md). PR2 errata →
   [`reports/progress-report-2/`](reports/progress-report-2/).
 
+## Direction (25 Nov 2026)
+We use Haq et al. 2025 ([notes](research/baseline-paper/README.md)) as the reference paper and improve on its
+**cost**, not its accuracy: smallest secure CKKS settings for our one model, smaller request, response and
+keys, shorter compute, plus browser-side keys and an encrypted sigmoid. Claim: *same decisions as the plaintext
+model at a lower measured cost* (RQ-A, RQ-B). Levers, what we may and may not claim, and the order of work:
+[`planning/project-direction.md`](planning/project-direction.md) (decisions #20–#21, proposed).
+
 ## Two phases, one repo
 | Phase | When | What lives here |
 |---|---|---|
@@ -41,9 +48,9 @@ Patient data is encrypted on the client, the server runs the model on the encryp
 |---|---|---|
 | [`meetings/`](meetings/) | **Joint meeting notes** – every team + supervisor meeting | Scribe / anyone |
 | [`members/`](members/) | **One folder per person** – your tasks, research notes, logbook notes | Only the owner |
-| [`research/`](research/) | Shared research: reading list, SLR protocol, search log, PRISMA | Everyone |
+| [`research/`](research/) | Shared research: reading list, baseline paper (Haq 2025), SLR protocol, search log, PRISMA | Everyone |
 | [`design/`](design/) | Architecture, API contract + OpenAPI, threat model, benchmark plan, diagrams | Abdullah, Naif, Hassan |
-| [`planning/`](planning/) | Work plan, Gantt, decision log, task board link | Naif, Abdullah |
+| [`planning/`](planning/) | Project direction, work plan, Gantt, decision log, task board link | Naif, Abdullah |
 | [`reports/`](reports/) | Progress reports, final report, slides | Everyone, Naif compiles |
 | [`code/`](code/) | Pilots, results, prototype skeleton, tests ([how to run](code/README.md)) | Saif, Sarim, Khalid, Hassan, Abdullah |
 

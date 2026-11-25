@@ -2,6 +2,7 @@
 | File | What it is | Owner |
 |---|---|---|
 | `slr/` | **SLR workspace.** Current set: [slr/refined-2026-10-29/](slr/refined-2026-10-29/) (Protocol v5, 29 Oct). Start at [slr/README.md](slr/README.md) | Everyone |
+| `baseline-paper/` | Haq et al. 2025, the paper we improve on: PDF, summary, cautions | Naif, Abdullah |
 | `reading-list.md` | Every paper anyone reads (one big table) – now includes all refined-search records | Everyone |
 | `ethics-data-note.md` | Datasets, licences, IRB decision | Sarim, Hassan |
 | `slr-protocol.md` | *Superseded* – see [slr/protocol.md](slr/protocol.md) + [v5 changes](slr/SLR_Protocol_v5_changes.md) | Abdullah |
