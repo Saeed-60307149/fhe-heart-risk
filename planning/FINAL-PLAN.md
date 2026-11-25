@@ -80,6 +80,17 @@ Candidates, and only these:
 Dropped for good: extra interaction features (no source), the LR-MLP hybrid (weakest evidence), trees and
 XGBoost (too costly under encryption).
 
+### Why we expect each model to help, and how solid that is
+
+| Model | Evidence | Status |
+|---|---|---|
+| M1 tuned LR | Standard practice; Haq tune training length by 10-fold CV | Background only; expect a small gain at most |
+| M2 linear SVM | Haq: SVM beat LR on Wisconsin (0.9649 vs 0.9211) but not on Cleveland (0.7667 vs 0.7883); AutoPro-RHC abstract: SVC 88% vs LR 86% on UCI heart data | Read (Haq); mixed result |
+| M4 small MLP | Haq: MLP beat LR on both datasets (0.9737 vs 0.9211; 0.8167 vs 0.7883) but ran about 18x (Wisconsin) and 14x (Cleveland) slower under encryption (`research/baseline-paper/README.md`) | Read; **one small split, inconsistent Cleveland table, so suggestive only** |
+
+Not found: any source comparing LR and MLP on Cleveland-type data with cross-validation. That is why the rule above
+uses cross-validation and a cost budget instead of trusting Haq's single split.
+
 **Decision rule (final):** compare with 10-fold repeated stratified cross-validation. A model replaces
 logistic regression only if (a) its accuracy gain is larger than the spread between folds, (b) it fits the
 optimised LR's box (same N and chain), and (c) its server time is at most 2× the LR's. Otherwise logistic
@@ -119,3 +130,11 @@ We do **not** say: more accurate because of encryption; faster than Haq in absol
 Finish the final report (Thu 26 Nov) and the defence. State this plan as the Capstone 2 plan with no result
 claimed. The SLR is reported as in progress: 4 unscreened and 6 inaccessible records, quality scoring and a
 full-text re-read of the abstract-only and seeded rows still open (`research/slr/synthesis.md`).
+
+## 10. What the SLR gave us
+
+The gap (no read paper reports key sizes or a real client), the reason for CKKS (milliseconds vs seconds for TFHE
+and hybrid BFV), support for the sigmoid choice, the Edinburgh dataset (Kim 2018), and the required practicum
+deliverable. It did **not** give the cost or model evidence: that is Haq et al., which the search missed.
+Details and limits: `research/slr/synthesis.md`.
+

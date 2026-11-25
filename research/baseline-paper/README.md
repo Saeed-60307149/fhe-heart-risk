@@ -55,3 +55,18 @@ The MLP shows the same trend (280 s down to 105 s). Accuracy stayed at the base-
 text, p. 19). Table 10: scale 2^27 or 2^24 and the 22-bit chain change accuracy, and 2^24 and 2^22 collapse it
 (e.g. the MLP falls to 0.68 and 0.35). They never vary N. Limits: their hardware, their model, one dataset.
 
+## Their model comparison (Tables 2-5): our evidence for Track 2 (model-side accuracy)
+Test accuracy, plaintext = CKKS in every row (no loss at their base setting). Same encrypted time ordering on both datasets.
+
+| Model | Wisconsin accuracy (114 test) | Wisconsin encrypted time (s) | Cleveland accuracy (60 test) | Cleveland encrypted time (s) |
+|---|---|---|---|---|
+| LR | 0.9211 | 15.60 | 0.7883 | 4.71 |
+| Linear SVM | 0.9649 | 15.66 | 0.7667 | 4.71 |
+| MLP (square activation) | 0.9737 | 280.22 | 0.8167 | 65.62 |
+| LR-MLP hybrid | 0.9825 | 279.81 | 0.8667 | 66.28 |
+| SVM-MLP hybrid | 0.9825 | 285.51 | 0.8667 | 66.56 |
+
+Reading: the MLP and hybrids are more accurate but about 18x (Wisconsin) and 14x (Cleveland) slower under encryption.
+Cautions: single 80/20 split, test sets of 60 and 114 patients, the Cleveland table is internally inconsistent
+(see Cautions above), no ablation of the hybrid initialisation. This is suggestive evidence, not proof.
+

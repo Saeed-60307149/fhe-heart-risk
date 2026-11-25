@@ -89,6 +89,21 @@ reports the size of the keys a client must upload. That is the clearest gap our 
 4. **Weakest links:** Cenitta's encrypted accuracy; the Cloud-IoT paper's HE is generic; the Paillier papers
    cannot answer the sigmoid question.
 
+## What the SLR gives the project (benefits, and what it does not give)
+
+| Benefit | What it supports | Solidity |
+|---|---|---|
+| The gap exists | No record we could read reports key sizes or runs encryption on a real client or browser (AutoPro-RHC lists a real client as future work) | Partly verified (3 read, 4 abstracts) |
+| Why CKKS | CKKS logistic regression is in the millisecond range; TFHE (AutoPro-RHC) takes 61-521 s and hybrid BFV (GuardML) about 12 s per sample; CKKS suits real-valued features | Partly verified |
+| Sigmoid handling | Papers use a polynomial sigmoid or avoid it under encryption (Kim 2018, Haq, GuardML, Harb): backs the cubic plus logit-only choice | Mostly abstract level |
+| Dataset choice | Kim 2018 uses the same Edinburgh MI data as our project | Abstract |
+| Closest prior work | Naresh and Reddi (TenSEAL logistic regression on heart data; Haq cite it). Its seeded note says it compares polynomial degrees 4096 and 8192: **if verified, that is SLR evidence for the lower-N change. Read it next.** | Not read |
+| A required deliverable | PRISMA diagram, study table, RQ1-RQ4 answers | In progress |
+
+**What it does not give:** the cost evidence for Track 1 and the model evidence for Track 2 come from Haq et al.
+2025, which the SLR search **missed** (their abstract says "medical tabular data", not "heart disease"). Naif
+supplied it by hand. About half of the SLR rows are still unverified.
+
 ## Limitations (for the report)
 
 - Two databases only (IEEE Xplore, Scopus); PubMed dropped (Scopus covers most MEDLINE titles).
