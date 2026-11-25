@@ -123,7 +123,7 @@ model's "Status in `code/`" column.
 | Client: **Plan A (node-seal in the browser) works**; Plan B (Python CLI) kept as fallback | Final (#12) | PR2 cross-library round trip; `code/frontend` tested in headless Chrome 11 Nov |
 | Versions pinned: node-seal 7.0.0, TenSEAL 0.3.16, Node.js ≥ 22 | Final (#13) | PR2 compatibility test |
 | Ciphertext layout: one ciphertext per feature | Final (#15) | PR2 §C mitigation + Report 1 plan. Packed = 1 MB/patient but 164 MB Galois keys; per-feature ≈ 16 MB/patient uncompressed (PR2 Table 5) but no Galois keys, ≈6–8 MB relin keys for the encrypted sigmoid |
-| Sigmoid on server (encrypted cubic) vs on client (after decrypt) | Both supported (`output` field) | Server-side needs relin keys + 2 more levels; client-side reveals the logit only to the patient |
+| Sigmoid on server (encrypted cubic) vs on client (after decrypt) | **Browser sigmoid is the main output (#24)**; the server cubic stays as a measured add-on (`output` field) | Client-side reveals the score only to the patient and needs 1 level and no relin keys; server-side needs relin keys + 2 more levels |
 
 ## Capstone 2 backlog (engineering items, not open decisions)
 

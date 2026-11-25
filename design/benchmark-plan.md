@@ -53,14 +53,15 @@ encrypt / infer / decrypt ms (mean and median), decision match vs plaintext, acc
 
 | Row | N | Chain / scale | Sigmoid | Other | Lever |
 |---|---|---|---|---|---|
-| 0 | 16384 | 60,40,40,40,40,60 / 2^40 | encrypted cubic | pilot setting | reference |
-| 1 | 16384 | shortest chain that keeps 100% match | encrypted cubic | | L1 |
-| 2 | 8192 | fits 218 bits | encrypted cubic | | L2 |
-| 3 | 8192 | | encrypted cubic | + compression check (is it already on?) | L5 |
-| 4 | 8192 | | logit only | sigmoid in browser | L3 / L8 |
-| 5 | 4096 | fits 109 bits | logit only | may fail: report it either way | L3 |
-| 6 | best of 2–5 | | | + seeded encryption, + trimmed response | L4, L6 |
-| H | 8192 | 31,26×6,31 / 2^26 | logit only | **Haq-style setting on our data and machine** | fair comparison with Haq et al. |
+| 0 | 16384 | 60,40,40,40,40,60 / 2^40 | **browser sigmoid** (main, #24) | pilot setting | reference |
+| 1 | 16384 | shortest chain that keeps 100% match | browser | | L1 |
+| 2 | 8192 | fits 218 bits | browser | | L2 |
+| 3 | 8192 | | browser | + compression check (is it already on?) | L5 |
+| 4 | 4096 | fits 109 bits | browser | may fail: report it either way | L3 |
+| 5 | best of 1-4 | | browser | + seeded encryption, + trimmed response | L4, L6 |
+| 6 | best of 1-5 | | browser | confirm no relin/rotation keys; key reuse | L7 |
+| 7 | 16384 and 8192 | as rows 0 and 2 | **server sigmoid (encrypted cubic), add-on** | extra cost and polynomial decision match | L8 |
+| H | 8192 | 31,26×6,31 / 2^26 | browser | **Haq-style setting on our data and machine** | fair comparison with Haq et al. |
 
 Rules: a row that drops decision match below 90% is a **fail** (RQ-A) and is still reported. No row is
 described as an improvement until its numbers are in `code/results/`. Packed layout with four rotation

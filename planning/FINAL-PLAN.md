@@ -1,4 +1,4 @@
-# FINAL PLAN – what we are doing (decided 25 Nov 2026)
+# FINAL PLAN – what we are doing (decided 25 Nov 2026; sigmoid decision flipped later the same day, #24)
 
 This page is the single answer. If another document disagrees with it, this page wins.
 Background and reasoning: [`project-direction.md`](project-direction.md). Nothing below is a result yet;
@@ -27,8 +27,9 @@ equal the plain model's.
 - Scheme CKKS; node-seal 7.0.0 in the browser, TenSEAL 0.3.16 on the server; Node.js 22+ (#1, #13).
 - One ciphertext per feature (#15).
 - Reference model: logistic regression, 13 features (Cleveland) and 9 (Edinburgh).
-- Reference setting = row 0: N = 16384, chain 60/40/40/40/40/60, scale 2^40, encrypted least-squares cubic.
-- Delivered system supports both outputs: encrypted cubic sigmoid (main) and logit-only (sigmoid in the browser).
+- **Main method = BROWSER SIGMOID (#24).** The server returns the encrypted score (weighted sum + bias); the browser decrypts it and applies the sigmoid. No ciphertext-times-ciphertext multiplication, so no relinearisation keys and only 1 multiplication level. This is also how Haq et al. do it, so our gain over Haq comes from the layout, the smaller settings, the browser-side keys and the measured costs, not from where the sigmoid is.
+- **Server sigmoid (encrypted cubic) is an add-on only**: still implemented (`output = "sigmoid"`) and measured once (row 7) to report its extra cost. It is not the reference and not part of the cost claims.
+- Reference setting = row 0: pilot box N = 16384, chain 60/40/40/40/40/60, scale 2^40, with the browser sigmoid.
 - Datasets reported separately: UCI Cleveland and Edinburgh MI.
 
 ## 4. Track 1 – make it cheaper (the main contribution)
@@ -39,14 +40,18 @@ still reported.
 
 | Row | Change | Owner |
 |---|---|---|
-| 0 | Reference setting | Hassan |
+All rows use the browser sigmoid unless stated.
+
+| Row | Change | Owner |
+|---|---|---|
+| 0 | Reference: pilot box (N = 16384, 60/40/40/40/40/60, 2^40) | Hassan |
 | 1 | Shortest chain and smallest scale that keep 100% match | Hassan, Khalid |
-| 2 | N = 8192, encrypted cubic | Hassan |
+| 2 | N = 8192 | Hassan |
 | 3 | Check whether compression is already on; report raw vs compressed size | Hassan |
-| 4 | N = 8192, logit-only | Khalid |
-| 5 | N = 4096, logit-only (one attempt; report either way) | Khalid |
-| 6 | Seeded (symmetric-key) encryption in the browser + trimmed response ciphertext | Saif |
-| 7 | Relinearisation keys only; key reuse decision | Saif, Naif |
+| 4 | N = 4096 (one attempt; report either way) | Khalid |
+| 5 | Seeded (symmetric-key) encryption in the browser + trimmed response ciphertext | Saif |
+| 6 | Confirm no relinearisation or rotation keys are generated or uploaded; key reuse decision | Saif, Naif |
+| 7 | **Add-on:** server sigmoid (encrypted cubic) at the reference box and at N = 8192: extra cost vs rows 0 and 2, and decision match of the polynomial | Khalid |
 | H | Haq-style setting (N = 8192, chain 31/26×6/31, scale 2^26) on our data and machine | Hassan |
 
 ### Why we expect each row to help, and how solid that is
@@ -54,11 +59,11 @@ still reported.
 | Rows | Evidence | Status |
 |---|---|---|
 | 1 (chain, scale) | Haq et al. Table 9: 8 → 5 primes cut time 15.6 → 5.9 s and upload 477 → 276 KB with no accuracy change; Table 10: scale 2^24 and 2^22 collapse accuracy (`research/baseline-paper/README.md`) | **Read; the only solid evidence.** Their hardware and model |
-| 2, 5 (lower N) | HomomorphicEncryption.org security standard (maximum modulus bits per N at 128-bit security) | **Not read yet**, named from memory. Haq never vary N |
+| 2, 4 (lower N) | HomomorphicEncryption.org security standard (maximum modulus bits per N at 128-bit security) | **Not read yet**, named from memory. Haq never vary N |
 | 3 (compression) | Microsoft SEAL documentation | **Not read yet.** May already be on, so it may give nothing |
-| 4 (logit-only) | Haq et al. and GuardML apply the sigmoid after decryption | They show it works; **none measures the benefit** |
-| 6 (seeded encryption, trimmed response) | Microsoft SEAL documentation | **Not read yet**; not yet confirmed in node-seal 7.0.0 and TenSEAL 0.3.16 |
-| 7 (keys) | Our own pilot: relinearisation keys about 6.3 MB (`code/results/`) | Measured by us |
+| 0 (browser sigmoid is the main method) | Haq et al. and GuardML apply the sigmoid after decryption | They show it works; **none measures the benefit** |
+| 5 (seeded encryption, trimmed response) | Microsoft SEAL documentation | **Not read yet**; not yet confirmed in node-seal 7.0.0 and TenSEAL 0.3.16 |
+| 6, 7 (keys) | Our own pilot: relinearisation keys about 6.3 MB, needed only by the server sigmoid (`code/results/`) | Measured by us |
 
 **Reading task before the measurements (Saif, Hassan):** read the SEAL documentation (serialisation, compression,
 seeded encryption) and the security standard; add both to `research/reading-list.md` and update this table.
@@ -75,7 +80,7 @@ Candidates, and only these:
 |---|---|
 | M1 tuned logistic regression | free under encryption |
 | M2 linear SVM | free under encryption |
-| M4 small MLP, square activation, logit-only output | the one test of whether a stronger model fits the same box |
+| M4 small MLP, square activation, browser sigmoid | the one test of whether a stronger model stays affordable. It needs about 3 multiplication levels against 1 for LR, so it will not fit LR's smallest box; we measure it in its own smallest box |
 
 Dropped for good: extra interaction features (no source), the LR-MLP hybrid (weakest evidence), trees and
 XGBoost (too costly under encryption).
@@ -92,8 +97,9 @@ Not found: any source comparing LR and MLP on Cleveland-type data with cross-val
 uses cross-validation and a cost budget instead of trusting Haq's single split.
 
 **Decision rule (final):** compare with 10-fold repeated stratified cross-validation. A model replaces
-logistic regression only if (a) its accuracy gain is larger than the spread between folds, (b) it fits the
-optimised LR's box (same N and chain), and (c) its server time is at most 2× the LR's. Otherwise logistic
+logistic regression only if (a) its accuracy gain is larger than the spread between folds, (b) its upload per
+patient is at most 1.5× the LR's, and (c) its server time is at most 2× the LR's (each model in its own smallest
+working box; M1 and M2 use the same box as LR, so they always pass b and c). Otherwise logistic
 regression stays, and the result is reported as "simplest model is the best balance". Both outcomes are fine.
 
 ## 6. Claims we will make, and not make
@@ -111,17 +117,17 @@ We do **not** say: more accurate because of encryption; faster than Haq in absol
 | Person | Capstone 2 job |
 |---|---|
 | Abdullah | Front end, API and plaintext baseline app; architecture and API contract kept in line |
-| Saif | Real FHE pipeline; rows 6–7; security tests 1, 3, 4, 7 |
+| Saif | Real FHE pipeline; rows 5–6; security tests 1, 3, 4, 7 |
 | Hassan | Benchmark harness; rows 0–3 and H; results table |
-| Khalid | Sigmoid and rows 1, 4, 5; Track 2 modelling with Sarim |
+| Khalid | Sigmoid; rows 1, 4, 7; Track 2 modelling with Sarim |
 | Sarim | Baselines, Edinburgh, cross-validation, Track 2 (M1, M2, M4) |
 | Naif | Threat model and security assessment; SLR upkeep; reports |
 
 ## 8. Order of work in Capstone 2 (follows the PR2 Gantt)
 
 1. Front end, API, plaintext baseline app.
-2. Real FHE pipeline with node-seal and TenSEAL; rows 0–3.
-3. Security hardening and assessment against the threat model; rows 4–7 and H.
+2. Real FHE pipeline with the browser sigmoid, node-seal and TenSEAL; rows 0–3.
+3. Security hardening and assessment against the threat model; rows 4–6 and H; then the server-sigmoid add-on (row 7).
 4. Performance evaluation on both datasets (Track 1 table, then Track 2).
 5. Polish, final report, demo that shows the server only handles ciphertext.
 

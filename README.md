@@ -33,7 +33,8 @@ Patient data is encrypted on the client, the server runs the model on the encryp
 ## Direction (25 Nov 2026)
 We use Haq et al. 2025 ([notes](research/baseline-paper/README.md)) as the reference paper and improve on its
 **cost**, not its accuracy: smallest secure CKKS settings for our one model, smaller request, response and
-keys, shorter compute, plus browser-side keys and an encrypted sigmoid. Claim: *same decisions as the plaintext
+keys, shorter compute, plus browser-side keys. Main method: **browser sigmoid** (the server returns the encrypted score, the browser applies the sigmoid; #24).
+Claim: *same decisions as the plaintext
 model at a lower measured cost* (RQ-A, RQ-B). Levers, what we may and may not claim, and the order of work:
 [`planning/FINAL-PLAN.md`](planning/FINAL-PLAN.md) is the decided plan (decisions #20–#23); reasoning in [`planning/project-direction.md`](planning/project-direction.md).
 
