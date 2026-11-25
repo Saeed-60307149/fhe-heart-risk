@@ -14,9 +14,9 @@ Status: **proposed, team to confirm** (decision #20 in [`decision-log.md`](decis
    smallest secure settings for our one model, and shrink the request, the response, the keys and the
    computation time. We also add what they do not cover: the patient encrypts in the browser and keeps the
    secret key, and the server computes the sigmoid on ciphertext.
-3. **Accuracy is not what we improve.** Encryption can at best match the plaintext model (Haq got
-   identical numbers with and without encryption). Our claim is *"same decisions as the plaintext model,
-   at a lower measured cost"* – which is exactly RQ-A and RQ-B.
+3. **Encryption does not improve accuracy.** It can at best match the plaintext model (Haq got
+   identical numbers with and without encryption), so the main claim is *"same decisions as the plaintext model,
+   at a lower measured cost"* – which is exactly RQ-A and RQ-B. A second, optional track tries to raise accuracy by changing the model itself (section 3b).
 
 Every improvement below is an **expectation until we measure it**. Nothing here goes into a report as a
 result before it is in `code/results/`.
@@ -47,7 +47,49 @@ result before it is in `code/results/`.
 | L8 | **Sigmoid location (A vs B)** | A: encrypted cubic on the server (main). B: logit only, sigmoid in the browser | B gives the smallest box and the largest savings. In both options only the patient can decrypt; A returns an encrypted risk probability, B an encrypted score (logit) | A is what PR2 objective 3 promises. Haq also does B, so "faster than Haq" is only meaningful against B | Measure both, report which is lighter | Capstone 2 |
 | L9 | **Packed layout with targeted rotations** | All 13 features in one ciphertext, summed with rotations by 1, 2, 4, 8 only | About 1 MB per patient | Rotation keys are only generated for those four steps, not the 164 MB default set; this is a *backlog* option because #15 chose per-feature | Measure the four-key size | Capstone 2 backlog |
 | L10 | **Hardware** | GPU, faster CPU | **GPU: no effect** – TenSEAL/SEAL run on the CPU only (Haq's A100 is not used by CKKS). A faster CPU helps all variants equally | Timings are only comparable on one machine | Record the CPU in every results file (already in the JSON `environment`) | Everyone |
-| L11 | **Accuracy-side work (not encryption)** | Nested/k-fold cross-validation, feature scaling, regularisation, hybrids like Haq's LR-MLP | Makes the *accuracy figure* more trustworthy or higher | Out of the RQ-A scope (RQ-A is logistic regression); a hybrid MLP needs depth 3, which makes the box bigger again | Optional: report 10-fold CV next to the fixed split so we can compare with Haq | Sarim – optional |
+| L11 | **Model-side accuracy work (not encryption)** | Different or better models: tuned LR, linear SVM, extra features, small MLP, Haq's LR-MLP hybrid | May raise accuracy a little; always raises or keeps the encrypted cost | Separate track with its own evidence and rules: see **section 3b** | Cross-validated comparison, then encrypted cost of each candidate | Sarim, Khalid – after the cost track |
+
+## 3b. Second track (optional): improve accuracy by changing the model
+
+Encryption cannot raise accuracy, but **the model can**, and the encrypted version inherits it. This track is
+an *add-on* to the cost track: the reference model stays logistic regression (RQ-A is defined for it), and any
+other model must beat it **and** have its encrypted cost reported next to the accuracy. Proposed as optional
+RQ-D: *"Does a more expressive HE-compatible model raise accuracy enough to justify its extra encrypted cost?"*
+
+### Candidates, in the order we would try them
+
+| # | Model change | Why it should work (evidence) | What it costs under encryption | Level |
+|---|---|---|---|---|
+| M1 | **Tune logistic regression** (regularisation strength C, class weights, scaling) with cross-validation | Standard practice; Haq tune epochs by 10-fold CV (their §4.3.3) | Nothing: same weights, same depth | Low risk |
+| M2 | **Linear SVM** | Haq: SVM beat LR on Wisconsin (0.9649 vs 0.9211) but not on Cleveland (0.7667 vs 0.7883, inconsistent table). AutoPro-RHC: SVC 88% vs LR 86% on UCI heart (abstract) | Same as LR: depth 1, no sigmoid needed | Low risk |
+| M3 | **Extra features** (squares, interactions) built in the browser before encrypting | Gives a linear model some non-linearity at zero extra depth; no paper read yet, needs a source | One more ciphertext per extra feature, so a larger upload (per-feature layout) | Medium |
+| M4 | **Small MLP with square activation** (Haq: 12 hidden units on Cleveland, 16 on Wisconsin) | Haq: MLP beat LR on both datasets (Wisconsin 0.9737 vs 0.9211; Cleveland 0.8167 vs 0.7883) | Depth 3 instead of 1: a bigger box. Haq measure **280 s vs 15.6 s** on Wisconsin (about 18× slower) and a smaller but still large result | High cost |
+| M5 | **LR-MLP hybrid** (MLP initialised from a trained LR; Haq's contribution) | Haq: best on both datasets (Wisconsin 0.9825, Cleveland 0.8667), same encrypted cost as the MLP | Same as M4 | High cost, weakest evidence (see below) |
+| M6 | Trees, gradient boosting (XGBoost) | McElfresh et al. 2023 (Haq's ref. 18) on when trees beat neural nets on tabular data; AutoPro-RHC and Wang run trees under FHE | Comparisons are expensive under encryption; AutoPro-RHC measured 61–521 s | **Out of scope** |
+
+### Research we actually have
+
+| Source | What it gives us | Level |
+|---|---|---|
+| Haq et al. 2025 (full text read) | LR / SVM / MLP / two hybrids on Cleveland and Wisconsin, plaintext and CKKS, with timings | Read |
+| AutoPro-RHC, Sheu 2023 | SVC 88% and LR 86% (abstract), plus XGBoost and a tree under TFHE | V-partial |
+| Harb and Celiktas 2025 | Learned activation estimators vs polynomials, for neural networks under HE; relevant if we ever use an MLP | A |
+| Cenitta 2025 | A CNN under CKKS reports 94.2% on ECG (a different task) | A |
+| Our own baselines (`code/results/`) | LR: Cleveland 0.853 / AUC 0.947 (75 test rows); Edinburgh 0.927 / 0.963 (314) | Measured |
+| Still to find | A source for interaction/polynomial features in linear models (M3); a source on LR-vs-MLP on Cleveland-type data | To read |
+
+### Why this track needs strict rules
+
+- **Tiny test sets.** One Cleveland patient moves accuracy by 1.3 points; a gain of 2–3 points is within
+  noise. Haq's hybrid gains also rest on a single split, and their Cleveland table is internally inconsistent
+  (paper notes). So: compare models with **10-fold or repeated stratified cross-validation** (mean ± spread),
+  not one split. A model counts as better only if its gain is larger than that spread.
+- **Cost always comes with accuracy.** Report every candidate's encrypted size and time next to its accuracy.
+  M4/M5 would undo much of what the cost track gains (depth 3 means a bigger box). If a candidate gains
+  less than about 2 points for 10× the time, we say so and keep LR.
+- **LR stays the reference.** RQ-A, the pilot, the sigmoid fit and the threat model are all LR. Changing the
+  main model reopens all of them, so a different model only replaces LR if the team decides after the results.
+- **Order:** M1 and M2 first (free under encryption), then M3, then M4–M5 only if time remains.
 
 ### Do the fairest comparison with Haq
 
@@ -64,7 +106,8 @@ different hardware, data split or sigmoid placement.
 | More accurate than Haq et al. | **No.** Different data splits (our test sets are 75 and 314 patients, theirs 60 and 114); and see the table inconsistency in the paper notes |
 | Faster than Haq et al. in absolute terms | **No** – different hardware, model and sigmoid placement |
 | A GPU makes it faster | **No** |
-| Hybrid models improve our results | Not tested; out of scope |
+| A different model is more accurate than logistic regression | Only through the model-side track (section 3b): cross-validated, with its encrypted cost reported |
+| Hybrid models improve our results | Not tested yet (M5); Haq's gain rests on one small split |
 
 ## 5. Where the proof comes from
 
@@ -90,8 +133,9 @@ benchmark. See the ablation section of [`design/benchmark-plan.md`](../design/be
 1. **Wk 13 (now, already assigned):** N = 8192 with/without compression (Hassan); N = 8192 and logit-only accuracy (Khalid); sigmoid error figure settled.
 2. **Check first:** is compression already on (L5)? One run, ten minutes, avoids wrong claims.
 3. **Wk 14:** modulus/scale sweep (L1, L3); seeded encryption and response trimming (L4, L6) if node-seal supports them with the pinned versions.
-4. **Capstone 2:** full ablation on both datasets, A-versus-B sigmoid, key-reuse decision, then the reported RQ-B table.
-5. **Final report (Thu 26 Nov):** present this as the Capstone 2 plan and the evidence we will collect. No improvement is reported as a result.
+4. **Model track (optional, Capstone 2, after step 3):** M1 and M2 with cross-validation, then M3; M4–M5 only if time remains (section 3b).
+5. **Capstone 2:** full ablation on both datasets, A-versus-B sigmoid, key-reuse decision, then the reported RQ-B table.
+6. **Final report (Thu 26 Nov):** present this as the Capstone 2 plan and the evidence we will collect. No improvement is reported as a result.
 
 ## 7. Inconsistencies found while writing this, and how they are settled
 
