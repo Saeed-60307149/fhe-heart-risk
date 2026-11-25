@@ -49,6 +49,21 @@ still reported.
 | 7 | Relinearisation keys only; key reuse decision | Saif, Naif |
 | H | Haq-style setting (N = 8192, chain 31/26×6/31, scale 2^26) on our data and machine | Hassan |
 
+### Why we expect each row to help, and how solid that is
+
+| Rows | Evidence | Status |
+|---|---|---|
+| 1 (chain, scale) | Haq et al. Table 9: 8 → 5 primes cut time 15.6 → 5.9 s and upload 477 → 276 KB with no accuracy change; Table 10: scale 2^24 and 2^22 collapse accuracy (`research/baseline-paper/README.md`) | **Read; the only solid evidence.** Their hardware and model |
+| 2, 5 (lower N) | HomomorphicEncryption.org security standard (maximum modulus bits per N at 128-bit security) | **Not read yet**, named from memory. Haq never vary N |
+| 3 (compression) | Microsoft SEAL documentation | **Not read yet.** May already be on, so it may give nothing |
+| 4 (logit-only) | Haq et al. and GuardML apply the sigmoid after decryption | They show it works; **none measures the benefit** |
+| 6 (seeded encryption, trimmed response) | Microsoft SEAL documentation | **Not read yet**; not yet confirmed in node-seal 7.0.0 and TenSEAL 0.3.16 |
+| 7 (keys) | Our own pilot: relinearisation keys about 6.3 MB (`code/results/`) | Measured by us |
+
+**Reading task before the measurements (Saif, Hassan):** read the SEAL documentation (serialisation, compression,
+seeded encryption) and the security standard; add both to `research/reading-list.md` and update this table.
+Only the Capstone 2 measurements prove any row; the sources only justify trying it.
+
 Dropped for good: GPU (SEAL is CPU-only), packed layout as a delivered option (measured once as a
 comparison, already in the PR2 pilot), packed layout with rotation keys.
 

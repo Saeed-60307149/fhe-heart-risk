@@ -40,3 +40,18 @@ encryption: the server returns the weighted sum and the client decides after dec
    the "hybrid beats MLP" claim rests on one split.
 4. Compression is not mentioned. Their ciphertext sizes (≈ 477 KB for N = 8192 and 7 data primes, where raw would be about 0.9 MB) suggest TenSEAL's default zstd is already on.
 5. Time is not split into encrypt / compute / decrypt, so we cannot compare per phase.
+
+## Their parameter sweep (Tables 8-10): our main evidence for the cost levers
+Wisconsin, logistic regression, N = 8192, scale 2^26, only the number of middle primes changes (Table 9):
+
+| Chain | Time, encrypted test set (s) | Encrypted input (bytes) | Encrypted result (bytes) |
+|---|---|---|---|
+| Base: 31, 26×6, 31 (8 primes) | 15.60 | 476,922 | 409,928 |
+| Set 1: 7 primes | 11.84 | 409,624 | 343,372 |
+| Set 2: 6 primes | 8.59 | 343,532 | 276,292 |
+| Set 3: 5 primes | 5.88 | 276,395 | 209,971 |
+
+The MLP shows the same trend (280 s down to 105 s). Accuracy stayed at the base-set values for sets 1-3 (their
+text, p. 19). Table 10: scale 2^27 or 2^24 and the 22-bit chain change accuracy, and 2^24 and 2^22 collapse it
+(e.g. the MLP falls to 0.68 and 0.35). They never vary N. Limits: their hardware, their model, one dataset.
+
