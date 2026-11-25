@@ -2,7 +2,7 @@
 
 Written 25 Nov 2026 from the team discussion, Progress Report 2 (submitted 8 Nov) and the baseline paper
 (Haq, Chen and Chen, *Algorithms* 18, 731, 2025 – notes in [`research/baseline-paper/`](../research/baseline-paper/README.md)).
-Status: **proposed, team to confirm** (decision #20 in [`decision-log.md`](decision-log.md)).
+**Background only. The decided plan is [`FINAL-PLAN.md`](FINAL-PLAN.md); where this page offers options or says "proposed", FINAL-PLAN.md has chosen.** (Decisions #20–#23 in [`decision-log.md`](decision-log.md).)
 
 ## 1. The goal in three sentences
 

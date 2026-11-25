@@ -35,7 +35,7 @@ We use Haq et al. 2025 ([notes](research/baseline-paper/README.md)) as the refer
 **cost**, not its accuracy: smallest secure CKKS settings for our one model, smaller request, response and
 keys, shorter compute, plus browser-side keys and an encrypted sigmoid. Claim: *same decisions as the plaintext
 model at a lower measured cost* (RQ-A, RQ-B). Levers, what we may and may not claim, and the order of work:
-[`planning/project-direction.md`](planning/project-direction.md) (decisions #20–#21, proposed).
+[`planning/FINAL-PLAN.md`](planning/FINAL-PLAN.md) is the decided plan (decisions #20–#23); reasoning in [`planning/project-direction.md`](planning/project-direction.md).
 
 ## Two phases, one repo
 | Phase | When | What lives here |
