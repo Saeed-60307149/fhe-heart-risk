@@ -74,7 +74,8 @@ Each person's checklist is in `members/<name>/slr/TASKS.md`.
 | `exports/` | Raw search exports (RIS / NBIB) | Pairs 1–3 |
 | `dedup/SLR_Dedup_and_Screening_Sets_2026-10-10.xlsx` | De-duplication record: 1,044 records split into Sets 1–3 (348 each), the 482 removed duplicates, PRISMA counts and the search check. **Reference copy only – screening decisions go in the PRISMA sheet.** | Hassan |
 | `PRISMA_Tracking_Sheet_2026-10-11.xlsx` | **The PRISMA sheet – screen here.** Tabs: How to use, PRISMA Counts, Lists, Search Log, Screening Log. Search Log: IEEE 337, PubMed 172, Scopus 1,017. PRISMA Counts: 1,526 − 482 = 1,044 to screen, 348 per pair, + 1 from other sources. Screening Log: 1,044 records (R0001–R1044) + Kim JMIR (R1045, Other sources, Pair 3), with the abstract in column Q | Hassan |
-| `data-extraction.csv` | One row per included paper (answers RQ1–RQ4); `checked_by` = partner who spot-checked | Full-text reader |
+| `data-extraction.csv` | One row per included paper (14 rows, 25 Nov). Column `evidence_level`: V = text read, A = abstract only, S = seeded from reviewers' notes, not re-checked. `checked_by` still empty | Full-text reader |
+| [`synthesis.md`](synthesis.md) | Draft answers to RQ1–RQ4 with evidence levels, limitations, and what is left to finish (25 Nov) | Everyone |
 | `quality-assessment.csv` | Q1–Q5 score per included paper; `checked_by` = partner | Full-text reader |
 | `archive/` | Protocol v2, old CSVs, old sheet snapshots | – |
 
