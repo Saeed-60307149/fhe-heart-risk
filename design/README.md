@@ -4,6 +4,7 @@ Owner: Abdullah Dar · reviewed by the team · Semester 1 = paper design + pilot
 | File | What | Week | Owner |
 |---|---|---|---|
 | [`architecture.md`](architecture.md) | Parts, request flow, parameters, layout, who holds which key, decisions, open items (**v1.0 final, 15 Nov**) | Wk 10 → 15 Nov | Abdullah |
+| [`finalized-decisions.md`](finalized-decisions.md) | One-page table of closed decisions, reasons, reference papers, and which are open to ablation | 25 Nov | Abdullah |
 | [`api-contract.md`](api-contract.md) | Endpoints, request/response, 8 error codes (v2) | Wk 10 → 11 Nov | Abdullah |
 | [`openapi.yaml`](openapi.yaml) | Same contract, machine-readable (OpenAPI 3.1) | 11 Nov | Abdullah |
 | [`threat-model.md`](threat-model.md) | Assets S1–S6, adversaries A1–A5, threats T1–T15, residual risks, security test plan, status in `code/` (**v1.0 final, 15 Nov**) | Wk 10 → 15 Nov | Naif |
