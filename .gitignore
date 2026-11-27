@@ -45,8 +45,3 @@ code/fhe-ml-service/model/
 
 # Round-trip scratch output
 code/pilots/node-seal-roundtrip/out/
-
-# Defense report PDFs carry student ID numbers: kept out of the public repository.
-# Add them only after the repository is made private (git add -f).
-reports/final-report/*ProposalDefenseReport*.pdf
-reports/final-report/Defense_Report*.pdf

@@ -1,3 +1,5 @@
 # Office files cannot be merged as text: on a conflict keep one version and redo the edit
 *.xlsx merge=binary
 *.docx merge=binary
+# PDFs are binary: never convert line endings
+*.pdf binary

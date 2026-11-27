@@ -23,8 +23,7 @@ and quote the commit hash of the run in the report.
 
 ## Defense report files
 
-> **The two PDFs below are not in this repository.** It is publicly visible and they carry student ID numbers. The team
-> keeps them locally and on D2L; add them with `git add -f` only after the repository is made private.
+> Both PDFs are in this public repository by team choice (27 Nov 2026). They include student ID numbers.
 
 | File | What |
 |---|---|

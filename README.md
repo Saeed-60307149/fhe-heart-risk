@@ -47,7 +47,7 @@ Claim: *same decisions as the plaintext
 model at a lower measured cost* (RQ-A, RQ-B). Levers, what we may and may not claim, and the order of work:
 [`planning/FINAL-PLAN.md`](planning/FINAL-PLAN.md) is the decided plan (decisions #20–#23); reasoning in [`planning/project-direction.md`](planning/project-direction.md).
 
-**Source of truth:** the corrected Defense Report (decision #26; see [reports/final-report/](reports/final-report/) – the PDF itself is kept outside this public repository). Dated status entries are history.
+**Source of truth:** the corrected Defense Report (decision #26; [PDF](reports/final-report/Defense_Report_corrected_reference.pdf); see [reports/final-report/](reports/final-report/)). Dated status entries are history.
 
 ## Two phases, one repo
 | Phase | When | What lives here |
