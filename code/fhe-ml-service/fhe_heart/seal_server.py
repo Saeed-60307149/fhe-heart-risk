@@ -1,8 +1,10 @@
-"""Server-side encrypted inference on node-seal ciphertexts (per-feature layout).
+"""Server-side encrypted inference on node-seal ciphertexts (both layouts).
 
-Layout: one CKKS ciphertext per feature (the Report 1 design, used in the PR2
-cross-library round-trip). The weighted sum needs no rotation (Galois) keys; the
-cubic sigmoid needs only relinearization keys, which the client creates and sends.
+per_feature: one CKKS ciphertext per feature. The weighted sum needs no rotation (Galois) keys.
+packed:      all features of one patient in the first slots of ONE ciphertext. The sum uses
+             rotations by 1, 2, 4, ... only, so the client creates just those Galois keys.
+The main output is the encrypted score (the client applies the sigmoid). The optional cubic
+sigmoid needs relinearization keys, which the client creates and sends.
 
 SECURITY RULES for this module (checked by tests/test_no_secret_on_server.py):
   * it never imports or creates a SecretKey or a Decryptor;
@@ -11,6 +13,7 @@ SECURITY RULES for this module (checked by tests/test_no_secret_on_server.py):
 """
 from __future__ import annotations
 
+import math
 import os
 import tempfile
 import time
@@ -57,7 +60,7 @@ class InferenceResult:
 
 
 class SealServer:
-    def __init__(self, parms_bytes: bytes):
+    def __init__(self, parms_bytes: bytes, approved_only: bool = False):
         parms = seal.EncryptionParameters(seal.SCHEME_TYPE.CKKS)
         try:
             _load(parms, parms_bytes)
@@ -66,6 +69,11 @@ class SealServer:
         if parms.scheme() != seal.SCHEME_TYPE.CKKS:
             raise FheInputError("UNSUPPORTED_PARAMETERS", "scheme must be CKKS")
         degree = parms.poly_modulus_degree()
+        if approved_only:
+            chain = tuple(m.bit_count() for m in parms.coeff_modulus())
+            if (degree, chain) not in P.approved_parameters():
+                raise FheInputError("UNSUPPORTED_PARAMETERS",
+                                    "encryption parameters are not one of the approved sets")
         if degree not in P.allowed_degrees():
             raise FheInputError("UNSUPPORTED_PARAMETERS",
                                 f"poly_modulus_degree {degree} not in {sorted(P.allowed_degrees())}")
@@ -105,17 +113,47 @@ class SealServer:
             raise FheInputError("INVALID_CIPHERTEXT", f"relinearization keys rejected: {exc}")
         return rk
 
+    def load_galois_keys(self, data: bytes) -> "seal.GaloisKeys":
+        if len(data) > P.MAX_GALOIS_KEY_BYTES:
+            raise FheInputError("PAYLOAD_TOO_LARGE", "rotation keys larger than allowed")
+        gk = seal.GaloisKeys()
+        try:
+            _load(gk, data, self.ctx)
+        except Exception as exc:
+            raise FheInputError("INVALID_CIPHERTEXT", f"rotation keys rejected: {exc}")
+        return gk
+
     # ---------- arithmetic ----------
     def _normalise(self, ct) -> None:
-        # After a rescale the scale is 2^40 * (2^40 / q_i), close to but not exactly
-        # 2^40. Re-labelling it as exactly 2^40 lets terms be added; the relative error
-        # is about |q_i / 2^40 - 1| (< 1e-6 for 40-bit primes), far below the sigmoid
-        # approximation error.
-        ct.scale = P.SCALE
+        # Used inside the cubic only. After a rescale the scale is s0 * (s0 / q_i), close to
+        # s0 when the middle primes are about s0. Re-labelling lets terms be added; the
+        # relative error is about |q_i / s0 - 1|.
+        ct.scale = self.s0
+
+    def _dropped_prime(self, ct) -> float:
+        """Value of the last prime at this level (the one the next rescale removes)."""
+        return float(self.ctx.get_context_data(ct.parms_id()).parms().coeff_modulus()[-1].value())
+
+    def _linear_weight_scale(self, ct) -> float:
+        if self.levels >= 1:
+            # Encoding the weights at exactly the dropped prime makes the rescaled result
+            # come back to the input scale with no approximation.
+            return self._dropped_prime(ct)
+        # Only one data prime: no rescale is possible; the result keeps scale s0 * weight scale.
+        q0_bits = math.log2(self._dropped_prime(ct))
+        bits = min(math.log2(ct.scale), q0_bits - math.log2(ct.scale) - 7)
+        if bits < 6:
+            raise FheInputError("UNSUPPORTED_PARAMETERS", "modulus too small for a weighted sum")
+        return 2.0 ** int(bits)
+
+    def _finish_linear(self, ct) -> None:
+        if self.levels >= 1:
+            self.evaluator.rescale_to_next_inplace(ct)
+            ct.scale = self.s0
 
     def _mul_plain(self, ct, value: float):
         pt = seal.Plaintext()
-        self.encoder.encode([float(value)], ct.parms_id(), ct.scale, pt)
+        self.encoder.encode(float(value), ct.parms_id(), ct.scale, pt)
         out = seal.Ciphertext()
         self.evaluator.multiply_plain(ct, pt, out)
         self.evaluator.rescale_to_next_inplace(out)
@@ -124,23 +162,50 @@ class SealServer:
 
     def _add_plain(self, ct, value: float) -> None:
         pt = seal.Plaintext()
-        self.encoder.encode([float(value)], ct.parms_id(), ct.scale, pt)
+        self.encoder.encode(float(value), ct.parms_id(), ct.scale, pt)
         self.evaluator.add_plain_inplace(ct, pt)
 
     def weighted_sum(self, cts: list, weights: list[float], bias: float):
-        """z = sum_j w_j * x_j + b. Uses 1 level. Zero weights are skipped (a
-        multiply by 0 gives a transparent ciphertext, which SEAL refuses)."""
+        """Per-feature layout: z = sum_j w_j * x_j + b. Uses 1 level. Zero weights are skipped
+        (a multiply by 0 gives a transparent ciphertext, which SEAL refuses)."""
         acc = None
+        weight_scale = None
         for ct, w in zip(cts, weights):
             if abs(w) < 1e-12:
                 continue
-            term = self._mul_plain(ct, w)
+            weight_scale = weight_scale or self._linear_weight_scale(ct)
+            pt = seal.Plaintext()
+            self.encoder.encode(float(w), ct.parms_id(), weight_scale, pt)
+            term = seal.Ciphertext()
+            self.evaluator.multiply_plain(ct, pt, term)
             if acc is None:
                 acc = term
             else:
                 self.evaluator.add_inplace(acc, term)
         if acc is None:
             raise FheInputError("BAD_REQUEST", "model has no non-zero weights")
+        self._finish_linear(acc)
+        self._add_plain(acc, bias)
+        return acc
+
+    def packed_sum(self, ct, weights: list[float], bias: float, galois_keys):
+        """Packed layout: slot j holds feature j. Multiply by the weight vector, then
+        rotate-and-add so slot 0 holds the full sum. Only slot 0 is the result; the other
+        slots hold partial sums (threat model: model-weight leakage, public-data model)."""
+        weight_scale = self._linear_weight_scale(ct)
+        vec = [float(w) for w in weights] + [0.0] * (self.encoder.slot_count() - len(weights))
+        pt = seal.Plaintext()
+        self.encoder.encode(vec, ct.parms_id(), weight_scale, pt)
+        acc = seal.Ciphertext()
+        self.evaluator.multiply_plain(ct, pt, acc)
+        self._finish_linear(acc)
+        for step in P.rotation_steps(len(weights)):
+            rot = seal.Ciphertext()
+            try:
+                self.evaluator.rotate_vector(acc, step, galois_keys, rot)
+            except Exception as exc:
+                raise FheInputError("INVALID_CIPHERTEXT", f"rotation by {step} failed: {exc}")
+            self.evaluator.add_inplace(acc, rot)
         self._add_plain(acc, bias)
         return acc
 
@@ -184,19 +249,34 @@ class SealServer:
         return res
 
     def infer(self, ct_bytes: list[bytes], weights: list[float], bias: float,
-              poly: list[float] | None = None, relin_bytes: bytes | None = None) -> InferenceResult:
-        if len(ct_bytes) != len(weights):
+              poly: list[float] | None = None, relin_bytes: bytes | None = None,
+              layout: str = "per_feature", galois_bytes: bytes | None = None,
+              trim: bool = True) -> InferenceResult:
+        expected = 1 if layout == "packed" else len(weights)
+        if len(ct_bytes) != expected:
             raise FheInputError("BAD_REQUEST",
-                                f"expected {len(weights)} ciphertexts, got {len(ct_bytes)}")
+                                f"expected {expected} ciphertexts, got {len(ct_bytes)}")
+        if layout == "packed" and not galois_bytes:
+            raise FheInputError("BAD_REQUEST", "layout=packed needs galois_keys")
         t0 = time.perf_counter()
         cts = [self.load_ciphertext(b) for b in ct_bytes]
+        scales = {round(math.log2(c.scale), 6) for c in cts}
+        if len(scales) != 1 or not 10 <= next(iter(scales)) <= 60:
+            raise FheInputError("INVALID_CIPHERTEXT", "ciphertexts must share one sensible scale")
+        self.s0 = cts[0].scale
         rk = self.load_relin_keys(relin_bytes) if (poly and relin_bytes) else None
+        gk = self.load_galois_keys(galois_bytes) if layout == "packed" else None
         t1 = time.perf_counter()
-        z = self.weighted_sum(cts, weights, bias)
+        if layout == "packed":
+            z = self.packed_sum(cts[0], weights, bias, gk)
+        else:
+            z = self.weighted_sum(cts, weights, bias)
         output = "logit"
         if rk is not None:
             z = self.cubic(z, poly, rk)
             output = "probability_poly"
+        if trim and z.parms_id() != self.ctx.last_parms_id():
+            self.evaluator.mod_switch_to_inplace(z, self.ctx.last_parms_id())
         t2 = time.perf_counter()
         out = _save(z)
         t3 = time.perf_counter()

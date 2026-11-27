@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plan B client: encrypt on the patient's own machine with Python (TenSEAL raw SEAL API).
+"""Plan B client: encrypt on the hospital's own machine with Python (TenSEAL raw SEAL API).
 
 Same privacy guarantee as the browser client (Plan A): the secret key is created here
 and never sent. Use it when a browser cannot load node-seal (it needs WebAssembly GC +
@@ -51,7 +51,7 @@ def main():
     ap.add_argument("--dataset", default="cleveland")
     ap.add_argument("--token", default=os.environ.get("API_TOKEN"))
     ap.add_argument("--values", nargs="+", type=float, required=True)
-    ap.add_argument("--output", choices=["probability_poly", "logit"], default="probability_poly")
+    ap.add_argument("--output", choices=["probability_poly", "logit"], default="logit")
     a = ap.parse_args()
 
     meta = request(f"{a.api}/api/model/{a.dataset}")
@@ -59,12 +59,13 @@ def main():
     if len(a.values) != n:
         sys.exit(f"expected {n} values in this order: {', '.join(meta['feature_names'])}")
     scaled = [(v - m) / s for v, m, s in zip(a.values, meta["scaler_mean"], meta["scaler_scale"])]
-    param_set = next(k for k, v in P.PARAM_SETS.items() if v == meta["params"])
+    output = a.output if meta.get("supports_probability_poly") else "logit"
+    wanted = meta["poly_params"] if output == "probability_poly" else meta["params"]
+    param_set = next(k for k in P.WEB_SETS if P.PARAM_SETS[k] == wanted)
 
     t0 = time.perf_counter()
     client = SealClient.create(param_set)
     cts = client.encrypt_features(scaled)
-    output = a.output if meta.get("supports_probability_poly") else "logit"
     rk = client.relin_keys_bytes() if output == "probability_poly" else None
     t1 = time.perf_counter()
     body = {"dataset": a.dataset, "parms": base64.b64encode(client.parms_bytes()).decode(),

@@ -91,9 +91,11 @@ components:
         params:
           type: object
           properties:
-            poly_modulus_degree: { type: integer, enum: [8192, 16384] }
+            poly_modulus_degree: { type: integer, enum: [4096, 8192] }
             coeff_mod_bit_sizes: { type: array, items: { type: integer } }
-        scale_bits: { type: integer, const: 40 }
+        scale_bits: { type: integer, const: 26 }
+        poly_params: { type: object, description: "approved set for output=probability_poly (same shape as params)" }
+        poly_scale_bits: { type: integer, const: 26 }
         supports_probability_poly: { type: boolean }
     PredictRequest:
       type: object
@@ -103,7 +105,7 @@ components:
         parms:
           allOf: [{ $ref: "#/components/schemas/Base64" }]
           maxLength: 4096
-          description: SEAL EncryptionParameters (CKKS), no compression
+          description: SEAL EncryptionParameters (CKKS); exactly one of the two approved sets
         ciphertexts:
           type: array
           minItems: 1

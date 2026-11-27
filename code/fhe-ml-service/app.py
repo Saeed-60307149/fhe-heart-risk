@@ -103,9 +103,11 @@ def model_info(dataset: str, x_internal_token: Optional[str] = Header(default=No
     return {"dataset": doc["dataset"], "feature_names": doc["feature_names"],
             "n_features": len(doc["weights"]), "scaler_mean": doc["scaler_mean"],
             "scaler_scale": doc["scaler_scale"], "threshold": doc["threshold"],
-            "param_set": doc.get("param_set", P.DEFAULT_PARAM_SET),
-            "params": P.PARAM_SETS[doc.get("param_set", P.DEFAULT_PARAM_SET)],
-            "scale_bits": P.SCALE_BITS,
+            "param_set": "web_logit",
+            "params": P.PARAM_SETS["web_logit"],
+            "scale_bits": P.scale_bits_for("web_logit"),
+            "poly_params": P.PARAM_SETS["web_poly"],
+            "poly_scale_bits": P.scale_bits_for("web_poly"),
             "supports_probability_poly": bool(doc.get("sigmoid_poly"))}
 
 
@@ -122,7 +124,7 @@ def infer(req: InferRequest, x_internal_token: Optional[str] = Header(default=No
                 raise FheInputError("BAD_REQUEST", "this model has no sigmoid polynomial")
             if not req.relin_keys:
                 raise FheInputError("BAD_REQUEST", "output=probability_poly needs relin_keys")
-        server = SealServer(b64(req.parms, "parms"))
+        server = SealServer(b64(req.parms, "parms"), approved_only=True)
         cts = [b64(c, f"ciphertexts[{i}]") for i, c in enumerate(req.ciphertexts)]
         poly = doc["sigmoid_poly"]["coeffs_ascending"] if req.output == "probability_poly" else None
         rk = b64(req.relin_keys, "relin_keys") if poly else None

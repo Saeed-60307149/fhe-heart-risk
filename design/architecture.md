@@ -1,5 +1,7 @@
 # Architecture – v1.0 (final, submitted 15 Nov 2026)
 
+> **Aligned with the corrected Defense Report (reference, decision #26).** Updated from Architecture v1.0 (15 Nov): **the user is now the hospital**; the browser sigmoid is the main output; the layout is one ciphertext per feature.
+
 Owner: Abdullah Dar · Practicum (Capstone 1) · Supervisor: Dr. Abdulatif Shikfa · history: v1 draft
 Week 10 (26 Oct) → v2 repo draft 11 Nov → **v1.0 final document 15 Nov** (the submitted PDF is numbered
 from 1.0). Diagram source: [diagrams/architecture.md](diagrams/architecture.md) (Mermaid, renders on
@@ -8,11 +10,11 @@ analysis: [threat-model.md](threat-model.md).
 
 ## Purpose and design rule
 
-A patient gets a heart disease risk prediction without the server ever seeing their health data. The
-patient encrypts 13 clinical features in the browser and keeps the secret key. The server computes the
-risk score on the ciphertext with CKKS and returns an encrypted score that only the patient can decrypt.
+A hospital gets a heart disease risk prediction without the server ever seeing the patient's health data. The
+hospital encrypts 13 clinical features in the browser and keeps the secret key. The server computes the
+risk score on the ciphertext with CKKS and returns an encrypted score that only the hospital can decrypt.
 
-**Design rule: plain data and the secret key exist only in the patient's browser. Every server-side
+**Design rule: plain data and the secret key exist only in the hospital's browser. Every server-side
 component handles ciphertext, public keys and model weights only.** Trust boundary: the browser is trusted;
 gateway, FHE service, logs and disk are untrusted for patient data.
 
@@ -20,13 +22,13 @@ gateway, FHE service, logs and disk are untrusted for patient data.
 
 | # | Part | Runs where | Stack | Responsibilities | Holds |
 |---|---|---|---|---|---|
-| 1 | **Patient client** (Plan A: browser page; Plan B: local Python CLI) | Patient's device | HTML/JS + node-seal 7.0.0 (SEAL 4.1.2, WASM; Node.js 22+ or a current browser) · or Python + TenSEAL 0.3.16 | Generate CKKS keys; scale and encrypt the 13 features; send ciphertexts and public keys; decrypt the encrypted score; apply the low/high-risk threshold | **Secret key** (memory only), plain features, plain score |
+| 1 | **Hospital client** (Plan A: browser page; Plan B: local Python CLI) | Hospital's device | HTML/JS + node-seal 7.0.0 (SEAL 4.1.2, WASM; Node.js 22+ or a current browser) · or Python + TenSEAL 0.3.16 | Generate CKKS keys; scale and encrypt the 13 features; send ciphertexts and public keys; decrypt the encrypted score; apply the low/high-risk threshold | **Secret key** (memory only), plain features, plain score |
 | 2 | **Gateway** (Node.js API) | Server, public (behind TLS) | Express 4, Node 22 | Serve the front end; TLS; authentication; rate limiting; check request size, format and encryption parameters; route requests (no cryptography) | Ciphertext in transit only; API tokens |
 | 3 | **FHE-ML service** | Server, localhost/private only | FastAPI + TenSEAL 0.3.16 (`sealapi`) | Load the public context; compute weighted sum, bias and cubic polynomial sigmoid on ciphertext; return the encrypted score | Plain model weights, public context, evaluation keys. **Never the secret key** |
 | 4 | **Model files** | In the repository | scikit-learn logistic regression | Weights, bias and scaler per dataset (UCI Cleveland: 13 features; Edinburgh MI: 9 features) | Model parameters only. No patient data |
 
 ```
-[1 Patient client] --HTTPS: parms + n ciphertexts (+ relin keys)--> [2 Node API] --localhost--> [3 FHE-ML service]
+[1 Hospital client] --HTTPS: parms + n ciphertexts (+ relin keys)--> [2 Node API] --localhost--> [3 FHE-ML service]
        ^                                                                                    |
        +--------------------- encrypted score (ciphertext) <-------------------------------+
    decrypt locally -> threshold 0.5 -> "Lower / Higher risk"
@@ -49,33 +51,36 @@ gateway, FHE service, logs and disk are untrusted for patient data.
 |---|---|---|---|
 | Secret key | Client memory only | **Never** | New keys per page load / per CLI run |
 | Encryption parameters | Client → server | Yes (≈100 bytes) | Public |
-| Relinearization keys | Client → server | Yes (≈6–8 MB raw) | Public evaluation keys; cannot decrypt |
-| Galois (rotation) keys | – | Not used | Needed only by the packed layout (164 MB) |
+| Relinearization keys | Client → server | Add-on mode only (about 685 KB) | Public evaluation keys; cannot decrypt |
+| Galois (rotation) keys | – | Not used | Needed only by the packed layout (comparison only) |
 | Encrypted features / score | Client ↔ server | Yes | Ciphertext only |
 | Model weights, polynomial | FHE service | No | Server asset; not returned by `/api/model` |
 | Scaler mean/scale | Server → client | Yes | Public; needed to scale before encrypting |
 
-## Cryptographic parameters (final)
+## Cryptographic parameters (web system, updated 27 Nov from the benchmarks)
 
-| Parameter | Value | Reason |
-|---|---|---|
-| Scheme | CKKS | Handles real-valued features such as blood pressure |
-| Polynomial modulus degree | 16,384 | Pilot setting; supports the multiplicative depth for weighted sum plus cubic |
-| Scale | 2^40 | Pilot setting; encrypted accuracy matched plain (0.853) |
-| Sigmoid replacement | Least-squares cubic | Mean absolute error 0.031 on the test set (PR2). The 11 Nov re-run of `code/pilots/sigmoid` gives 0.0356 because it picks the fitting interval from the training logits (±6.37); decisions match 100% either way. Use one number in the final report and say how it was fitted |
-| Libraries | node-seal 7.0.0, TenSEAL 0.3.16 (pinned) | TenSEAL 0.3.17 and later reject node-seal ciphertexts |
+| Mode | N | Modulus chain (bits) | Scale | Why |
+|---|---|---|---|---|
+| **Main: browser sigmoid** | 4096 | 46 / 46 | 2^26 | Smallest passing per-feature setting: 100% decision match, score error ≤ 0.01, 128-bit security |
+| Add-on: server cubic | 8192 | 31 / 26 / 26 / 26 / 31 | 2^26 | Smallest passing per-feature setting for the cubic |
+| Pilot (PR2 history) | 16384 | 60 / 40 / 40 / 40 / 40 / 60 | 2^40 | Used by the pilot scripts only |
+
+CKKS; node-seal 7.0.0 and TenSEAL 0.3.16 (pinned). The browser uses **seeded secret-key encryption** and **zstd
+compression**. The web service accepts **only these two exact parameter sets**. The cubic is a least-squares fit
+(mean absolute error 0.0356 on the Cleveland test set in the 11 Nov and later runs; PR2 reported 0.031).
+Source: [`code/fhe-ml-service/fhe_heart/params.py`](../code/fhe-ml-service/fhe_heart/params.py).
 
 ## Ciphertext layout: one ciphertext per feature
 
-| | Packed (1 ciphertext) | Per-feature (13 ciphertexts) |
+| (Cleveland, N=4096, seeded + zstd) | Per-feature (**delivered**) | Packed (comparison only) |
 |---|---|---|
-| Ciphertext per patient | about 1 MB | about 16 MB (13.06 MiB measured raw on 11 Nov; Edinburgh, 9 features, about 11 MB) |
-| Galois keys | 163.9 MB | None |
-| Used in the cross-library round trip | No | Yes (score 0.877, matched plain) |
-| Decision | Not used (benchmark comparison) | **Chosen** (#15) |
+| Upload per patient | 354 KB | 30 KB |
+| Rotation keys (sent once) | none | 241 KB (only steps 1, 2, 4, 8) |
+| Other slots of the result | nothing useful | partial sums that reveal model weights unless masked |
 
-The cost is a larger request. Capstone 2 measures end-to-end timing for this layout and tests two
-reductions: a lower polynomial degree and ciphertext compression. If both fail, Plan B applies.
+The server module supports both layouts; the web page and API use per-feature (#15, #26). The benchmarks show packed
+is lighter; see FINAL-PLAN section 11 for the open team decision. In the PR2 pilot, packed looked heavy because it used
+the full default set of rotation keys (164 MB).
 
 ## Plan B (fallbacks only)
 
@@ -122,12 +127,12 @@ model's "Status in `code/`" column.
 | Scheme: CKKS | Final (#1) | Real-valued features |
 | Client: **Plan A (node-seal in the browser) works**; Plan B (Python CLI) kept as fallback | Final (#12) | PR2 cross-library round trip; `code/frontend` tested in headless Chrome 11 Nov |
 | Versions pinned: node-seal 7.0.0, TenSEAL 0.3.16, Node.js ≥ 22 | Final (#13) | PR2 compatibility test |
-| Ciphertext layout: one ciphertext per feature | Final (#15) | PR2 §C mitigation + Report 1 plan. Packed = 1 MB/patient but 164 MB Galois keys; per-feature ≈ 16 MB/patient uncompressed (PR2 Table 5) but no Galois keys, ≈6–8 MB relin keys for the encrypted sigmoid |
+| Ciphertext layout: one ciphertext per feature | Final (#15, #26) | Packed is measured for comparison only. Pilot: packed about 1 MB per patient but 164 MB of full-set Galois keys; per-feature about 13 MB per Cleveland patient (Python client) |
 | Sigmoid on server (encrypted cubic) vs on client (after decrypt) | **Browser sigmoid is the main output (#24)**; the server cubic stays as a measured add-on (`output` field) | Client-side reveals the score only to the patient and needs 1 level and no relin keys; server-side needs relin keys + 2 more levels |
 
 ## Capstone 2 backlog (engineering items, not open decisions)
 
-- **Upload size**: per-feature uploads ≈ 16 MB raw / ≈ 22 MB base64 for 13 features (+10 MB relin keys). Options:
+- **Upload size**: done (27 Nov): seeded + zstd at the approved small settings (about 354 KB per Cleveland patient per-feature in browser-sigmoid mode, from 16.3 MB). Open: the team decision on packed (FINAL-PLAN section 11).
   SEAL `zstd` compression (test on both libraries), N = 8192 with `output = "logit"` (smaller
   ciphertexts, no relin keys; sigmoid on the client), or packing several features per ciphertext
   with a few targeted Galois keys only.

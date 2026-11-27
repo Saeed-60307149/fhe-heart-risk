@@ -40,6 +40,7 @@ class SealClient:
         kg.create_public_key(pk)
         client = cls(parms, ctx, kg.secret_key(), pk, seal.CKKSEncoder(ctx))
         client._keygen = kg
+        client.scale = 2.0 ** P.scale_bits_for(param_set)
         return client
 
     def parms_bytes(self) -> bytes:
@@ -55,7 +56,7 @@ class SealClient:
         out = []
         for v in values:
             pt = seal.Plaintext()
-            self.encoder.encode([float(v)], P.SCALE, pt)
+            self.encoder.encode([float(v)], self.scale, pt)
             ct = seal.Ciphertext()
             enc.encrypt(pt, ct)
             out.append(_save(ct))

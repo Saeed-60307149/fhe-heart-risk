@@ -36,9 +36,11 @@ Every response carries `X-Request-Id`.
   "scaler_mean": [54.4, 0.68, "…"],
   "scaler_scale": [9.0, 0.47, "…"],
   "threshold": 0.5,
-  "param_set": "n16384_depth4",
-  "params": { "poly_modulus_degree": 16384, "coeff_mod_bit_sizes": [60, 40, 40, 40, 40, 60] },
-  "scale_bits": 40,
+  "param_set": "web_logit",
+  "params": { "poly_modulus_degree": 4096, "coeff_mod_bit_sizes": [46, 46] },
+  "scale_bits": 26,
+  "poly_params": { "poly_modulus_degree": 8192, "coeff_mod_bit_sizes": [31, 26, 26, 26, 31] },
+  "poly_scale_bits": 26,
   "supports_probability_poly": true
 }
 ```
@@ -48,7 +50,7 @@ The model **weights are not returned** (they are a server asset, threat model A3
 ```json
 {
   "dataset": "cleveland",
-  "parms": "<base64 SEAL EncryptionParameters, CKKS, no compression>",
+  "parms": "<base64 SEAL EncryptionParameters, CKKS>",
   "ciphertexts": ["<base64 ciphertext of scaled feature 1>", "…", "<feature n>"],
   "relin_keys": "<base64 SEAL RelinKeys>",
   "output": "probability_poly"
@@ -57,14 +59,14 @@ The model **weights are not returned** (they are a server asset, threat model A3
 | Field | Rules |
 |---|---|
 | `dataset` | required; must have a model on the server |
-| `parms` | required; base64; ≤ 4,096 chars; CKKS; degree 8192 or 16384; accepted by SEAL at 128-bit security |
-| `ciphertexts` | required; 1–64 base64 strings; count must equal `n_features`; each ≤ 2,000,000 bytes decoded; fresh size-2 ciphertexts at the first level; order = `feature_names`; each holds one **scaled** value (`(raw − mean) / scale`) in slot 0 at scale 2^40 |
+| `parms` | required; base64; ≤ 4,096 chars; must be exactly one of the two approved sets: `params` (for `logit`) or `poly_params` (for `probability_poly`), at 128-bit security |
+| `ciphertexts` | required; 1–64 base64 strings; count must equal `n_features`; each ≤ 2,000,000 bytes decoded; fresh size-2 ciphertexts at the first level (seeded and zstd-compressed accepted); order = `feature_names`; each holds one **scaled** value in slot 0 at the matching scale |
 | `relin_keys` | required when `output = "probability_poly"`; ≤ 12,000,000 bytes decoded |
 | `output` | `"logit"` (default; server returns encrypted z = w·x + b, client applies the sigmoid after decrypting) or `"probability_poly"` (server also applies the cubic sigmoid on ciphertext) |
 
 Unknown fields are dropped by the API and never forwarded.
-Typical size: 13 features × ≈1.7 MB base64 ≈ 22 MB, plus ≈10 MB of base64 relin keys for
-`probability_poly`. Body limit: 48 MB.
+Measured size, Cleveland (raw bytes; base64 adds one third): `logit` about 354 KB; `probability_poly` about 1.7 MB of
+ciphertexts plus under 1 MB of relinearization keys (web page, seeded + zstd). Body limit: 48 MB.
 
 ### 2.3 `POST /api/predict` response → 200
 ```json
@@ -111,7 +113,6 @@ Internal-only codes from the FHE service are mapped: `UNSUPPORTED_PARAMETERS` �
 
 ## 5. Serialization decision (runbook step 10)
 
-Ciphertexts, parameters and keys are SEAL's own binary format (`save` / `saveToBase64`, compression
-`none`), base64-encoded inside JSON. Same format in node-seal 7.0.0 (SEAL 4.1.2) and TenSEAL 0.3.16
-`sealapi`. Compression (`zstd`) would roughly halve the upload; not enabled until it is tested on
-both libraries (open item in [architecture.md](architecture.md)).
+Ciphertexts, parameters and keys are SEAL's own binary format, base64-encoded inside JSON. The web page uses **zstd**
+compression and **seeded** (secret-key) ciphertexts; tested from node-seal 7.0.0 to TenSEAL 0.3.16 (27 Nov). The
+parameters are sent uncompressed.

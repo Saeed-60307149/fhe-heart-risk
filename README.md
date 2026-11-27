@@ -5,13 +5,22 @@ Heart disease risk prediction on encrypted patient data using Fully Homomorphic 
 COMP4101 Practicum, Fall 2026 → Capstone 2 · Supervisor: **Shikfa** · Team leader: **Naif**
 
 ## The idea in one line
-Patient data is encrypted on the client, the server runs the model on the encrypted data, and only the patient can decrypt the result. The server never sees the data or holds the secret key.
+A hospital encrypts patient data in its browser, the server runs the model on the encrypted data, and only the hospital can decrypt the result. The server never sees the data or holds the secret key.
 
 ```
-[Patient browser: node-seal] --ciphertext--> [Node API] --> [FHE-ML service: TenSEAL] --encrypted score--> [browser] --decrypt--> risk
+[Hospital browser: node-seal] --ciphertext--> [Node API] --> [FHE-ML service: TenSEAL] --encrypted score--> [browser] --decrypt--> risk
 ```
 
-## Where we are (15 Nov 2026)
+## Where we are (27 Nov 2026)
+- **Experiments run:** settings sweep, real browser benchmark (21 settings, 100% decision match in all), model
+  comparison (logistic regression stays) and neural-network cost → [`code/results/benchmarks/`](code/results/benchmarks/README.md),
+  summary in [`planning/FINAL-PLAN.md`](planning/FINAL-PLAN.md) section 11.
+- **Web system updated:** browser sigmoid, one ciphertext per feature, N = 4096, seeded + compressed (about 354 KB
+  per Cleveland patient, from 16.3 MB), exact approved settings only. 29 Python and 17 backend tests, live end-to-end
+  and web-page checks pass.
+- **Not done:** security assessment, timings over a real network or on other computers, rest of the literature review.
+
+## Earlier status (15 Nov 2026)
 - **Design documents final (15 Nov):** System Architecture v1.0 and Threat Model v1.0 (STRIDE, T1–T15,
   residual risks T4/T6/T11, security test plan) → [`design/`](design/), decision #19.
 
@@ -37,6 +46,8 @@ keys, shorter compute, plus browser-side keys. Main method: **browser sigmoid** 
 Claim: *same decisions as the plaintext
 model at a lower measured cost* (RQ-A, RQ-B). Levers, what we may and may not claim, and the order of work:
 [`planning/FINAL-PLAN.md`](planning/FINAL-PLAN.md) is the decided plan (decisions #20–#23); reasoning in [`planning/project-direction.md`](planning/project-direction.md).
+
+**Source of truth:** the corrected Defense Report (decision #26; see [reports/final-report/](reports/final-report/) – the PDF itself is kept outside this public repository). Dated status entries are history.
 
 ## Two phases, one repo
 | Phase | When | What lives here |

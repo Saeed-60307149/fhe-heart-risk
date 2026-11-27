@@ -1,0 +1,94 @@
+{
+ "datasets": {
+  "cleveland": {
+   "plain_accuracy_fixed_split": 0.8666666666666667,
+   "best_params": {
+    "epochs": 100,
+    "l2": 3.0
+   },
+   "layouts": {
+    "per_feature": {
+     "N": 8192,
+     "chain": [
+      34,
+      25,
+      25,
+      25,
+      34
+     ],
+     "scale_bits": 25,
+     "decision_match": 1.0,
+     "max_abs_error": 0.00033819997916961775,
+     "server_ms_mean": 121.47703866629551,
+     "upload_bytes": 3631059,
+     "result_bytes": 82426,
+     "relin_key_bytes": 1457727,
+     "rotation_key_bytes": 0
+    },
+    "packed": {
+     "N": 8192,
+     "chain": [
+      40,
+      30,
+      30,
+      30,
+      40
+     ],
+     "scale_bits": 30,
+     "decision_match": 1.0,
+     "max_abs_error": 0.0009792891595754583,
+     "server_ms_mean": 195.262653332126,
+     "upload_bytes": 322778,
+     "result_bytes": 94255,
+     "relin_key_bytes": 1705740,
+     "rotation_key_bytes": 6850713
+    }
+   }
+  },
+  "edinburgh": {
+   "plain_accuracy_fixed_split": 0.9299363057324841,
+   "best_params": {
+    "epochs": 300,
+    "l2": 3.0
+   },
+   "layouts": {
+    "per_feature": {
+     "N": 8192,
+     "chain": [
+      34,
+      25,
+      25,
+      25,
+      34
+     ],
+     "scale_bits": 25,
+     "decision_match": 1.0,
+     "max_abs_error": 0.00015394286883640973,
+     "server_ms_mean": 94.23910541366118,
+     "upload_bytes": 2513334,
+     "result_bytes": 82346,
+     "relin_key_bytes": 1457221,
+     "rotation_key_bytes": 0
+    },
+    "packed": {
+     "N": 8192,
+     "chain": [
+      40,
+      30,
+      30,
+      30,
+      40
+     ],
+     "scale_bits": 30,
+     "decision_match": 1.0,
+     "max_abs_error": 0.0017892426445156318,
+     "server_ms_mean": 207.93194012830602,
+     "upload_bytes": 324864,
+     "result_bytes": 94379,
+     "relin_key_bytes": 1706616,
+     "rotation_key_bytes": 6848989
+    }
+   }
+  }
+ }
+}

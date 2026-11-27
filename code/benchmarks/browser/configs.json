@@ -1,0 +1,417 @@
+[
+ {
+  "id": "row0-pf",
+  "row": "0",
+  "N": 16384,
+  "chain": [
+   60,
+   40,
+   40,
+   40,
+   40,
+   60
+  ],
+  "scale_bits": 40,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "none",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "reference, as the first web client (no compression)"
+ },
+ {
+  "id": "row1-pf",
+  "row": "1",
+  "N": 16384,
+  "chain": [
+   40,
+   30,
+   40
+  ],
+  "scale_bits": 30,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "shorter chain, smaller scale at N=16384"
+ },
+ {
+  "id": "row2-pf",
+  "row": "2",
+  "N": 8192,
+  "chain": [
+   50,
+   50
+  ],
+  "scale_bits": 30,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "smallest passing at N=8192"
+ },
+ {
+  "id": "row3-none-pf",
+  "row": "3",
+  "N": 4096,
+  "chain": [
+   46,
+   46
+  ],
+  "scale_bits": 26,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "none",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "N=4096, no compression"
+ },
+ {
+  "id": "row3-zlib-pf",
+  "row": "3",
+  "N": 4096,
+  "chain": [
+   46,
+   46
+  ],
+  "scale_bits": 26,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zlib",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "N=4096, zlib"
+ },
+ {
+  "id": "row4-pf",
+  "row": "4",
+  "N": 4096,
+  "chain": [
+   46,
+   46
+  ],
+  "scale_bits": 26,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "smallest passing at N=4096, zstd"
+ },
+ {
+  "id": "row5-pf",
+  "row": "5",
+  "N": 4096,
+  "chain": [
+   46,
+   46
+  ],
+  "scale_bits": 26,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "seeded",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "row 4 + seeded encryption"
+ },
+ {
+  "id": "row7-ref-pf",
+  "row": "7",
+  "N": 16384,
+  "chain": [
+   60,
+   40,
+   40,
+   40,
+   40,
+   60
+  ],
+  "scale_bits": 40,
+  "layout": "per_feature",
+  "sigmoid": "server_cubic",
+  "encryption": "public",
+  "compr": "none",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "add-on: server cubic at the reference setting"
+ },
+ {
+  "id": "row7-8192-pf",
+  "row": "7",
+  "N": 8192,
+  "chain": [
+   31,
+   26,
+   26,
+   26,
+   31
+  ],
+  "scale_bits": 26,
+  "layout": "per_feature",
+  "sigmoid": "server_cubic",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "add-on: server cubic at N=8192"
+ },
+ {
+  "id": "row0-pk",
+  "row": "0",
+  "N": 16384,
+  "chain": [
+   60,
+   40,
+   40,
+   40,
+   40,
+   60
+  ],
+  "scale_bits": 40,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "none",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "reference, as the first web client (no compression)"
+ },
+ {
+  "id": "row1-pk",
+  "row": "1",
+  "N": 16384,
+  "chain": [
+   40,
+   30,
+   40
+  ],
+  "scale_bits": 30,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "shorter chain, smaller scale at N=16384"
+ },
+ {
+  "id": "row2-pk",
+  "row": "2",
+  "N": 8192,
+  "chain": [
+   40,
+   26,
+   40
+  ],
+  "scale_bits": 26,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "smallest passing at N=8192"
+ },
+ {
+  "id": "row3-none-pk",
+  "row": "3",
+  "N": 4096,
+  "chain": [
+   54,
+   54
+  ],
+  "scale_bits": 30,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "none",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "N=4096, no compression"
+ },
+ {
+  "id": "row3-zlib-pk",
+  "row": "3",
+  "N": 4096,
+  "chain": [
+   54,
+   54
+  ],
+  "scale_bits": 30,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zlib",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "N=4096, zlib"
+ },
+ {
+  "id": "row4-pk",
+  "row": "4",
+  "N": 4096,
+  "chain": [
+   54,
+   54
+  ],
+  "scale_bits": 30,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "smallest passing at N=4096, zstd"
+ },
+ {
+  "id": "row5-pk",
+  "row": "5",
+  "N": 4096,
+  "chain": [
+   54,
+   54
+  ],
+  "scale_bits": 30,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "seeded",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "row 4 + seeded encryption"
+ },
+ {
+  "id": "row7-ref-pk",
+  "row": "7",
+  "N": 16384,
+  "chain": [
+   60,
+   40,
+   40,
+   40,
+   40,
+   60
+  ],
+  "scale_bits": 40,
+  "layout": "packed",
+  "sigmoid": "server_cubic",
+  "encryption": "public",
+  "compr": "none",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "add-on: server cubic at the reference setting"
+ },
+ {
+  "id": "row7-8192-pk",
+  "row": "7",
+  "N": 8192,
+  "chain": [
+   31,
+   26,
+   26,
+   26,
+   31
+  ],
+  "scale_bits": 26,
+  "layout": "packed",
+  "sigmoid": "server_cubic",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": true,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "add-on: server cubic at N=8192"
+ },
+ {
+  "id": "row6-notrim-pk",
+  "row": "6",
+  "N": 4096,
+  "chain": [
+   54,
+   54
+  ],
+  "scale_bits": 30,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "seeded",
+  "compr": "zstd",
+  "trim": false,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "response NOT trimmed, to measure the effect of trimming"
+ },
+ {
+  "id": "rowH-pf",
+  "row": "H",
+  "N": 8192,
+  "chain": [
+   31,
+   26,
+   26,
+   26,
+   26,
+   26,
+   26,
+   31
+  ],
+  "scale_bits": 26,
+  "layout": "per_feature",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": false,
+  "full_galois": false,
+  "max_patients": 75,
+  "note": "Haq-style setting, per-feature"
+ },
+ {
+  "id": "rowH-pk",
+  "row": "H",
+  "N": 8192,
+  "chain": [
+   31,
+   26,
+   26,
+   26,
+   26,
+   26,
+   26,
+   31
+  ],
+  "scale_bits": 26,
+  "layout": "packed",
+  "sigmoid": "browser",
+  "encryption": "public",
+  "compr": "zstd",
+  "trim": false,
+  "full_galois": true,
+  "max_patients": 20,
+  "note": "Haq-style setting, packed, full default rotation keys"
+ }
+]

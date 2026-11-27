@@ -1,0 +1,1623 @@
+{
+ "criterion": {
+  "decision_match": 1.0,
+  "max_abs_error": 0.01
+ },
+ "rows": [
+  {
+   "N": 16384,
+   "chain": [
+    60,
+    40,
+    40,
+    40,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 7.807246404922807e-09,
+     "upload_bytes_zstd": 13694524,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.457567571667596e-08,
+     "upload_bytes_zstd": 9481928,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 16384,
+   "chain": [
+    60,
+    40,
+    40,
+    40,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 4.276852879403492e-06,
+     "upload_bytes_zstd": 1053211,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 26375616,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.8610093680825344e-06,
+     "upload_bytes_zstd": 1053485,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 26375117,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 16384,
+   "chain": [
+    60,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.217761374545546e-08,
+     "upload_bytes_zstd": 5977198,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 5.800970481750767e-09,
+     "upload_bytes_zstd": 4137413,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 16384,
+   "chain": [
+    60,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 5.129910225054601e-06,
+     "upload_bytes_zstd": 459051,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 5797752,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.2099823446808387e-06,
+     "upload_bytes_zstd": 459132,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 5797966,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 16384,
+   "chain": [
+    40,
+    30,
+    40
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.0755566838271946e-06,
+     "upload_bytes_zstd": 4492748,
+     "result_bytes": 197587,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.9037673620280202e-05,
+     "upload_bytes_zstd": 3106428,
+     "result_bytes": 197583,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 16384,
+   "chain": [
+    40,
+    30,
+    40
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.002603876196173638,
+     "upload_bytes_zstd": 346495,
+     "result_bytes": 196870,
+     "rotation_key_bytes": 4380465,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00413103488501676,
+     "upload_bytes_zstd": 346847,
+     "result_bytes": 197340,
+     "rotation_key_bytes": 4382367,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    60,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 4.9966474291451846e-09,
+     "upload_bytes_zstd": 3059501,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.1695182539360758e-08,
+     "upload_bytes_zstd": 2118164,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    60,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.042646129434388e-06,
+     "upload_bytes_zstd": 235361,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 2929100,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.2106743318973656e-06,
+     "upload_bytes_zstd": 235302,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 2929779,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    50,
+    30,
+    50
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 5.212398403120488e-06,
+     "upload_bytes_zstd": 2506769,
+     "result_bytes": 117915,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.4344590717918493e-05,
+     "upload_bytes_zstd": 1735679,
+     "result_bytes": 117915,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    50,
+    30,
+    50
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 5.296193850057307e-05,
+     "upload_bytes_zstd": 193592,
+     "result_bytes": 117879,
+     "rotation_key_bytes": 2495233,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0005003849248144121,
+     "upload_bytes_zstd": 193532,
+     "result_bytes": 117934,
+     "rotation_key_bytes": 2497323,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    30,
+    40
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.0337977525587405e-05,
+     "upload_bytes_zstd": 2287260,
+     "result_bytes": 94337,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 3.0173140856959435e-06,
+     "upload_bytes_zstd": 1579746,
+     "result_bytes": 94420,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    30,
+    40
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00015360534621633448,
+     "upload_bytes_zstd": 175208,
+     "result_bytes": 94363,
+     "rotation_key_bytes": 2226016,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.002538563586925391,
+     "upload_bytes_zstd": 175739,
+     "result_bytes": 94344,
+     "rotation_key_bytes": 2225772,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    26,
+    40
+   ],
+   "scale_bits": 26,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 9.685832228445435e-05,
+     "upload_bytes_zstd": 2203434,
+     "result_bytes": 94265,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00019680903228547209,
+     "upload_bytes_zstd": 1526161,
+     "result_bytes": 94350,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    26,
+    40
+   ],
+   "scale_bits": 26,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.002304625762499235,
+     "upload_bytes_zstd": 168794,
+     "result_bytes": 94331,
+     "rotation_key_bytes": 2167543,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.002606885265399761,
+     "upload_bytes_zstd": 168964,
+     "result_bytes": 94320,
+     "rotation_key_bytes": 2167640,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    36,
+    24,
+    36
+   ],
+   "scale_bits": 24,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00044687523554243214,
+     "upload_bytes_zstd": 1967495,
+     "result_bytes": 88572,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0006981757311015357,
+     "upload_bytes_zstd": 1361524,
+     "result_bytes": 88503,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    36,
+    24,
+    36
+   ],
+   "scale_bits": 24,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.007247753158180714,
+     "upload_bytes_zstd": 151264,
+     "result_bytes": 88504,
+     "rotation_key_bytes": 1929463,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.06319701650104381,
+     "upload_bytes_zstd": 151377,
+     "result_bytes": 88537,
+     "rotation_key_bytes": 1930434,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 8192,
+   "chain": [
+    31,
+    26,
+    31
+   ],
+   "scale_bits": 26,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00015885763496559235,
+     "upload_bytes_zstd": 1858075,
+     "result_bytes": 70435,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00017790421814689594,
+     "upload_bytes_zstd": 1286441,
+     "result_bytes": 70457,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    31,
+    26,
+    31
+   ],
+   "scale_bits": 26,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.014335444405754572,
+     "upload_bytes_zstd": 143019,
+     "result_bytes": 70514,
+     "rotation_key_bytes": 1743646,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 0.9872611464968153,
+     "max_abs_error": 0.049968998478089,
+     "upload_bytes_zstd": 142859,
+     "result_bytes": 70374,
+     "rotation_key_bytes": 1743358,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 8192,
+   "chain": [
+    30,
+    22,
+    30
+   ],
+   "scale_bits": 22,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.002745157224403272,
+     "upload_bytes_zstd": 1805878,
+     "result_bytes": 71863,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0019993255171231183,
+     "upload_bytes_zstd": 1250267,
+     "result_bytes": 71925,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    30,
+    22,
+    30
+   ],
+   "scale_bits": 22,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 0.9866666666666667,
+     "max_abs_error": 0.3666751923556175,
+     "upload_bytes_zstd": 138960,
+     "result_bytes": 71859,
+     "rotation_key_bytes": 1726022,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 0.9872611464968153,
+     "max_abs_error": 0.1706193717194333,
+     "upload_bytes_zstd": 138948,
+     "result_bytes": 71849,
+     "rotation_key_bytes": 1726404,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 8192,
+   "chain": [
+    60,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00036941897961950687,
+     "upload_bytes_zstd": 1705600,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0007725318158158245,
+     "upload_bytes_zstd": 1180800,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    60,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.05114404263722516,
+     "upload_bytes_zstd": 131200,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 1049397,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.13025326156822636,
+     "upload_bytes_zstd": 131200,
+     "result_bytes": 131200,
+     "rotation_key_bytes": 1049396,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 8192,
+   "chain": [
+    50,
+    50
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00036914365544871153,
+     "upload_bytes_zstd": 1532833,
+     "result_bytes": 117905,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0007701909207957769,
+     "upload_bytes_zstd": 1061161,
+     "result_bytes": 117934,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    50,
+    50
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.05114621051475976,
+     "upload_bytes_zstd": 117901,
+     "result_bytes": 117864,
+     "rotation_key_bytes": 942724,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.13025264387459323,
+     "upload_bytes_zstd": 117912,
+     "result_bytes": 117912,
+     "rotation_key_bytes": 942569,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    40
+   ],
+   "scale_bits": 25,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.02000482401388791,
+     "upload_bytes_zstd": 1226527,
+     "result_bytes": 94287,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false,
+   "error": "result ciphertext is transparent"
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    40
+   ],
+   "scale_bits": 25,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {},
+   "pass": false,
+   "error": "result ciphertext is transparent"
+  },
+  {
+   "N": 8192,
+   "chain": [
+    31,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    31
+   ],
+   "scale_bits": 26,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 9.915736289523025e-05,
+     "upload_bytes_zstd": 6200299,
+     "result_bytes": 70457,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00019437722090920317,
+     "upload_bytes_zstd": 4292595,
+     "result_bytes": 70445,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    31,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26,
+    31
+   ],
+   "scale_bits": 26,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.008336308372948187,
+     "upload_bytes_zstd": 476917,
+     "result_bytes": 70460,
+     "rotation_key_bytes": 15558417,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.029248960317994843,
+     "upload_bytes_zstd": 477098,
+     "result_bytes": 70440,
+     "rotation_key_bytes": 15558132,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 4096,
+   "chain": [
+    40,
+    26,
+    40
+   ],
+   "scale_bits": 26,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.3980059399010258e-05,
+     "upload_bytes_zstd": 1106107,
+     "result_bytes": 49176,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.890186181663367e-05,
+     "upload_bytes_zstd": 765862,
+     "result_bytes": 49271,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    40,
+    26,
+    40
+   ],
+   "scale_bits": 26,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.005076980010349896,
+     "upload_bytes_zstd": 85123,
+     "result_bytes": 49091,
+     "rotation_key_bytes": 1090369,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.006018816175144992,
+     "upload_bytes_zstd": 85082,
+     "result_bytes": 49295,
+     "rotation_key_bytes": 1090046,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    36,
+    30,
+    36
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.4393655584376006e-06,
+     "upload_bytes_zstd": 1088924,
+     "result_bytes": 46336,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.1728943137834236e-06,
+     "upload_bytes_zstd": 753793,
+     "result_bytes": 46321,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    36,
+    30,
+    36
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0003930363941013759,
+     "upload_bytes_zstd": 83750,
+     "result_bytes": 46349,
+     "rotation_key_bytes": 1055187,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00017481173232836156,
+     "upload_bytes_zstd": 83840,
+     "result_bytes": 46333,
+     "rotation_key_bytes": 1054980,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    36,
+    25,
+    36
+   ],
+   "scale_bits": 25,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 7.488656934023785e-05,
+     "upload_bytes_zstd": 1028578,
+     "result_bytes": 46334,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00011581304275498638,
+     "upload_bytes_zstd": 712033,
+     "result_bytes": 46405,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    36,
+    25,
+    36
+   ],
+   "scale_bits": 25,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.006349619469188106,
+     "upload_bytes_zstd": 79016,
+     "result_bytes": 46475,
+     "rotation_key_bytes": 1002907,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0015745269554834351,
+     "upload_bytes_zstd": 79051,
+     "result_bytes": 46378,
+     "rotation_key_bytes": 1003207,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    30,
+    20,
+    30
+   ],
+   "scale_bits": 20,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.005907351184847531,
+     "upload_bytes_zstd": 882554,
+     "result_bytes": 35010,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0065313333827656805,
+     "upload_bytes_zstd": 610968,
+     "result_bytes": 35105,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    30,
+    20,
+    30
+   ],
+   "scale_bits": 20,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 0.92,
+     "max_abs_error": 0.7380171984373336,
+     "upload_bytes_zstd": 67847,
+     "result_bytes": 35074,
+     "rotation_key_bytes": 860826,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 0.9840764331210191,
+     "max_abs_error": 0.3593053156892161,
+     "upload_bytes_zstd": 67856,
+     "result_bytes": 35010,
+     "rotation_key_bytes": 860988,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 4096,
+   "chain": [
+    54,
+    54
+   ],
+   "scale_bits": 35,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.001283678440187952,
+     "upload_bytes_zstd": 802375,
+     "result_bytes": 61717,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0009664201534702599,
+     "upload_bytes_zstd": 555554,
+     "result_bytes": 61729,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    54,
+    54
+   ],
+   "scale_bits": 35,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.06391765957972861,
+     "upload_bytes_zstd": 61754,
+     "result_bytes": 61740,
+     "rotation_key_bytes": 493272,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.16075859113446445,
+     "upload_bytes_zstd": 61719,
+     "result_bytes": 61720,
+     "rotation_key_bytes": 493324,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 4096,
+   "chain": [
+    54,
+    54
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 2.9358467598772364e-05,
+     "upload_bytes_zstd": 802440,
+     "result_bytes": 61701,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 4.651160991375747e-05,
+     "upload_bytes_zstd": 555525,
+     "result_bytes": 61731,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    54,
+    54
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0023479548852380905,
+     "upload_bytes_zstd": 61718,
+     "result_bytes": 61696,
+     "rotation_key_bytes": 493402,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.003437842854653539,
+     "upload_bytes_zstd": 61706,
+     "result_bytes": 61740,
+     "rotation_key_bytes": 493370,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    50,
+    50
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0003705714018573669,
+     "upload_bytes_zstd": 766623,
+     "result_bytes": 58982,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0007729883565987805,
+     "upload_bytes_zstd": 530760,
+     "result_bytes": 58983,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    50,
+    50
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.06299218046196975,
+     "upload_bytes_zstd": 58985,
+     "result_bytes": 58991,
+     "rotation_key_bytes": 471347,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.08374767843817965,
+     "upload_bytes_zstd": 58982,
+     "result_bytes": 58994,
+     "rotation_key_bytes": 471339,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 4096,
+   "chain": [
+    46,
+    46
+   ],
+   "scale_bits": 26,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0003890214893371713,
+     "upload_bytes_zstd": 722588,
+     "result_bytes": 55571,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0007569485559404399,
+     "upload_bytes_zstd": 500203,
+     "result_bytes": 55589,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 4096,
+   "chain": [
+    46,
+    46
+   ],
+   "scale_bits": 26,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.06301358267175594,
+     "upload_bytes_zstd": 55573,
+     "result_bytes": 55584,
+     "rotation_key_bytes": 444147,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.08375138774728308,
+     "upload_bytes_zstd": 55597,
+     "result_bytes": 55581,
+     "rotation_key_bytes": 444175,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 4096,
+   "chain": [
+    40,
+    40
+   ],
+   "scale_bits": 24,
+   "layout": "per_feature",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.007637284987259185,
+     "upload_bytes_zstd": 639074,
+     "result_bytes": 49087,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.011532904250548093,
+     "upload_bytes_zstd": 442373,
+     "result_bytes": 49118,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 4096,
+   "chain": [
+    40,
+    40
+   ],
+   "scale_bits": 24,
+   "layout": "packed",
+   "sigmoid": "browser",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 0.5466666666666666,
+     "max_abs_error": 5.582965200409724,
+     "upload_bytes_zstd": 49267,
+     "result_bytes": 49086,
+     "rotation_key_bytes": 395715,
+     "relin_key_bytes": 0
+    },
+    "edinburgh": {
+     "decision_match": 0.8471337579617835,
+     "max_abs_error": 7.742513417005872,
+     "upload_bytes_zstd": 49195,
+     "result_bytes": 49066,
+     "rotation_key_bytes": 395771,
+     "relin_key_bytes": 0
+    }
+   },
+   "pass": false
+  },
+  {
+   "N": 16384,
+   "chain": [
+    60,
+    40,
+    40,
+    40,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "per_feature",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.3765859796510682e-06,
+     "upload_bytes_zstd": 13695224,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 6586167
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 8.506177402556325e-06,
+     "upload_bytes_zstd": 9479645,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 6584842
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 16384,
+   "chain": [
+    60,
+    40,
+    40,
+    40,
+    40,
+    60
+   ],
+   "scale_bits": 40,
+   "layout": "packed",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.5937497179763227e-06,
+     "upload_bytes_zstd": 1053930,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 26374841,
+     "relin_key_bytes": 6586169
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 8.756549081168075e-06,
+     "upload_bytes_zstd": 1053734,
+     "result_bytes": 262275,
+     "rotation_key_bytes": 26375927,
+     "relin_key_bytes": 6585647
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    50,
+    38,
+    38,
+    38,
+    50
+   ],
+   "scale_bits": 38,
+   "layout": "per_feature",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.0566033576964173e-06,
+     "upload_bytes_zstd": 5316059,
+     "result_bytes": 117915,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 2106936
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 6.939363571212276e-06,
+     "upload_bytes_zstd": 3680004,
+     "result_bytes": 117939,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 2106755
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    50,
+    38,
+    38,
+    38,
+    50
+   ],
+   "scale_bits": 38,
+   "layout": "packed",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 1.3173721709058839e-06,
+     "upload_bytes_zstd": 409549,
+     "result_bytes": 117894,
+     "rotation_key_bytes": 8427961,
+     "relin_key_bytes": 2106864
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 8.043543457625368e-06,
+     "upload_bytes_zstd": 410953,
+     "result_bytes": 117908,
+     "rotation_key_bytes": 8428816,
+     "relin_key_bytes": 2106847
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    30,
+    30,
+    30,
+    40
+   ],
+   "scale_bits": 30,
+   "layout": "per_feature",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00015056658810053136,
+     "upload_bytes_zstd": 4204507,
+     "result_bytes": 94377,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 1705525
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0007177941382220387,
+     "upload_bytes_zstd": 2912240,
+     "result_bytes": 94280,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 1705407
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    40,
+    30,
+    30,
+    30,
+    40
+   ],
+   "scale_bits": 30,
+   "layout": "packed",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.00014398621520328447,
+     "upload_bytes_zstd": 324527,
+     "result_bytes": 94371,
+     "rotation_key_bytes": 6851080,
+     "relin_key_bytes": 1706178
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0003205935639707391,
+     "upload_bytes_zstd": 323706,
+     "result_bytes": 94340,
+     "rotation_key_bytes": 6849027,
+     "relin_key_bytes": 1706395
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    31,
+    26,
+    26,
+    26,
+    31
+   ],
+   "scale_bits": 26,
+   "layout": "per_feature",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.0007748549044791497,
+     "upload_bytes_zstd": 3592171,
+     "result_bytes": 70474,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 1404722
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.004479101457973589,
+     "upload_bytes_zstd": 2486979,
+     "result_bytes": 70424,
+     "rotation_key_bytes": 0,
+     "relin_key_bytes": 1405014
+    }
+   },
+   "pass": true
+  },
+  {
+   "N": 8192,
+   "chain": [
+    31,
+    26,
+    26,
+    26,
+    31
+   ],
+   "scale_bits": 26,
+   "layout": "packed",
+   "sigmoid": "server_cubic",
+   "datasets": {
+    "cleveland": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.002260057042568542,
+     "upload_bytes_zstd": 276253,
+     "result_bytes": 70438,
+     "rotation_key_bytes": 5637222,
+     "relin_key_bytes": 1405349
+    },
+    "edinburgh": {
+     "decision_match": 1.0,
+     "max_abs_error": 0.004792092444580676,
+     "upload_bytes_zstd": 276389,
+     "result_bytes": 70475,
+     "rotation_key_bytes": 5636855,
+     "relin_key_bytes": 1404585
+    }
+   },
+   "pass": true
+  }
+ ]
+}

@@ -20,7 +20,7 @@ A person with UDST access should upgrade the A and S rows; the CSV column `evide
 34 records from IEEE Xplore and Scopus (2016–2026) after de-duplication, plus Kim 2018 by hand. 14 included.
 4 records were never screened (Dziri, Janagama, ICIC 2019, Dakhare) and 6 await full text (see
 [`refined-2026-10-29/prisma-flow.md`](refined-2026-10-29/prisma-flow.md)); the review is therefore **incomplete by
-those 10 records**. The search also missed our baseline paper (Haq et al. 2025), whose abstract says
+those 10 records**. The refined search also missed our baseline paper (Haq et al. 2025), whose abstract says
 "medical tabular data", not "heart disease" – a search-strategy limitation.
 
 ## RQ1 – Which FHE schemes and libraries?
@@ -64,7 +64,7 @@ and, for Cenitta, on a number we could not confirm.
 
 **Finding:** costs are reported inconsistently: parameters (polynomial degree, scale) are often missing
 (AutoPro none; GuardML none; Nguyen only N), ciphertext and key sizes are rare, and hardware differs. TFHE and
-hybrid-BFV approaches take seconds per sample; CKKS logistic regression is in the millisecond range. This is
+hybrid-BFV approaches take seconds per sample; no re-checked record gives a CKKS logistic-regression inference time (our own pilot: about 0.2 s of server time per patient). This is
 the gap RQ-B fills: one dataset pair, all costs, reported side by side.
 
 ## RQ4 – Keys, client-side encryption, workflow
@@ -76,15 +76,15 @@ the gap RQ-B fills: one dataset pair, all costs, reported side by side.
 | Wang | trusted key centre (seeded) | not read | S |
 | Others | not read | not read | A / S |
 
-**Finding:** none of the records we could read runs encryption in a browser or on a real client device or
-reports the size of the keys a client must upload. That is the clearest gap our project addresses (RQ-C).
+**Finding:** none of the records whose text we obtained runs encryption in a browser or on a real client
+device. Key sizes are rarely reported (GuardML gives a public-key size). That is the clearest gap our project addresses (RQ-C).
 
 ## What this means for the project
 
 1. **Gap confirmed (V-partial):** read papers omit parameters, key sizes and real-client evidence.
 2. **Design supported:** CKKS for real-valued features; polynomial sigmoid or none under encryption; equal
    accuracy at the bottom of the reported range.
-3. **Cost improvement is plausible but unproven:** the only parameter-sweep evidence is Haq et al. (not part of
+3. **Cost improvement:** since measured by the project's own benchmarks (27 Nov, `code/results/benchmarks/`). In the literature, the parameter-sweep evidence is Haq et al. (not part of
    the SLR); see [`planning/project-direction.md`](../../planning/project-direction.md) §5.
 4. **Weakest links:** Cenitta's encrypted accuracy; the Cloud-IoT paper's HE is generic; the Paillier papers
    cannot answer the sigmoid question.
@@ -93,21 +93,21 @@ reports the size of the keys a client must upload. That is the clearest gap our 
 
 | Benefit | What it supports | Solidity |
 |---|---|---|
-| The gap exists | No record we could read reports key sizes or runs encryption on a real client or browser (AutoPro-RHC lists a real client as future work) | Partly verified (3 read, 4 abstracts) |
-| Why CKKS | CKKS logistic regression is in the millisecond range; TFHE (AutoPro-RHC) takes 61-521 s and hybrid BFV (GuardML) about 12 s per sample; CKKS suits real-valued features | Partly verified |
+| The gap exists | In the records whose text we obtained, none runs encryption on a real client or in a browser (AutoPro-RHC lists a real client as future work); key sizes are rarely reported (GuardML gives a public-key size) | Partly verified (3 read, 4 abstracts) |
+| Why CKKS | CKKS suits real-valued features; TFHE (AutoPro-RHC) lists 61-521 s (unit unclear) and hybrid BFV (GuardML) about 12 s per sample. These are different tasks and machines, so not a direct comparison | Partly verified |
 | Sigmoid handling | Papers use a polynomial sigmoid or avoid it under encryption (Kim 2018, Haq, GuardML, Harb): backs the cubic plus logit-only choice | Mostly abstract level |
 | Dataset choice | Kim 2018 uses the same Edinburgh MI data as our project | Abstract |
 | Closest prior work | Naresh and Reddi (TenSEAL logistic regression on heart data; Haq cite it). Its seeded note says it compares polynomial degrees 4096 and 8192: **if verified, that is SLR evidence for the lower-N change. Read it next.** | Not read |
 | A required deliverable | PRISMA diagram, study table, RQ1-RQ4 answers | In progress |
 
 **What it does not give:** the cost evidence for Track 1 and the model evidence for Track 2 come from Haq et al.
-2025, which the SLR search **missed** (their abstract says "medical tabular data", not "heart disease"). Naif
+2025, which the refined SLR search **missed** (their abstract says "medical tabular data", not "heart disease"). Naif
 supplied it by hand. About half of the SLR rows are still unverified.
 
 ## Limitations (for the report)
 
 - Two databases only (IEEE Xplore, Scopus); PubMed dropped (Scopus covers most MEDLINE titles).
-- Search strings missed Haq et al. (abstract wording); added by hand.
+- The refined search strings missed Haq et al. (abstract wording); added by hand. It does appear in the superseded 10 Oct broad Scopus export (`research/slr/exports/Scopus_2026-10-10.ris`).
 - Single reviewer per record, no inter-rater agreement; a second reader for exclusions is still pending.
 - 4 records unscreened, 6 awaiting full text, 7 included records not re-read.
 - Quality assessment not done.

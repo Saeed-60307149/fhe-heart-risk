@@ -12,15 +12,15 @@
   <header class="top">
     <div class="wrap">
       <h1>Private heart-risk check</h1>
-      <p class="lede">Your answers are encrypted in this browser before they are sent. The server
-        computes the risk score on encrypted data and cannot read your answers or the result.
+      <p class="lede">For hospital use. Patient details are encrypted in this browser before they are sent. The server
+        computes the risk score on encrypted data and cannot read the details or the result.
         Only this page holds the key to decrypt it.</p>
     </div>
   </header>
 
   <main class="wrap grid">
     <section class="card" aria-labelledby="form-title">
-      <h2 id="form-title">Your details</h2>
+      <h2 id="form-title">Patient details</h2>
       <form id="patient-form" novalidate>
         <div class="row">
           <label for="dataset">Model</label>
@@ -39,8 +39,8 @@
           <div class="row">
             <label for="output">Sigmoid computed</label>
             <select id="output" name="output">
-              <option value="probability_poly">on the server, encrypted (needs relinearization keys)</option>
-              <option value="logit">here, after decryption (smaller upload)</option>
+              <option value="logit">here, after decryption (main method)</option>
+              <option value="probability_poly">on the server, encrypted (add-on mode, needs relinearization keys)</option>
             </select>
           </div>
           <button type="button" id="fill-example" class="secondary">Fill with an example patient</button>
@@ -54,7 +54,7 @@
       <h2 id="result-title">Result</h2>
       <ol id="steps" class="steps">
         <li data-step="keys">Create keys in this browser</li>
-        <li data-step="encrypt">Encrypt your answers</li>
+        <li data-step="encrypt">Encrypt the patient details</li>
         <li data-step="send">Send ciphertext to the server</li>
         <li data-step="decrypt">Decrypt the encrypted score here</li>
       </ol>

@@ -4,8 +4,8 @@ Practicum pilots (Weeks 10–12) and the Capstone 2 prototype skeleton. Everythi
 public, de-identified data only; raw data, ciphertexts and keys are never committed.
 
 ```
-patient browser (node-seal 7.0.0)          Node.js API (Express)            FHE-ML service (FastAPI + TenSEAL 0.3.16)
-  keys made here, secret key stays   --->  auth, size/format checks,  --->  weighted sum + cubic sigmoid on
+hospital browser (node-seal 7.0.0)          Node.js API (Express)            FHE-ML service (FastAPI + TenSEAL 0.3.16)
+  keys made here, secret key stays   --->  auth, size/format checks,  --->  weighted sum (cubic: add-on) on
   encrypt each feature (CKKS)              rate limit, metadata logs        ciphertexts; never decrypts
   decrypt the score locally          <---  forwards ciphertext only   <---  returns an encrypted score
 ```
@@ -60,10 +60,25 @@ cd code/backend && FHE_SERVICE_TOKEN=dev-internal API_TOKENS=dev-client npm star
 ```
 Plan B client: `python code/client-python/fhe_client.py --dataset cleveland --token dev-client --values 57 1 4 140 241 0 1 123 1 0.2 2 0 7`
 
+## Benchmarks (Track 1 and Track 2)
+
+Results and method: [`results/benchmarks/README.md`](results/benchmarks/README.md). Run from `code/`:
+
+```bash
+python benchmarks/sweep.py                    # which settings keep every decision (about 20 min)
+python benchmarks/browser/make_configs.py     # picks the smallest passing settings
+python benchmarks/browser/run_all.py          # real browser benchmark; keep the computer awake
+python benchmarks/model_compare.py            # 10x10-fold cross-validation of the models
+python benchmarks/mlp_cost.py                 # encrypted cost of the small neural network
+python benchmarks/summarise.py                # writes results/benchmarks/README.md
+```
+To re-run the browser benchmark from zero, delete `results/benchmarks/browser.json` first (finished settings are skipped).
+Live web-page check (services running): `node benchmarks/browser/webpage_check.mjs http://127.0.0.1:3000 <token>`.
+
 ## 3. Tests
 
 ```bash
-(cd code/fhe-ml-service && python -m pytest)        # 26 tests: round trip, sigmoid, API contract, no secret key on server
+(cd code/fhe-ml-service && python -m pytest)        # 29 tests: round trip (both layouts), sigmoid, API contract, approved settings, no secret key on server
 (cd code/backend && npm test)                        # 17 tests: auth, validation, error codes, rate limit, logging
 # full chain (service running on 8001 with a model for the dataset):
 (cd code/backend && E2E_FHE_URL=http://127.0.0.1:8001 E2E_DATASET=cleveland FHE_SERVICE_TOKEN=dev-internal node --test test/e2e.test.js)
@@ -72,9 +87,6 @@ CI (`.github/workflows/ci.yml`) runs all three on every pull request.
 
 ## Ciphertext layout
 
-Two layouts were measured in the pilot (PR2 Table 5 and section A.3). The project uses
-**one ciphertext per feature** (decision #15 in [`planning/decision-log.md`](../planning/decision-log.md)):
-it needs no Galois keys, and with the cubic sigmoid computed on the server only relinearization keys
-(about 6–8 MB) instead of 164 MB of Galois keys. The cost is a bigger upload (about 1.3 MB per
-feature uncompressed, ≈16 MB per patient – PR2 Table 5). The packed layout stays in the benchmark
-as the comparison.
+The delivered system uses **one ciphertext per feature** (decisions #15, #26). A packed layout is supported by the
+server module and measured in the benchmarks **for comparison only**. The main output is the encrypted score, with
+the sigmoid applied in the browser; the server cubic is an add-on mode.

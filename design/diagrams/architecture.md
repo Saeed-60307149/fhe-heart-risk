@@ -1,10 +1,12 @@
 # Diagrams (Mermaid – GitHub renders these)
 
+> **Aligned with the corrected Defense Report (reference, decision #26).** The user is the hospital.
+
 ## System architecture
 
 ```mermaid
 flowchart LR
-  subgraph Client["Patient device (trusted)"]
+  subgraph Client["Hospital device (trusted)"]
     F[Web form / Plan B CLI] --> S[Scale with public scaler]
     S --> E["node-seal 7.0.0<br/>CKKS encrypt each feature"]
     K[(Secret key<br/>memory only)] -.-> D

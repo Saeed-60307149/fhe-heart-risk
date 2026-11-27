@@ -1,5 +1,7 @@
 # Benchmark plan
 
+> **Aligned with the corrected Defense Report (reference, decision #26).** Pass mark 90%; per-feature is the delivered layout.
+
 Owner: **Hassan Zahid** (work plan Week 10, runbook step 28 plan) · draft 11 Nov 2026, built on the
 PR2 Table 5 measurements · answers **RQ-B** (cost of privacy) and feeds RQ-A (decision match).
 
@@ -64,5 +66,9 @@ encrypt / infer / decrypt ms (mean and median), decision match vs plaintext, acc
 | H | 8192 | 31,26×6,31 / 2^26 | browser | **Haq-style setting on our data and machine** | fair comparison with Haq et al. |
 
 Rules: a row that drops decision match below 90% is a **fail** (RQ-A) and is still reported. No row is
-described as an improvement until its numbers are in `code/results/`. Packed layout with four rotation
-keys (L9) is a backlog row, not part of the first pass.
+described as an improvement until its numbers are in `code/results/`. The packed layout is measured for comparison only (#26). Row 7 at N = 8192 needs smaller primes than the pilot (the cubic does not fit N = 8192 at scale 2^40), so it may fail; report it either way.
+
+## Status: run on 27 Nov 2026
+
+Results and method: [`code/results/benchmarks/README.md`](../code/results/benchmarks/README.md); summary in
+[`planning/FINAL-PLAN.md`](../planning/FINAL-PLAN.md) section 11. End-to-end latency over a real network has not been measured.

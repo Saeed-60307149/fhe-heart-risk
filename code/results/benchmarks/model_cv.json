@@ -1,0 +1,109 @@
+{
+ "cv": {
+  "n_splits": 10,
+  "n_repeats": 10,
+  "seed": 42
+ },
+ "datasets": {
+  "cleveland": {
+   "rows": 297,
+   "spread_lr_sd": 0.06599334386880752,
+   "models": {
+    "LR": {
+     "accuracy_mean": 0.8338505747126436,
+     "accuracy_sd": 0.06599334386880752,
+     "auc_mean": 0.9048008241758242,
+     "auc_sd": 0.054747753116483444,
+     "gain_vs_lr": 0.0,
+     "paired_diff_sd": 0.0,
+     "folds_better_than_lr": 0,
+     "folds_worse_than_lr": 0,
+     "passes_rule_a": false
+    },
+    "M1 tuned LR": {
+     "accuracy_mean": 0.8382068965517243,
+     "accuracy_sd": 0.06569108867519106,
+     "auc_mean": 0.9053605769230768,
+     "auc_sd": 0.0553910843825943,
+     "gain_vs_lr": 0.004356321839080746,
+     "paired_diff_sd": 0.02787988296455073,
+     "folds_better_than_lr": 31,
+     "folds_worse_than_lr": 18,
+     "passes_rule_a": false
+    },
+    "M2 linear SVM": {
+     "accuracy_mean": 0.8362183908045978,
+     "accuracy_sd": 0.06733818564532884,
+     "auc_mean": 0.9065934065934066,
+     "auc_sd": 0.05455517127212092,
+     "gain_vs_lr": 0.0023678160919542446,
+     "paired_diff_sd": 0.021067932689597148,
+     "folds_better_than_lr": 16,
+     "folds_worse_than_lr": 11,
+     "passes_rule_a": false
+    },
+    "M4 square MLP": {
+     "accuracy_mean": 0.8359080459770116,
+     "accuracy_sd": 0.07417945478114793,
+     "auc_mean": 0.9031421703296704,
+     "auc_sd": 0.05763554861856846,
+     "gain_vs_lr": 0.0020574712643680604,
+     "paired_diff_sd": 0.03159649323114269,
+     "folds_better_than_lr": 26,
+     "folds_worse_than_lr": 18,
+     "passes_rule_a": false
+    }
+   }
+  },
+  "edinburgh": {
+   "rows": 1253,
+   "spread_lr_sd": 0.025749807898187486,
+   "models": {
+    "LR": {
+     "accuracy_mean": 0.9174755555555556,
+     "accuracy_sd": 0.025749807898187486,
+     "auc_mean": 0.962430012178329,
+     "auc_sd": 0.018569497302878008,
+     "gain_vs_lr": 0.0,
+     "paired_diff_sd": 0.0,
+     "folds_better_than_lr": 0,
+     "folds_worse_than_lr": 0,
+     "passes_rule_a": false
+    },
+    "M1 tuned LR": {
+     "accuracy_mean": 0.9158793650793653,
+     "accuracy_sd": 0.02560282098237936,
+     "auc_mean": 0.9624680437139673,
+     "auc_sd": 0.01851320272224159,
+     "gain_vs_lr": -0.0015961904761903067,
+     "paired_diff_sd": 0.005788420603384485,
+     "folds_better_than_lr": 4,
+     "folds_worse_than_lr": 13,
+     "passes_rule_a": false
+    },
+    "M2 linear SVM": {
+     "accuracy_mean": 0.9185904761904762,
+     "accuracy_sd": 0.025326104837857452,
+     "auc_mean": 0.9620717804794967,
+     "auc_sd": 0.018817332319820804,
+     "gain_vs_lr": 0.0011149206349205798,
+     "paired_diff_sd": 0.00480683263941152,
+     "folds_better_than_lr": 19,
+     "folds_worse_than_lr": 7,
+     "passes_rule_a": false
+    },
+    "M4 square MLP": {
+     "accuracy_mean": 0.9130120634920635,
+     "accuracy_sd": 0.026330794898867173,
+     "auc_mean": 0.9580307605778361,
+     "auc_sd": 0.023229777207126517,
+     "gain_vs_lr": -0.004463492063492058,
+     "paired_diff_sd": 0.014562159465178661,
+     "folds_better_than_lr": 20,
+     "folds_worse_than_lr": 29,
+     "passes_rule_a": false
+    }
+   }
+  }
+ }
+}

@@ -20,3 +20,29 @@ written by the owners.
 Before submitting: apply the PR2 errata ([../progress-report-2/README.md](../progress-report-2/README.md)),
 re-run `python research/slr/scripts/prisma_counts.py --write` and `bash code/scripts/run_pilot.sh`,
 and quote the commit hash of the run in the report.
+
+## Defense report files
+
+> **The two PDFs below are not in this repository.** It is publicly visible and they carry student ID numbers. The team
+> keeps them locally and on D2L; add them with `git add -f` only after the repository is made private.
+
+| File | What |
+|---|---|
+| `Defense_Report_corrected_reference.pdf` | **The repo's reference (decision #26).** Corrected report; five student IDs are still blank in this copy |
+| `Abdullatif_Shikfa_2026_495_Practicum_ProposalDefenseReport.pdf` | The submitted report, kept unchanged as a record |
+
+### How the submitted PDF differs from the reference (tell the supervisor)
+
+| Topic | Submitted PDF | Reference |
+|---|---|---|
+| Literature review (C.4) | IEEE, PubMed, Scopus; 1,526 / 1,044; 36 included | Refined search: 43 records, 34 after de-duplication + 1 by hand; 31 screened, 14 included, 4 unscreened. **The records support the reference figures; no record of 36 was found** |
+| Haq in the search (F.4) | Did not appear | Not in the refined search; it **is** in the superseded 10 Oct broad Scopus export (the reference should say this too) |
+| RQ-A pass mark | 100% | At least 90% |
+| Layout | Both compared, delivered layout chosen from results | One ciphertext per feature; packed for comparison only |
+
+### After the reports
+
+The benchmarks planned in the reports were run on 27 Nov 2026, **after** both report versions, so neither report
+contains these results: [`code/results/benchmarks/`](../../code/results/benchmarks/README.md).
+The corrected reference also still says, in F.4 and C.4, that the search missed Haq et al.; that is true of the refined
+search only (it is in the superseded 10 Oct broad Scopus export).

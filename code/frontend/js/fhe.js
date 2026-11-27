@@ -14,22 +14,24 @@ export async function createSession(params, scaleBits) {
   if (!context.parametersSet()) throw new Error('CKKS parameters rejected by node-seal');
   const keyGen = new seal.KeyGenerator(context);
   const secretKey = keyGen.secretKey();
-  const encryptor = new seal.Encryptor(context, keyGen.createPublicKey());
+  const encryptor = new seal.Encryptor(context, keyGen.createPublicKey(), secretKey);
   const encoder = new seal.CKKSEncoder(context);
   const none = seal.ComprModeType.none;
+  const zstd = seal.ComprModeType.zstd;
   const scale = 2 ** scaleBits;
   let relin = null;
 
   return {
     parmsB64: () => parms.saveToBase64(none),
-    relinKeysB64: () => (relin ??= keyGen.createRelinKeys().saveToBase64(none)),
+    relinKeysB64: () => (relin ??= keyGen.createRelinKeysSerializable().saveToBase64(zstd)),
     encryptEach(values) {
       return values.map((v) => {
         const pt = new seal.Plaintext();
         encoder.encode(Float64Array.from([v]), scale, pt);
-        const ct = new seal.Ciphertext();
-        encryptor.encrypt(pt, ct);
-        const b64 = ct.saveToBase64(none);
+        // Seeded (secret-key) encryption: half of each ciphertext is rebuilt from a seed,
+        // so about half as much is uploaded. The secret key never leaves this page.
+        const ct = encryptor.encryptSymmetricSerializable(pt);
+        const b64 = ct.saveToBase64(zstd);
         pt.delete(); ct.delete();
         return b64;
       });

@@ -48,16 +48,21 @@ function step(name, state) {
   if (li) li.className = state;
 }
 
-async function getSession(dataset) {
-  if (!sessions.has(dataset)) {
+async function getSession(dataset, wanted) {
+  const key = `${dataset}|${wanted}`;
+  if (!sessions.has(key)) {
     const r = await fetch(`/api/model/${dataset}`);
     const meta = await r.json();
     if (!r.ok) throw new Error(meta.error?.message ?? 'model not available');
     const names = FIELDS[dataset].map((f) => f.name).join(',');
     if (meta.feature_names.join(',') !== names) throw new Error('form fields do not match the model features');
-    sessions.set(dataset, { meta, session: await createSession(meta.params, meta.scale_bits) });
+    // The two output modes use different encryption settings (the add-on needs more levels).
+    const usePoly = wanted === 'probability_poly' && meta.supports_probability_poly;
+    const session = await createSession(usePoly ? meta.poly_params : meta.params,
+      usePoly ? meta.poly_scale_bits : meta.scale_bits);
+    sessions.set(key, { meta, session, output: usePoly ? 'probability_poly' : 'logit' });
   }
-  return sessions.get(dataset);
+  return sessions.get(key);
 }
 
 async function onSubmit(ev) {
@@ -71,12 +76,10 @@ async function onSubmit(ev) {
   ['keys', 'encrypt', 'send', 'decrypt'].forEach((s) => step(s, ''));
   try {
     step('keys', 'active');
-    const { meta, session } = await getSession(dataset);
+    const { meta, session, output } = await getSession(dataset, $('output').value);
     step('keys', 'done'); step('encrypt', 'active');
     const scaled = values.map((v, i) => (v - meta.scaler_mean[i]) / meta.scaler_scale[i]);
     const ciphertexts = session.encryptEach(scaled);
-    let output = $('output').value;
-    if (output === 'probability_poly' && !meta.supports_probability_poly) output = 'logit';
     const body = { dataset, parms: session.parmsB64(), ciphertexts, output,
       relin_keys: output === 'probability_poly' ? session.relinKeysB64() : null };
     step('encrypt', 'done'); step('send', 'active');
@@ -88,6 +91,8 @@ async function onSubmit(ev) {
     if (!res.ok) throw new Error(`${j.error?.code ?? res.status}: ${j.error?.message ?? 'request failed'}`);
     step('send', 'done'); step('decrypt', 'active');
     const v = session.decryptScalar(j.encrypted_result);
+    const plausible = j.output === 'logit' ? Math.abs(v) < 100 : v > -0.5 && v < 1.5;
+    if (!Number.isFinite(v) || !plausible) throw new Error('The returned result is outside the possible range. Do not use it.');
     const prob = j.output === 'logit' ? 1 / (1 + Math.exp(-v)) : Math.min(1, Math.max(0, v));
     step('decrypt', 'done');
     showResult(prob, j.threshold ?? meta.threshold, j.output, body);

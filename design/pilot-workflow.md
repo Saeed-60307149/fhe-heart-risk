@@ -1,5 +1,7 @@
 # Pilot workflow notes
 
+> **Aligned with the corrected Defense Report (reference, decision #26).** The layout is one ciphertext per feature; packed is measured for comparison.
+
 Owner: Abdullah Dar (work plan Week 11, Gantt 4.9a) · 11 Nov 2026 · how the practicum pilot runs,
 step by step, and where each PR2 number comes from. Diagram: [diagrams/architecture.md](diagrams/architecture.md#practicum-pilot-workflow).
 
@@ -19,6 +21,6 @@ step by step, and where each PR2 number comes from. Diagram: [diagrams/architect
 
 - PR1 planned browser encryption (Plan A). Measurements were first taken with a Python client
   (Plan B) and the full node-seal ↔ TenSEAL round trip followed in Week 11 – **Plan A is feasible**.
-- Ciphertext layout closed (decision #15): **one ciphertext per feature** (no Galois keys); the
-  packed layout is kept in the benchmark as the comparison.
+- Ciphertext layout closed (#15, #26): **one ciphertext per feature** (no Galois keys); the packed
+  layout is measured for comparison.
 - Edinburgh MI pilot (PR2 "Week 12") is now scripted: the same commands with `--dataset edinburgh`.

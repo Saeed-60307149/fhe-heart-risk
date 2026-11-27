@@ -77,3 +77,32 @@ def test_oversized_ciphertext_rejected(client_keys):
     with pytest.raises(FheInputError) as e:
         server.load_ciphertext(b"\x00" * 3_000_000)
     assert e.value.code == "PAYLOAD_TOO_LARGE"
+
+
+@pytest.mark.parametrize("layout", ["per_feature", "packed"])
+def test_web_sized_settings_both_layouts(toy_model, patients, layout):
+    """Small settings: the encrypted score matches the plain score in both layouts."""
+    from tenseal import sealapi as seal
+    from fhe_heart import params as P
+    from fhe_heart.seal_client import SealClient
+    from fhe_heart.seal_server import _save
+    client = SealClient.create("web_logit")
+    server = SealServer(client.parms_bytes())
+    w, b = toy_model["weights"], toy_model["bias"]
+    galois = None
+    if layout == "packed":
+        degree = P.PARAM_SETS["web_logit"]["poly_modulus_degree"]
+        keys = seal.GaloisKeys()
+        client._keygen.create_galois_keys([pow(3, s, 2 * degree) for s in P.rotation_steps(len(w))], keys)
+        galois = _save(keys)
+    for x in patients:
+        if layout == "packed":
+            pt, ct = seal.Plaintext(), seal.Ciphertext()
+            client.encoder.encode([float(v) for v in x], client.scale, pt)
+            seal.Encryptor(client.ctx, client.public_key).encrypt(pt, ct)
+            blobs = [_save(ct)]
+        else:
+            blobs = client.encrypt_features(x)
+        res = server.infer(blobs, w, b, layout=layout, galois_bytes=galois)
+        tolerance = 0.1 if layout == "packed" else 1e-2   # packed adds rotation noise
+        assert abs(client.decrypt_scalar(res.ciphertext) - (x @ np.array(w) + b)) < tolerance
